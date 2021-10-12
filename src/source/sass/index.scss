@@ -1,5 +1,7 @@
 @import './component/nav.scss';
 @import './color/light.scss';
+@import './component/button.scss';
+@import './component/panel.scss';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -30,6 +32,7 @@ body {
 	line-height: 1;
 	font-size: 15px;
 	font-family: '微软雅黑';
+	background-color: var(--background-color);
 }
 ol, ul {
 	list-style: none;

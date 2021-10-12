@@ -4,9 +4,9 @@
 const site = {
     title: '',
     anno: '',
-    author: '',
-    profile: '',
+    author: 'midou',
     github: '',
-    bili: ''
+    bili: '',
+    cloud: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com'
 }
-module.exports = site;
+export default site;
