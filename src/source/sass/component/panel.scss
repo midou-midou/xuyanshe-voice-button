@@ -1,0 +1,201 @@
+.panel-container{
+    border-radius: .2rem;
+    margin: 1rem;
+    box-shadow: 0 .1rem .2rem var(--shadow-color);
+    background-color: var(--panel-bg-color);
+    
+    .panel-tags{
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: .7rem;
+        color: var(--global-font-color);
+    }
+
+    .panel-btn-container{
+        display: flex;
+        flex-wrap: wrap
+    }
+    
+}
+
+.audioPanel-container{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: rgba(255,255,255,.7);
+
+    .audioinfo{
+        text-align: center;
+        padding: 1rem 0 .5rem 0;
+    }
+    
+    .audioControl-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        div{
+            font-size: 1.7rem;
+            margin: 0 1.2rem .5rem 1.2rem;
+            padding: .5rem;
+            border-radius: 2rem;
+            cursor: pointer;
+        }
+
+        div:hover{
+            background-color: #e8e8e8;
+        }
+
+        .control-btn-click{
+            animation: oneBeat 1.2s;
+        }
+
+        .cbtn-bg-click{
+            animation: pulse 1s;
+        }
+
+        @keyframes oneBeat {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            
+            50% {
+                -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+            }
+        
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+    }
+
+    .loopInfo{
+        font-size: .7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: .7rem;
+        span{
+            display: block;
+        }
+    }
+    
+}
+
+.annoPanel-container{
+    display: flex;
+    justify-content: center;
+    padding: .5rem 2rem;
+    align-items: center;
+    
+    .profile{
+        width: 6rem;
+        height: 6rem;
+        margin: 0 1rem;
+        border-radius: 3rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #danmu-collect{
+        width: 20%;
+    }
+
+    .site-info{
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        text-align: center;
+
+        .site-inner{
+            padding: .2rem 0;
+            letter-spacing: .1rem;
+        }
+
+        .site-title{
+            font-weight: 700;
+        }
+
+        .site-gray{
+            font-size: .7rem;
+            color: #d0e6ff;
+        }
+
+        .site-important{
+            font-size: .9rem;
+        }
+
+        .shields-container{
+            display: flex;
+            justify-content: center;
+
+            img{
+                padding: 0 .5rem;
+            }
+        }
+
+        .heimu{ 
+            width: auto;
+            background-color: #252525; 
+            color: #252525; 
+            text-shadow: none; 
+
+            &:hover{ transition: color .13s linear ; color: #d0e6ff; }
+
+        
+        }
+        
+    }
+    
+}
+
+.footer-container-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem 1rem;
+    padding-top: 0.5rem;
+    border-top: 0.1rem solid var(--global-shadow);
+
+    a{
+        color: var(--link-blue);
+    }
+
+    div{
+        margin-top: 0.5rem;
+    }
+
+    .shield-footer-container{
+        margin: 1rem 0 0 0;
+        .shield-github-star{
+            display: flex;
+            justify-content: center;
+            img{
+                padding: 0 .5rem;
+            }
+        }
+    }
+
+    #footer-powerby{
+        svg{
+            display: inline;
+        }
+
+        #theme-name{
+            font-family: bubble;
+        }
+
+        #footer-beian{
+            margin-bottom: 1rem;
+
+            #gongan{
+                margin-left: 1rem;
+            }
+            
+        }
+    }
+}
