@@ -24,6 +24,8 @@
 
     div.mask{
         position: absolute;
+        border-color: transparent;
+        border-style: solid;
     }
 
     .mask-gray{
@@ -53,7 +55,6 @@
             border-top-left-radius: var(--btn-radius);
             transform-origin: 100% 100%;
             transform: rotate(-90deg);
-            // animation: left-route 5s linear forwards; 
         }
         .left-bottom-mask{
             --delay: 4;
@@ -64,7 +65,6 @@
             border-bottom-left-radius: var(--btn-radius);
             transform-origin: 100% 0%; 
             transform: rotate(-90deg);
-            // animation: left-route 5s linear forwards; 
         }
     }
 
@@ -80,13 +80,11 @@
         .middle-top-mask{
             --delay: 0;
             top: 0;
-            // animation: middle-top-line 5s linear forwards;
         }
         .middle-bottom-mask{
             --delay: 3;
             right: 0;
             bottom: 0;
-            // animation: middle-bottom-line 5s linear forwards ;
         }
     }
 
@@ -108,7 +106,6 @@
             border-top-right-radius: var(--btn-radius);
             transform-origin: 0% 100%;
             transform: rotate(-90deg);
-            // animation: left-route 5s linear forwards;
         }
         .right-bottom-mask{
             --delay: 2;
@@ -119,10 +116,10 @@
             border-bottom-right-radius: var(--btn-radius);
             transform-origin: 0% 0%; 
             transform: rotate(-90deg);
-            // animation: left-route 5s linear forwards;
         }
     }
 
+    // mobile适配
     @media screen and (max-width: 680px){
         --btn-height: 2.5rem;
         --btn-font-size: .64rem;
@@ -138,9 +135,34 @@
 
 }
 
+// 按钮 & 进度条动画
 .wrapper-click{
-    animation: headShake 1.5s;
+    animation: oneBeat 0.6s ease-out;
+    .left-top-mask{
+        animation: left-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+    }
+
+    .left-bottom-mask{
+        animation: left-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+    }
+    
+    .middle-top-mask{
+        animation: middle-top-line var(--piece) linear forwards calc(var(--piece) * var(--delay));
+    }
+    
+    .middle-bottom-mask{
+        animation: middle-bottom-line var(--piece) linear forwards calc(var(--piece) * var(--delay));
+    }
+    
+    .right-bottom-mask{
+        animation: right-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+    } 
+
+    .right-top-mask{
+        animation: right-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+    }
 }
+
 
 @keyframes left-route {
     0% {
@@ -184,18 +206,12 @@
     }
 }
 
+// 每一个人的主题色
 .xiaoxi{
     .btn-wrapper{
-        // background-color: var(--btn-bg-color);
         box-shadow: 0px 1px 2px 1px var(--xiaoxi-color);
-
         .btn-name{
             color: var(--xiaoxi-color);
-        }
-
-        div.mask{
-            border-color: transparent;
-            border-style: solid;
         }
         div.left-mask div{
             background-color: var(--xiaoxi-color);
@@ -206,7 +222,77 @@
         div.middle-mask-container div{
             background-color: var(--xiaoxi-color);
         }
-
     }
-    
+}
+
+.xiaotao{
+    .btn-wrapper{
+        box-shadow: 0px 1px 2px 1px var(--xiaotao-color);
+        .btn-name{
+            color: var(--xiaotao-color);
+        }
+        div.left-mask div{
+            background-color: var(--xiaotao-color);
+        }
+        div.right-mask div{
+            background-color: var(--xiaotao-color);
+        }
+        div.middle-mask-container div{
+            background-color: var(--xiaotao-color);
+        }
+    }
+}
+
+.xiaorou{
+    .btn-wrapper{
+        box-shadow: 0px 1px 2px 1px var(--xiaorou-color);
+        .btn-name{
+            color: var(--xiaorou-color);
+        }
+        div.left-mask div{
+            background-color: var(--xiaorou-color);
+        }
+        div.right-mask div{
+            background-color: var(--xiaorou-color);
+        }
+        div.middle-mask-container div{
+            background-color: var(--xiaorou-color);
+        }
+    }
+}
+
+.reine{
+    .btn-wrapper{
+        box-shadow: 0px 1px 2px 1px var(--reine-color);
+        .btn-name{
+            color: var(--reine-color);
+        }
+        div.left-mask div{
+            background-color: var(--reine-color);
+        }
+        div.right-mask div{
+            background-color: var(--reine-color);
+        }
+        div.middle-mask-container div{
+            background-color: var(--reine-color);
+        }
+    }
+}
+
+.ailurus{
+    .btn-wrapper{
+        box-shadow: 0px 1px 2px 1px var(--ailurus-color);
+        .btn-name{
+            color: var(--ailurus-color);
+        }
+        div.left-mask div{
+            background-color: var(--ailurus-color);
+        }
+        div.right-mask div{
+            background-color: var(--ailurus-color);
+        }
+        div.middle-mask-container div{
+            background-color: var(--ailurus-color);
+        }
+    }
 }

@@ -1,4 +1,6 @@
 const messages = {
-    zh: zh
+    zh: zh,
+    en: en,
+    jp: jp
 }
 export default messages;
