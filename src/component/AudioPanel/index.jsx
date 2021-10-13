@@ -161,16 +161,11 @@ function AudioPanel(props) {
             }, 3000)
         })
     }
-
-    // clear anima
-    const clearAnima = () => {
-
-    }
     
     return ( 
         <div className="audioPanel-container">
                 <IntlProvider locale={lang} messages={playing.voice.desc || {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}>
-                    <div className="audioinfo animate__animated animate__backInDown">
+                    <div className="audioinfo animate__animated animate__zoomIn">
                         <FormattedMessage id={lang}></FormattedMessage>
                     </div>
                 </IntlProvider>

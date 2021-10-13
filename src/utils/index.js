@@ -62,7 +62,6 @@ const drawDanmu = (canvas, danmulist, style) => {
     danmulist.map((danmu, k) => {
         let x = Math.floor(Math.random() * 400);
         let y = Math.floor(Math.random() * 200);
-        console.log(x, y);
         ctx.fillText(danmu.toString(), x, y);
     })
 }

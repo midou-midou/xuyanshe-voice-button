@@ -4,18 +4,18 @@ import VoicePanel from '../VoicePanel'
 import AudioPanel from '../AudioPanel'
 import AnnoPanel from '../AnnoPanel'
 
-function XiaoTao(){
-    const voice = useSelector(state => state.getVoiceData.xiaotao);
+function Ailurus(){
+    const voice = useSelector(state => state.getVoiceData.xiaorou);
     
     return (
         <Fragment>
             <section className="panel-root">
-                <AnnoPanel up="小桃"/>
-                <VoicePanel voice={voice} theme="xiaotao"/>
+                <AnnoPanel up="艾露露"/>
+                <VoicePanel voice={voice} theme="ailurus"/>
             </section>
-            <AudioPanel up="xiaoxi"/>
+            <AudioPanel up="ailurus"/>
         </Fragment>
     );
 }
 
-export default XiaoTao;
+export default Ailurus;

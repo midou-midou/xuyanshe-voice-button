@@ -6,7 +6,11 @@ const site = {
     anno: '',
     author: 'midou',
     github: '',
-    bili: '',
-    cloud: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com'
+    bili: 'https://space.bilibili.com/9964933',
+    cloud: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com',
+    beian: {
+        wangan: '',
+        icp: ''
+    }
 }
 export default site;

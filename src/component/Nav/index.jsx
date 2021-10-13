@@ -1,4 +1,4 @@
-import { NavLink, Route } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 function Nav(){
@@ -8,7 +8,11 @@ function Nav(){
             <div className="navbar">
             {
                 vup.map((v,k) => {
-                    return <NavLink className="nav-item" key={k} to={"/"+v.abbr}>{v.name}</NavLink>  
+                    return (
+                        <NavLink activeClassName="top-nav-active" className="nav-item" key={k} to={"/"+v.abbr}>
+                            <div className={`nav-small-item ${v.abbr}`}><div className="nav-icon" style={{backgroundImage: `url(${v.icon})`}}></div> {v.name}</div>
+                        </NavLink>
+                    )
                 })
             }
             </div>

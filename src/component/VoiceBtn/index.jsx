@@ -57,34 +57,23 @@ function VoiceBtn(props) {
     // playAnimation cb
     const cbPlayAnima = (audio) => {
         const pieceTime = getAudioSecond(audio.duration) / 6;
-        midTopRef.current.className = 'middle-top-mask';
-        midTopRef.current.style = `animation: middle-top-line ${pieceTime}s linear forwards calc(var(--delay) * ${pieceTime}s)`;
-
-        rightTopRef.current.className = 'right-top-mask';
-        rightTopRef.current.style = `animation: right-route ${pieceTime}s linear forwards calc(var(--delay) * ${pieceTime}s)`;
-
-        rightBotRef.current.className = 'right-bottom-mask';
-        rightBotRef.current.style = `animation: right-route ${pieceTime}s linear forwards calc(var(--delay) * ${pieceTime}s)`;
-
-        midBotRef.current.className = 'middle-bottom-mask';
-        midBotRef.current.style = `animation: middle-bottom-line ${pieceTime}s linear forwards calc(var(--delay) * ${pieceTime}s)`;
-
-        leftBotRef.current.className = 'left-bottom-mask';
-        leftBotRef.current.style = `animation: left-route ${pieceTime}s linear forwards calc(var(--delay) * ${pieceTime}s)`;
-
-        leftTopRef.current.className = 'left-top-mask';
-        leftTopRef.current.style = `animation: left-route ${pieceTime}s linear forwards calc(var(--delay) * ${pieceTime}s)`;
+        midTopRef.current.style = `--piece: ${pieceTime}s`;
+        rightTopRef.current.style = `--piece: ${pieceTime}s`;
+        rightBotRef.current.style = `--piece: ${pieceTime}s`;
+        midBotRef.current.style = `--piece: ${pieceTime}s`;
+        leftBotRef.current.style = `--piece: ${pieceTime}s`;
+        leftTopRef.current.style = `--piece: ${pieceTime}s`;
     }
 
     // stop anima
     const stopAnim = () => {
-        wrapper.current.className = 'btn-wrapper';
+        wrapper.current.classList.remove('wrapper-click');
         midTopRef.current.style = rightTopRef.current.style = rightBotRef.current.style = midBotRef.current.style = leftBotRef.current.style = leftTopRef.current.style = '';
     }
 
     // 播放voice
     const playVoice = () => {
-        wrapper.current.className = 'btn-wrapper wrapper-click';
+        wrapper.current.classList.add('wrapper-click');
         dispatch(createPlayingAction(onevoice));
         dispatch(createAddPlaylistAction(onevoice));
         playerPlay(onevoice, cbAddPlayingList, cbstopVoice, cbPlayAnima);

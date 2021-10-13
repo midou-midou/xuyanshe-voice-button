@@ -5,12 +5,239 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--nav-bg-color);
+    border-bottom:.2rem solid var(--nav-bg-color);
+    background-color: white;
+    
     .nav-item{
         margin: 0 1rem;
-        color: var(--nav-font-color);
         font-weight: 600;
         font-size: 1.1rem;
         text-decoration: none;
+        border-bottom: .15rem solid transparent;
+
+        .nav-icon{
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+        }
+
+        .nav-small-item{
+            width: 100%;
+            height: 100%;
+        }
+        .xx{
+            color: var(--xiaoxi-color);
+        }
+        .xt{
+            color: var(--xiaotao-color);
+        }
+        .xr{
+            color: var(--xiaorou-color);
+        }
+        .reine{
+            color: var(--reine-color);
+        }
+        .ailurus{
+            color: var(--ailurus-color);
+        }  
+    }
+
+    .top-nav-active{
+        border-bottom: .15rem solid var(--link-blue);
+    }
+
+    // mobile适配
+    @media screen and (max-width: 680px){
+        display: none;
+    }
+
+    @media screen and (min-width: 680px){
+        
+    }
+    
+}
+
+.float-navbar{
+    position: fixed;
+    bottom: 7rem;
+    right: 2rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color: #bdbebd;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    border: .1rem solid #bdbebd;
+
+    i{
+        position: absolute;
+        font-size: 2.6rem;
+    }
+
+    .float-nav-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+        .float-nav-item{
+            visibility: hidden;
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 1.4rem;
+        }
+
+        a{
+            display: block;
+            box-shadow: 0 .1rem .2rem .1rem #6a6a6a;
+        }
+        
+        .xx{
+            --delay: 0;
+            border: .15rem solid var(--xiaoxi-color);
+        }
+
+        .xt{
+            --delay: 1;
+            border: .15rem solid var(--xiaotao-color);
+        }
+
+        .xr{
+            --delay: 2;
+            border: .15rem solid var(--xiaorou-color);
+        }
+
+        .reine{
+            --delay: 3;
+            border: .15rem solid var(--reine-color);
+        }
+
+        .ailurus{
+            --delay: 4;
+            border: .15rem solid var(--ailurus-color);
+        }
+
+        .float-nav-item-active{
+            background-color: var(--link-blue);
+        }
+        
+    }
+}
+
+.active-e{
+    i{
+        animation: eli-route 1s ease forwards;
+    }
+    .xx{
+        animation: fly-xx 1s ease forwards calc(1s * var(--delay));
+    }
+    .xt{
+        animation: fly-xt 1s ease forwards calc(1s * var(--delay));
+    }
+    .xr{
+        animation: fly-xr 1s ease forwards calc(1s * var(--delay));
+    }
+    .reine{
+        animation: fly-reine 1s ease forwards calc(1s * var(--delay));
+    }
+    .ailurus{
+        animation: fly-ailurus 1s ease forwards calc(1s * var(--delay));
+    }
+}
+
+.not-active-e{
+    i{
+        animation: eli-disroute 1s ease forwards;
+    }
+    .xx{
+        bottom: 0;
+        visibility: hidden;
+    }
+    .xt{
+        bottom: 0;
+        visibility: hidden;
+    }
+    .xr{
+        bottom: 0;
+        visibility: hidden;
+    }
+    .reine{
+        bottom: 0;
+        visibility: hidden;
+    }
+    .ailurus{
+        bottom: 0;
+        visibility: hidden;
+    }
+}
+
+// float-nav 动画
+@keyframes eli-route {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes eli-disroute {
+    0%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fly-xx {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        visibility: visible;
+        bottom: 20rem;
+    }
+}
+
+@keyframes fly-xt {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        visibility: visible;
+        bottom: 16rem;
+    }
+}
+
+@keyframes fly-xr {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        visibility: visible;
+        bottom: 12rem;
+    }
+}
+
+@keyframes fly-reine {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        visibility: visible;
+        bottom: 8rem;
+    }
+}
+
+@keyframes fly-ailurus {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        visibility: visible;
+        bottom: 4rem;
     }
 }
