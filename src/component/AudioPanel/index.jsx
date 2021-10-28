@@ -1,182 +1,176 @@
-import { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { Component, createRef } from "react";
+import { connect } from "react-redux";
+import PubSub from 'pubsub-js';
 import { IntlProvider, FormattedMessage } from 'react-intl';
-import { stop, oneloop, allloop, playerPlay } from '../../Player/index';
-import { NO_LOOP, ALL_VOICE_LOOP, ONE_LOOP, PLAYLIST_LOOP } from '../../config/enmu'
-import { getTargArr } from '../../utils/index'
+import store from '../../store/store';
+import { NO_LOOP, ALL_VOICE_LOOP, ONE_LOOP } from '../../config/enmu'
 import {
     createPlayStopAction,
-    createGetPlayingAction,
-    createRemoveAllPlayerlistAction,
-    createRemovePlaylistAction,
     createPlayerStateAction,
-    createAddPlayerlistAction,
-    createAddWillPlaylistAction,
-    createRemoveWillPlaylistAction,
-    createInitWillPlaylistAction,
-    createPlayingAction,
-    createAddPlaylistAction,
-    createRemovePlaylistItemAction,
-    createRemovePlayerlistItemAction
+    createRandomAction,
+    createPlayingAction
 } from '../../store/actions/audio'
 
-function AudioPanel(props) {
-    const { up } = props;
-    const loopInfo = useRef(null);
-    const playstopBtn = useRef(null);
-    const loopBtn = useRef(null);
-    const randomBtn = useRef(null);
-    const dispatch = useDispatch();
-    const playing = useSelector(state => state.playingVoice);
-    const playlist = useSelector(state => state.handlePlaylist);
-    const playerlist = useSelector(state => state.handlePlayerlist);
-    const willPlist = useSelector(state => state.handleWillPlaylist);
-    const lang = useSelector((state) => state.getLang);
-    var index = 0;  // 待播放列表index
+class AudioPanel extends Component {
 
-    useEffect(() => {
-        dispatch(createInitWillPlaylistAction(getTargArr(up)));
-        return () => {
-            dispatch(createRemoveWillPlaylistAction());
+    constructor(props) {
+        super(props);
+        this.state = {
+            playingList: [],
+            playList: new Map(),
+            playListIndex: [],
+            loopInfo: ['啥都不循环','单曲循环','循环当前页面全部音频']
         }
-    },[])
-    
-    // 停止所有音频
-    const stopAllVoice = () => {
-        // play anima
-        playstopBtn.current.className = "audioPanel-playstop cbtn-bg-click";
-        playstopBtn.current.firstChild.className = "fas fa-stop-circle control-btn-click";
-        dispatch(createPlayStopAction());
-        if(stop(playerlist)){
-            dispatch(createRemoveAllPlayerlistAction());
-            dispatch(createRemovePlaylistAction());
-        }
-        new Promise((resolve, reject) => {
-            resolve()
-        }).then(() => {
-            setInterval(() => {
-                playstopBtn.current.className = "audioPanel-playstop";
-                playstopBtn.current.firstChild.className = "fas fa-stop-circle";
-            }, 3000)
+        this.playstopbtn = createRef();
+        this.loopbtn = createRef();
+        this.randombtn = createRef();
+        this.timer = setTimeout(()=>{},1000);
+    }
+
+    // 初始化播放列表
+    initPlayList = () => {
+        let _playlist = new Map();
+        let _playlistIndex = [];
+        this.props.voice.map((tags, clifkey) => 
+            tags.voice.map((oneSound, voiceKey) => {
+                _playlist.set(clifkey*100+voiceKey, oneSound);
+                _playlistIndex.push(clifkey*100+voiceKey);
+                return null;
+            })
+        )
+        this.setState(()=>({
+            playList: _playlist,
+            playListIndex: [..._playlistIndex]
+        }))
+    }
+
+    // 监听store & 设置所有播放列表 & 订阅AllLoop next voice
+    componentDidMount(){
+        store.subscribe(() => {
+            const storeState = store.getState();
+            this.setState({
+                playingList: [...storeState.playingVoice.playingList]
+            })
+        });
+        this.initPlayList();
+        PubSub.subscribe('nextVoice', () => {
+            this.AllLoop();
         })
     }
 
-    const cbChangePlayingState = (voice) => {
-        dispatch(createPlayingAction(voice));
-    }
-
-    const cbAddPlayingList = (audioEl) => {
-        dispatch(createAddPlayerlistAction(audioEl));
-    }
-
-    // random 结束voice回调
-    const cbstopVoice = () => {
-        // 当前播放音频
-        const loopState = playing.isLoop;
-        if(loopState === NO_LOOP){
-            if(playlist.length === 1){
-                dispatch(createPlayStopAction());
-            }
-            dispatch(createRemovePlaylistItemAction());
-            dispatch(createRemovePlayerlistItemAction());
-        }
-        if(loopState === ONE_LOOP){
-            oneloop(playerlist.pop());
-        }
-    }
-
-    // 播放列表顺序播放
-    const cbautoPlayNext = () => {
-        index+=1;
-        if(!willPlist[index]){
-            dispatch(createPlayStopAction());
-            return;
-        }
-        cbChangePlayingState(willPlist[index]);
-        dispatch(createAddPlaylistAction(willPlist[index]));
-        playerPlay(willPlist[index], cbAddPlayingList, cbautoPlayNext, () => {});
-    }
-
-    // 循环 loop
-    const changeLoopState = () => {
-        // play anima
-        loopBtn.current.className = "audioPanel-loop cbtn-bg-click";
-        loopBtn.current.firstChild.className = "fas fa-undo-alt control-btn-click";
-
-        new Promise((resolve, reject) => {
-            resolve()
-        }).then(() => {
-            setInterval(() => {
-                loopBtn.current.className = "audioPanel-loop";
-                loopBtn.current.firstChild.className = "fas fa-undo-alt";
-            }, 3000)
-        })
-
-        // dispatch
-        let loopState = playing.isLoop;
-        if(loopState === ALL_VOICE_LOOP){
-            loopState = NO_LOOP;
-        }else{
-            loopState += 1;
-        }
-        dispatch(createPlayerStateAction(loopState));
-        
-        // icon change & player behavior
-        switch(loopState){
-            case ALL_VOICE_LOOP:
-                loopInfo.current.innerText = "循环当前页面全部音频";
-                cbChangePlayingState(willPlist[index]);
-                dispatch(createAddPlaylistAction(willPlist[index]));
-                playerPlay(willPlist[index],cbAddPlayingList, cbautoPlayNext, () => {});
-                break;
-            case ONE_LOOP:
-                loopInfo.current.innerText = "无限循环当前播放";
-                if(playerlist.length !== 0){
-                    oneloop(playerlist.pop());
-                }
-                break;
+    // 组件更新后执行
+    componentDidUpdate(){
+        switch(this.props.isLoop){
             case NO_LOOP:
-                loopInfo.current.innerText = "啥都不循环";
-                break;
+                return;
+            case ONE_LOOP:
+                return;
+            case ALL_VOICE_LOOP:
+                if(this.props.playingIndex === -1){
+                    this.AllLoop();
+                }
+                return;
+            default:
+                return;
         }
     }
 
-    // random 盲盒
-    const random = () => {
-        // play anima
-        randomBtn.current.className = "audioPanel-random cbtn-bg-click";
-        randomBtn.current.firstChild.className = "fas fa-random control-btn-click";
+    // 卸载
+    componentWillUnmount(){
+        PubSub.unsubscribe('nextVoice');
+        clearTimeout(this.timer);
+    }
 
-        let hit = Math.floor(Math.random() * (willPlist.length - 1));
-        cbChangePlayingState(willPlist[hit]);
-        dispatch(createAddPlaylistAction(willPlist[hit]));
-        playerPlay(willPlist[hit], cbAddPlayingList, cbstopVoice, () => {});
+    // audioPanel 相关操作
+    // 停止音频播放 
+    stopAllVoice = () => {
+        this.playAnima(this.playstopbtn);
+        this.props.stopAll();
+    }
 
-        new Promise((resolve, reject) => {
-            resolve()
-        }).then(() => {
-            setInterval(() => {
-                randomBtn.current.className = "audioPanel-random";
-                randomBtn.current.firstChild.className = "fas fa-random";
-            }, 3000)
-        })
+    // 全部循环
+    AllLoop = () => {
+        let key = this.state.playListIndex.indexOf(this.props.playingIndex) + 1;
+        let currentIndex = this.state.playListIndex[parseInt(key)];
+        if(this.state.playList.has(currentIndex)){
+            this.props.playingAction({onevoice: this.state.playList.get(currentIndex), currentIndex: currentIndex});
+        }else{
+            // console.log("没有拿到音频，或者是音频已播放完毕");
+            this.props.loop(NO_LOOP);
+        }
     }
     
-    return ( 
-        <div className="audioPanel-container">
-                <IntlProvider locale={lang} messages={playing.voice.desc || {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}>
+    // 随机播放
+    random = () => {
+        this.playAnima(this.randombtn);
+        this.props.stopAll();
+        let hit = Math.floor(Math.random() * ( this.state.playListIndex.length - 1 ));
+        let currentIndex = this.state.playListIndex[hit];
+        if(this.state.playList.has(currentIndex)){
+            this.props.randomVoice({onevoice: this.state.playList.get(currentIndex), hitIndex: currentIndex});
+            this.props.playingAction({onevoice: this.state.playList.get(currentIndex), currentIndex: currentIndex});
+        }
+    }
+
+    // 单曲、全部循环
+    changeLoopState = () => {
+        this.playAnima(this.loopbtn);
+        this.props.stopAll();
+        switch(this.props.isLoop){
+            case NO_LOOP:
+                this.props.loop(ONE_LOOP);
+                return;
+            case ONE_LOOP:
+                this.props.loop(ALL_VOICE_LOOP);
+                return;
+            default:
+                this.props.loop(NO_LOOP);
+                return;
+        }
+    }
+
+    // 播放动画
+    playAnima = (myref) => {
+        myref.current.classList.add('cbtn-bg-click');
+        myref.current.firstChild.classList.add('control-btn-click');
+        this.timer = setTimeout(() => {
+            myref.current.classList.remove('cbtn-bg-click');
+            myref.current.firstChild.classList.remove('control-btn-click');
+        }, 1000)
+    }
+    
+    render() { 
+        return ( 
+            <div className="audioPanel-container">
+                <IntlProvider locale={this.props.lang} messages={this.props.playingVoiceData.desc || {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}>
                     <div className="audioinfo animate__animated animate__zoomIn">
-                        <FormattedMessage id={lang}></FormattedMessage>
+                        <FormattedMessage id={this.props.lang}></FormattedMessage>
                     </div>
                 </IntlProvider>
-            <div className="audioControl-container">
-                <div className="audioPanel-playstop" ref={playstopBtn} onClick={stopAllVoice} title="别走"><i className="fas fa-stop-circle"></i></div>
-                <div className="audioPanel-loop" ref={loopBtn} onClick={changeLoopState} title="洗脑"><i className="fas fa-undo-alt"></i></div>
-                <div className="audioPanel-random" ref={randomBtn} onClick={random} title="盲盒"><i className="fas fa-random"></i></div>
+                <div className="audioControl-container">
+                    <div className="audioPanel-playstop"  onClick={this.stopAllVoice} ref={this.playstopbtn} title="别走"><i className="fas fa-stop-circle"></i></div>
+                    <div className="audioPanel-loop"  onClick={this.changeLoopState} ref={this.loopbtn} title="洗脑"><i className="fas fa-undo-alt"></i></div>
+                    <div className="audioPanel-random"  onClick={this.random} ref={this.randombtn} title="盲盒"><i className="fas fa-random"></i></div>
+                </div>
+                <div className="loopInfo"><span>{this.state.loopInfo[this.props.isLoop]}</span></div>
             </div>
-            <div className="loopInfo"><span ref={loopInfo}>啥都不循环</span></div>
-        </div>
-     );
+        );
+    }
 }
 
-export default AudioPanel;
+// container component
+export default connect(
+    state => ({
+        isPlay: state.playingVoice.isPlay,
+        isLoop: state.playingVoice.isLoop,
+        playingVoiceData: state.playingVoice.voice,
+        playingIndex: state.playingVoice.playingIndex,
+        lang: state.getLang
+    }),
+    {
+        stopAll: createPlayStopAction,
+        playingAction: createPlayingAction,
+        loop: createPlayerStateAction,
+        randomVoice: createRandomAction
+    }
+)(AudioPanel);

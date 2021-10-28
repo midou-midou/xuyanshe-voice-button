@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { Fragment } from "react";
-import VoicePanel from '../VoicePanel'
-import AudioPanel from '../AudioPanel'
-import AnnoPanel from '../AnnoPanel'
+import VoicePanel from '../../VoicePanel'
+import AudioPanel from '../../AudioPanel'
+import AnnoPanel from '../../AnnoPanel'
 
 function XiaoXi(){
     const voice = useSelector(state => state.getVoiceData.xiaoxi);
@@ -13,7 +13,7 @@ function XiaoXi(){
                 <AnnoPanel up="小希"/>
                 <VoicePanel voice={voice} theme="xiaoxi"/>
             </section>
-            <AudioPanel up="xiaoxi"/>
+            <AudioPanel voice={voice} up="xiaoxi"/>
         </Fragment>
     );
 }

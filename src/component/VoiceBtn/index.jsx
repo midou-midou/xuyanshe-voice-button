@@ -1,102 +1,188 @@
-import { useRef } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { Component, createRef } from 'react';
+import PubSub from 'pubsub-js';
 import { FormattedMessage } from 'react-intl';
-import { playerPlay, oneloop } from '../../Player/index'
-import { NO_LOOP,  ONE_LOOP, ALL_VOICE_LOOP, PLAYLIST_LOOP } from '../../config/enmu'
-import { getAudioSecond } from '../../utils/index'
+import store from '../../store/store';
+import { NO_LOOP,  ONE_LOOP, ALL_VOICE_LOOP } from '../../config/enmu';
+import { getAudioSecond, pathComplete } from '../../utils/index';
 import {
     createPlayingAction,
-    createPlayStopAction,
-    createAddPlayerlistAction,
-    createRemovePlayerlistItemAction,
-    createAddPlaylistAction,
-    createRemovePlaylistItemAction
+    createChangePlayingIndex,
+    createRandomAction,
+    createClearPlayerInfo
 } from '../../store/actions/audio'
 
 import 'animate.css';
 
-function VoiceBtn(props) {
-    const {onevoice, lang} = props;
-    const dispatch = useDispatch();
-    const playlist = useSelector(state => state.handlePlaylist);
-    const playing = useSelector(state => state.playingVoice);
-    const playerlist = useSelector(state => state.handlePlayerlist);
-    const leftTopRef = useRef(null);
-    const leftBotRef = useRef(null);
-    const midTopRef = useRef(null);
-    const midBotRef = useRef(null);
-    const rightTopRef = useRef(null);
-    const rightBotRef = useRef(null);
-    const wrapper = useRef(null);
-
-    const cbAddPlayingList = (audioEl) => {
-        dispatch(createAddPlayerlistAction(audioEl));
-    }
-
-    const cbRemovePlayandPlayerList = () => {
-        dispatch(createRemovePlaylistItemAction());
-        dispatch(createRemovePlayerlistItemAction());
-    }
-
-    // 结束voice回调
-    const cbstopVoice = () => {
-        // 当前播放音频
-        const loopState = playing.isLoop;
-        stopAnim();
-        if(loopState === NO_LOOP){
-            if(playlist.length === 1){
-                dispatch(createPlayStopAction());
-            }
-            cbRemovePlayandPlayerList();
-        }
-        if(loopState === ONE_LOOP){
-            oneloop(playerlist.pop());
-        }
-    }
-
-    // playAnimation cb
-    const cbPlayAnima = (audio) => {
-        const pieceTime = getAudioSecond(audio.duration) / 6;
-        midTopRef.current.style = `--piece: ${pieceTime}s`;
-        rightTopRef.current.style = `--piece: ${pieceTime}s`;
-        rightBotRef.current.style = `--piece: ${pieceTime}s`;
-        midBotRef.current.style = `--piece: ${pieceTime}s`;
-        leftBotRef.current.style = `--piece: ${pieceTime}s`;
-        leftTopRef.current.style = `--piece: ${pieceTime}s`;
-    }
-
-    // stop anima
-    const stopAnim = () => {
-        wrapper.current.classList.remove('wrapper-click');
-        midTopRef.current.style = rightTopRef.current.style = rightBotRef.current.style = midBotRef.current.style = leftBotRef.current.style = leftTopRef.current.style = '';
-    }
-
-    // 播放voice
-    const playVoice = () => {
-        wrapper.current.classList.add('wrapper-click');
-        dispatch(createPlayingAction(onevoice));
-        dispatch(createAddPlaylistAction(onevoice));
-        playerPlay(onevoice, cbAddPlayingList, cbstopVoice, cbPlayAnima);
-    }
+class VoiceBtn extends Component {
     
-    return ( 
-        <div className="btn-wrapper" ref={wrapper}>
-            <div className="left-mask mask">
-                <div className="left-top-mask" ref={leftTopRef}></div>
-                <div className="left-bottom-mask" ref={leftBotRef}></div>
-            </div>
-            <div className="middle-mask-container mask">
-                <div className="middle-top-mask" ref={midTopRef}></div>
-                <div className="middle-bottom-mask" ref={midBotRef}></div>
-            </div>
-            <div className="right-mask mask">
-                <div className="right-top-mask" ref={rightTopRef}></div>
-                <div className="right-bottom-mask" ref={rightBotRef}></div>
-            </div>
-            <div className="mask-gray mask"></div>
-            <a onClick={playVoice} className="btn-name"><FormattedMessage id={lang}></FormattedMessage></a>
-        </div>
-     );
-}
+    constructor(props) {
+        super(props);
+        const storeState = store.getState();
+        this.state = { 
+            animaList: [],
+            isPlay: false,
+            isAllStop: storeState.playingVoice.isAllStop,
+            isLoop: storeState.playingVoice.isLoop,
+            playingIndex: storeState.playingVoice.playingIndex,
+            hitIndex: storeState.playingVoice.hitIndex,
+            playerList: []
+        }
+        this.voiceButton = createRef();
+    }
 
+    // 挂载
+    componentDidMount(){
+        store.subscribe(() => {
+            const storeState = store.getState();
+            this.setState(() => ({
+                isAllStop: storeState.playingVoice.isAllStop,
+                isLoop: storeState.playingVoice.isLoop,
+                playingIndex: storeState.playingVoice.playingIndex,
+                hitIndex: storeState.playingVoice.hitIndex
+            }));
+        });
+    }
+
+    // 更新后
+    componentDidUpdate(prevProps, prevState){  
+        // 选取当前播放的音声
+        if(this.props.currentIndex === this.state.playingIndex){
+            this.watchPlayState(this.props.onevoice, prevState);
+        }
+    }
+
+    // 监听按钮状态
+    watchPlayState = (voice, prevState) => {
+        if(this.state.isAllStop){
+            this.stopVoice()
+            return;
+        }else if(this.props.currentIndex === this.state.hitIndex && !this.state.isPlay){
+            this.randomVoice();
+            return;
+        }else if(this.state.isPlay){
+            if(this.state.playerList.length > 0){
+                this.voiceButton.current.classList.remove('wrapper-click');
+                this.voiceButton.current.classList.add('wrapper-click');
+            }
+            if(this.state.playerList.length === 0){
+                this.voiceButton.current.classList.remove('wrapper-click');
+            }
+        }else if(!this.state.isPlay){
+            this.voiceButton.current.classList.remove('wrapper-click');
+            switch(this.state.isLoop){
+                case NO_LOOP:
+                    store.dispatch(createClearPlayerInfo());
+                    return;
+                case ONE_LOOP:
+                    this._playerPlay(voice);
+                    return;
+                case ALL_VOICE_LOOP:
+                    this._playerPlay(voice, this.loopAll);
+                    return;
+                default:
+                    return;
+            }
+        }
+        
+    }
+
+    // 停止按钮音声
+    stopVoice = () => {
+        this.voiceButton.current.classList.remove('wrapper-click');
+        if(this.state.playerList.length !== 0){
+            this.state.playerList.map((item, key) => item.pause());
+        }
+        store.dispatch(createChangePlayingIndex(-1));
+        this.setState({
+            isPlay: false,
+            playerList: JSON.parse(JSON.stringify([]))
+        })
+    }
+
+    // 点击播放音声
+    playVoice = () => {
+        this._playerPlay(this.props.onevoice, 
+            () => {this.voiceButton.current.classList.remove('wrapper-click')},
+            () => {store.dispatch(createPlayingAction({onevoice: this.props.onevoice, currentIndex: this.props.currentIndex}))}
+        );
+    }
+
+    // 随机播放音声
+    randomVoice = () => {
+        this._playerPlay(
+            this.props.onevoice,
+            () => {},
+            () => {store.dispatch(createRandomAction({onevoice: this.props.onevoice, hitIndex: -1}))}
+        );
+    }
+
+    // 全部循环音声
+    loopAll = () => {
+        PubSub.publishSync('nextVoice');
+    }
+
+    // audio播放音声
+    _playerPlay = (voice, stopcb, playcb) => {
+        const audio = new Audio();
+        audio.src = pathComplete(voice);
+        audio.preload = 'meta';
+        audio.load();
+        let _playerList = this.state.playerList;
+        _playerList.push(audio);
+        audio.oncanplay = () => {
+            // console.log("music can play");
+            const pieceTime = getAudioSecond(audio.duration) / 6;
+            this.setState({
+                isPlay: true,
+                playerList: [..._playerList],
+                piece: pieceTime
+            })
+            if(playcb){
+                playcb();
+            }
+            audio.play().then(() => {
+                // console.log("music playing");
+            })
+        }
+        audio.onended = () => {
+            // console.log("music stop");
+            let _playerList = this.state.playerList;
+            _playerList.shift();
+            this.setState({
+                playerList: [..._playerList]
+            })
+            if(stopcb){
+                stopcb();
+            }
+            if(this.state.playerList.length === 0){
+                this.setState({isPlay: false})
+            }
+        }
+        audio.onerror = () => {
+            console.error("音频播放失败");
+        }
+    }
+
+    render() { 
+        return ( 
+            <div className="btn-wrapper" ref={this.voiceButton}>
+                <div className="left-mask mask">
+                    <div className="left-top-mask" style={{'--piece': this.state.piece+'s'}}></div>
+                    <div className="left-bottom-mask" style={{'--piece': this.state.piece+'s'}}></div>
+                </div>
+                <div className="middle-mask-container mask">
+                    <div className="middle-top-mask" style={{'--piece': this.state.piece+'s'}}></div>
+                    <div className="middle-bottom-mask" style={{'--piece': this.state.piece+'s'}}></div>
+                </div>
+                <div className="right-mask mask">
+                    <div className="right-top-mask" style={{'--piece': this.state.piece+'s'}}></div>
+                    <div className="right-bottom-mask" style={{'--piece': this.state.piece+'s'}}></div>
+                </div>
+                <div className="mask-gray mask"></div>
+                <a onClick={this.playVoice} className="btn-name"><FormattedMessage id={this.props.lang}></FormattedMessage></a>
+            </div>
+        );
+    }
+}
+ 
 export default VoiceBtn;

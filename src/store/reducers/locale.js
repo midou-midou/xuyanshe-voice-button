@@ -1,5 +1,5 @@
 import { CHANGE_LANG } from '../constant'
-import zh from '../../locale/zh'
+// import zh from '../../locale/zh'
 
 var locale = 'zh';
 

@@ -13,6 +13,8 @@
 
 **声明：本作品为粉丝作品，与虚研社官方等账号无任何关联**
 
+提交PR请到Github仓库，gitee仓库仅作为同步仓库
+
 ## 在线演示 Demo
 
 Demo [点这里](https://xynbtn.gitee.io)
@@ -92,7 +94,7 @@ yarn start
 ## 提交
 
 - **PR请提交到dev分支，main分支暂不支持PR**
-- **git commit请遵循husky规范**
+- **git commit请遵循commit规范**
 - **issue的提交可以在gitee或GitHub上提交**
 
 ## License

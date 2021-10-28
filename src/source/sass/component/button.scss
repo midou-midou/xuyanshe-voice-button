@@ -137,7 +137,7 @@
 
 // 按钮 & 进度条动画
 .wrapper-click{
-    animation: oneBeat 0.6s ease-out;
+    animation: oneBeat 0.45s ease-out;
     .left-top-mask{
         animation: left-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }

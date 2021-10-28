@@ -50,7 +50,15 @@
             animation: oneBeat 1s;
         }
 
+        .control-btn-reclick{
+            animation: oneBeat 1s;
+        }
+
         .cbtn-bg-click{
+            animation: pulse 1s;
+        }
+
+        .cbtn-bg-reclick{
             animation: pulse 1s;
         }
 
@@ -77,8 +85,8 @@
     }
     
     50% {
-        -webkit-transform: scale(0.7);
-        transform: scale(0.7);
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
     }
 
     100% {
