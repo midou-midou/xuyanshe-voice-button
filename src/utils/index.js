@@ -23,9 +23,9 @@ const getTargArr = (sour) => {
         return;
     }
     var targetArr = [];
-    voiceData[sour].map((clfyVoice, k) => {
-        targetArr = [...targetArr, ...clfyVoice.voice];
-    })
+    voiceData[sour].map((clfyVoice, k) => 
+        targetArr = [...targetArr, ...clfyVoice.voice]
+    )
     return targetArr;
 }
 
@@ -45,7 +45,7 @@ const getBiliProfileUrl = (biliId) => {
         return;
     }
     biliId = parseInt(biliId);
-    // TODO: fetch 403 问题
+    // TODO: next version will do
     // const profileUrl = await (await fetch(`http://localhost:3000/bApi?mid=${biliId}`)).json();
     const profileUrl = "https://static.xiaoblogs.cn/img/head.jpg";
     return profileUrl;
@@ -63,6 +63,7 @@ const drawDanmu = (canvas, danmulist, style) => {
         let x = Math.floor(Math.random() * 400);
         let y = Math.floor(Math.random() * 200);
         ctx.fillText(danmu.toString(), x, y);
+        return null;
     })
 }
 

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { Fragment } from "react";
-import VoicePanel from '../VoicePanel'
-import AudioPanel from '../AudioPanel'
-import AnnoPanel from '../AnnoPanel'
+import VoicePanel from '../../VoicePanel'
+import AudioPanel from '../../AudioPanel'
+import AnnoPanel from '../../AnnoPanel'
 
 function Reine(){
     const voice = useSelector(state => state.getVoiceData.xiaorou);

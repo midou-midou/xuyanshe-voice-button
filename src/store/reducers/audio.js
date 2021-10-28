@@ -1,9 +1,12 @@
 import { 
     PLAYINGVOICE,
     LOOPONEVOICE,
-    STOPVOICE
+    STOPVOICE,
+    CLEARVOICEINFO,
+    RANDOMVOICE,
+    CHANGEPLAYINGINDEX
 } from '../constant'
-import { NO_LOOP, ALL_VOICE_LOOP, ONE_LOOP, PLAYLIST_LOOP } from '../../config/enmu'
+import { NO_LOOP } from '../../config/enmu'
 
 // 播放器数据 播放器维护当前播放的最新Voice
 // playingVoice : 当前播放的Voice
@@ -14,25 +17,50 @@ import { NO_LOOP, ALL_VOICE_LOOP, ONE_LOOP, PLAYLIST_LOOP } from '../../config/e
 var playingVoice = {
     voice: {},
     isPlay: false,
-    isLoop: NO_LOOP
+    isAllStop: false,
+    isLoop: NO_LOOP,
+    playingIndex: -1,
+    hitIndex: -1,
+    playingList: []
 };
 
 export default function playerReducer(preState = playingVoice, action){
     const { data, type } = action;
+    let newState;
     switch(type){
         case PLAYINGVOICE:
-            preState = Object.assign(preState, {voice: data});
+            preState = Object.assign(preState, {voice: data.onevoice});
             preState.isPlay = true;
-            var newState = JSON.parse(JSON.stringify(preState));
+            preState.isAllStop = false;
+            preState.playingIndex = data.currentIndex;
+            preState.playingList.push(data.onevoice);
+            newState = JSON.parse(JSON.stringify(preState));
             return newState;
         case LOOPONEVOICE:
             preState.isLoop = data;
-            var newState = JSON.parse(JSON.stringify(preState));
+            newState = JSON.parse(JSON.stringify(preState));
             return newState;
         case STOPVOICE:
-            preState.isPlay = !preState.isPlay;
+            preState.isPlay = false;
+            preState.isAllStop = true;
+            preState.isLoop = NO_LOOP;
             preState.voice = JSON.parse(JSON.stringify({}));
-            var newState = JSON.parse(JSON.stringify(preState));
+            newState = JSON.parse(JSON.stringify(preState));
+            return newState;
+        case CHANGEPLAYINGINDEX:
+            preState.playingIndex = data;
+            newState = JSON.parse(JSON.stringify(preState));
+            return newState;
+        case RANDOMVOICE:
+            preState = Object.assign(preState, {voice: data.onevoice});
+            preState.isPlay = true;
+            preState.hitIndex = data.hitIndex;
+            newState = JSON.parse(JSON.stringify(preState));
+            return newState;
+        case CLEARVOICEINFO:
+            preState.voice = JSON.parse(JSON.stringify({}));
+            preState.playingIndex = -1;
+            newState = JSON.parse(JSON.stringify(preState));
             return newState;
         default:
             return preState;

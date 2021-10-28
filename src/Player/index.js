@@ -5,7 +5,7 @@ function playerPlay(voice, addlistcb, stopcb, playAnimecb){
     audio.src = pathComplete(voice);
     audio.preload = 'meta';
     audio.load();
-    addlistcb(audio);
+    addlistcb(voice, audio);
     audio.oncanplay = () => {
         playAnimecb(audio);
         audio.play().then(() => {

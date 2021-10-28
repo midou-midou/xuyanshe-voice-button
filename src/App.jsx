@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import { Redirect, Route } from 'react-router';
-import XiaoXi from './component/XiaoXi';
-import XiaoTao from './component/XiaoTao';
-import XiaoRou from './component/XiaoRou';
+import XiaoXi from './component/Vup/XiaoXi';
+import XiaoTao from './component/Vup/XiaoTao';
+import XiaoRou from './component/Vup/XiaoRou';
 import SiteInfo from './component/SiteInfo';
 import Footer from './component/Footer';
-import Reine from './component/Reine';
-import Ailurus from './component/Ailurus';
+import Reine from './component/Vup/Reine';
+import Ailurus from './component/Vup/Ailurus';
 
 import './source/sass/index.scss';
 
