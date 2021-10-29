@@ -13,6 +13,9 @@ import { NO_LOOP } from '../../config/enmu'
 // voice: 当前播放源
 // isPlay: 播放器状态
 // isLoop: 播放器循环状态
+// playingIndex: 当前播放的音声Index
+// hitIndex: 随机命中的音声Index
+// playingList: 播放的音声列表
 
 var playingVoice = {
     voice: {},

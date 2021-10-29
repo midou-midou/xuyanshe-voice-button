@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
-import { Fragment } from "react";
-import VoicePanel from '../../VoicePanel'
-import AudioPanel from '../../AudioPanel'
-import AnnoPanel from '../../AnnoPanel'
+import { Fragment, Suspense, lazy } from "react";
+import { Skeleton } from "antd";
+import AudioPanel from '../../Panel/AudioPanel'
+const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
+const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
 
 function Ailurus(){
     const voice = useSelector(state => state.getVoiceData.xiaorou);
@@ -10,10 +11,14 @@ function Ailurus(){
     return (
         <Fragment>
             <section className="panel-root">
-                <AnnoPanel up="艾露露"/>
-                <VoicePanel voice={voice} theme="ailurus"/>
+                <Suspense fallback={<Skeleton active />} >
+                    <AnnoPanel up="艾露露"/>
+                </Suspense>
+                <Suspense fallback={<Skeleton active />} >
+                    <VoicePanel voice={voice} theme="ailurus"/>
+                </Suspense>
             </section>
-            <AudioPanel up="ailurus"/>
+            <AudioPanel voice={voice} up="ailurus"/>
         </Fragment>
     );
 }

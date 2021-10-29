@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
-import { Fragment } from "react";
-import VoicePanel from '../../VoicePanel'
-import AudioPanel from '../../AudioPanel'
-import AnnoPanel from '../../AnnoPanel'
+import { Fragment, Suspense, lazy } from "react";
+import { Skeleton } from "antd";
+import AudioPanel from '../../Panel/AudioPanel'
+const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
+const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
 
 function XiaoTao(){
     const voice = useSelector(state => state.getVoiceData.xiaotao);
@@ -10,10 +11,14 @@ function XiaoTao(){
     return (
         <Fragment>
             <section className="panel-root">
-                <AnnoPanel up="小桃"/>
-                <VoicePanel voice={voice} theme="xiaotao"/>
+                <Suspense fallback={<Skeleton active/>}>
+                    <AnnoPanel up="小桃"/>
+                </Suspense>
+                <Suspense fallback={<Skeleton active/>}>
+                    <VoicePanel voice={voice} theme="xiaotao"/>
+                </Suspense>
             </section>
-            <AudioPanel up="xiaoxi"/>
+            <AudioPanel voice={voice} up="xiaoxi"/>
         </Fragment>
     );
 }

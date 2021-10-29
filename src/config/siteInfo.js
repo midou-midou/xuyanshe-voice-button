@@ -10,7 +10,7 @@ const site = {
     cloud: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com',
     beian: {
         wangan: '',
-        icp: ''
+        icp: '渝ICP备19003460号'
     }
 }
 export default site;

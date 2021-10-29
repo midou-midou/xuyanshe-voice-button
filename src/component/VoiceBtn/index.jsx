@@ -103,7 +103,10 @@ class VoiceBtn extends Component {
     playVoice = () => {
         this._playerPlay(this.props.onevoice, 
             () => {this.voiceButton.current.classList.remove('wrapper-click')},
-            () => {store.dispatch(createPlayingAction({onevoice: this.props.onevoice, currentIndex: this.props.currentIndex}))}
+            () => {
+                store.dispatch(createPlayingAction({onevoice: this.props.onevoice, currentIndex: this.props.currentIndex}));
+                this.emitDanmu();
+            }
         );
     }
 
@@ -163,6 +166,11 @@ class VoiceBtn extends Component {
         }
     }
 
+    // 发送随机音声弹幕
+    emitDanmu = () => {
+        PubSub.publishSync('emitDanmu', {isShowHowUseInfo: false});
+    }
+
     render() { 
         return ( 
             <div className="btn-wrapper" ref={this.voiceButton}>
@@ -179,7 +187,7 @@ class VoiceBtn extends Component {
                     <div className="right-bottom-mask" style={{'--piece': this.state.piece+'s'}}></div>
                 </div>
                 <div className="mask-gray mask"></div>
-                <a onClick={this.playVoice} className="btn-name"><FormattedMessage id={this.props.lang}></FormattedMessage></a>
+                <div onClick={this.playVoice} className="btn-name"><FormattedMessage id={this.props.lang}></FormattedMessage></div>
             </div>
         );
     }

@@ -1,8 +1,11 @@
 import { useSelector } from "react-redux";
-import { Fragment } from "react";
-import VoicePanel from '../../VoicePanel'
-import AudioPanel from '../../AudioPanel'
-import AnnoPanel from '../../AnnoPanel'
+import { Fragment, lazy, Suspense } from "react";
+// import VoicePanel from '../../Panel/VoicePanel'
+import AudioPanel from '../../Panel/AudioPanel'
+import { Skeleton } from "antd";
+// import AnnoPanel from '../../Panel/AnnoPanel'
+const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
+const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
 
 function XiaoXi(){
     const voice = useSelector(state => state.getVoiceData.xiaoxi);
@@ -10,8 +13,12 @@ function XiaoXi(){
     return (
         <Fragment>
             <section className="panel-root">
-                <AnnoPanel up="小希"/>
-                <VoicePanel voice={voice} theme="xiaoxi"/>
+                <Suspense fallback={<Skeleton active/>}>
+                    <AnnoPanel up="小希"/>
+                </Suspense>
+                <Suspense fallback={<Skeleton active/>}>
+                    <VoicePanel voice={voice} theme="xiaoxi"/>
+                </Suspense>
             </section>
             <AudioPanel voice={voice} up="xiaoxi"/>
         </Fragment>

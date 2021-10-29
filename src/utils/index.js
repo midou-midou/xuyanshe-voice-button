@@ -1,5 +1,6 @@
 import site from '../config/siteInfo'
 import voiceData from '../config/voice'
+import { NO_LIVE } from '../config/enmu';
 // import http from 'http'
 
 // 组合Voice路径
@@ -51,6 +52,22 @@ const getBiliProfileUrl = (biliId) => {
     return profileUrl;
 }
 
+// 获取bili直播间info
+const getBiliLive = async (liveroomId) => {
+    if(!liveroomId){
+        console.error(`${liveroomId}不存在`);
+        return;
+    }
+    let state = NO_LIVE;
+    try{
+        const livedata = await (await fetch(`https://api.xiaoblogs.cn/live?id=${liveroomId}`, {referrerPolicy:'no-referrer'})).json();
+        state = livedata.data.live_status;
+    }catch(err){
+        console.log("请求出错",err);
+    }
+    return state;
+}
+
 // 绘制canvas弹幕
 const drawDanmu = (canvas, danmulist, style) => {
     if(!canvas || !danmulist){
@@ -88,5 +105,6 @@ export {
     getAudioSecond,
     getBiliProfileUrl,
     drawDanmu,
-    findVup
+    findVup,
+    getBiliLive
 }

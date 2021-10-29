@@ -5,6 +5,7 @@ const voiceData = {
     xiaoxi:[
         {
             clfy: '小希叫你起床',
+            alias: '\"叫床\"(bushi',
             voice:[
                 {
                     path: 'jiaoqichuang-xx.mp3',
@@ -73,6 +74,7 @@ const voiceData = {
         },
         {
             clfy: '小希的鼓励',
+            alias: '希爹你看看你过去多励志',
             voice:[
                 {
                     path: '7jg07-m2fp9.mp3',
@@ -131,24 +133,205 @@ const voiceData = {
                     }
                 }
             ]
-        }
-    ],
-    xiaotao:[
+        },
         {
-            clfy: '待添加',
+            clfy: '小希动物园',
+            alias: 'We Bought A Zoo',
             voice:[
                 {
-                    path: '',
+                    path: 'xx-dog2.mp3',
                     desc: {
-                        zh: '',
+                        zh: '哈士奇叫',
                         en: '',
                         jp: ''
                     }
                 },
                 {
-                    path: '',
+                    path: 'xx-dog111.mp3',
                     desc: {
-                        zh: '',
+                        zh: '哈士奇又叫',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xx-ji1.mp3',
+                    desc: {
+                        zh: '鸡叫',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xx-luotuo1.mp3',
+                    desc: {
+                        zh: '骆驼叫',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xx-niao1.mp3',
+                    desc: {
+                        zh: '鸟叫',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xx-wolf1.mp3',
+                    desc: {
+                        zh: '狼叫?',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xx-yangtuo.mp3',
+                    desc: {
+                        zh: '羊驼叫',
+                        en: '',
+                        jp: ''
+                    }
+                }
+            ]
+        }
+    ],
+    xiaotao:[
+        {
+            clfy: '桃桃的三年',
+            alias: '┭┮﹏┭┮',
+            voice:[
+                {
+                    path: 'xt-sannianle1.mp3',
+                    desc: {
+                        zh: '我们在一起三年了',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-peibanshigaobai.mp3',
+                    desc: {
+                        zh: '陪伴是最长情的告白',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-jiedaoai1.mp3',
+                    desc: {
+                        zh: '届到了好多爱',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-daizhechengzhang.mp3',
+                    desc: {
+                        zh: '带着帅老弟弟成长',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-duguosannian.mp3',
+                    desc: {
+                        zh: '度过∞个三年',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-dailaikuaile.mp3',
+                    desc: {
+                        zh: '带来快乐',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-chuianmianqu.mp3',
+                    desc: {
+                        zh: '给您吹安眠曲',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-mingliyouni.mp3',
+                    desc: {
+                        zh: '生命中有你',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-ainimen.mp3',
+                    desc: {
+                        zh: '爱你们!',
+                        en: '',
+                        jp: ''
+                    }
+                }
+            ]
+        },
+        {
+            clfy: '桃桃妹妹',
+            alias: '谁会认这个妹妹呢?',
+            voice:[
+                {
+                    path: 'xt-buxintengrenjia.mp3',
+                    desc: {
+                        zh: '哥哥不心疼人家',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-erji.mp3',
+                    desc: {
+                        zh: '妹妹很开心,因为哥哥耳机坏了',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-giegie.mp3',
+                    desc: {
+                        zh: '心疼giegie',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-kanwoyiyan.mp3',
+                    desc: {
+                        zh: '多看妹妹一眼',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-meimeicaboli.mp3',
+                    desc: {
+                        zh: '妹妹擦玻璃',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-youcaiboli.mp3',
+                    desc: {
+                        zh: '妹妹又擦玻璃',
+                        en: '',
+                        jp: ''
+                    }
+                },
+                {
+                    path: 'xt-mmrangggshesi.mp3',
+                    desc: {
+                        zh: '妹让哥社死,哥不得不_',
                         en: '',
                         jp: ''
                     }
@@ -158,7 +341,8 @@ const voiceData = {
     ],
     xiaorou:[
         {
-            clfy: '待添加',
+            clfy: '',
+            alias: '',
             voice:[
                 {
                     path: '',
@@ -182,6 +366,7 @@ const voiceData = {
     reine:[
         {
             clfy: '待添加',
+            alias: '',
             voice:[
                 {
                     path: '',
@@ -205,6 +390,7 @@ const voiceData = {
     ailurus:[
         {
             clfy: '待添加',
+            alias: '',
             voice:[
                 {
                     path: '',
