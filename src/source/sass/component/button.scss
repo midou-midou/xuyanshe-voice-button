@@ -121,15 +121,15 @@
 
     // mobile适配
     @media screen and (max-width: 680px){
-        --btn-height: 2.5rem;
+        --btn-height: 2rem;
         --btn-font-size: .64rem;
-        --btn-radius: 1.25rem;
+        --btn-radius: 1rem;
     }
 
     @media screen and (min-width: 680px){
-        --btn-height: 3rem;
+        --btn-height: 2.5rem;
         --btn-font-size: .8rem;
-        --btn-radius: 1.5rem;
+        --btn-radius: 1.25rem;
         
     }
 
@@ -210,6 +210,10 @@
 .xiaoxi{
     .btn-wrapper{
         box-shadow: 0px 1px 2px 1px var(--xiaoxi-color);
+        &:hover{
+            transition: box-shadow .13s linear;
+            box-shadow: 0px 2px 3px 1px var(--xiaoxi-color);
+        }   
         .btn-name{
             color: var(--xiaoxi-color);
         }
@@ -228,6 +232,10 @@
 .xiaotao{
     .btn-wrapper{
         box-shadow: 0px 1px 2px 1px var(--xiaotao-color);
+        &:hover{
+            transition: box-shadow .13s linear;
+            box-shadow: 0px 2px 3px 1px var(--xiaotao-color);
+        } 
         .btn-name{
             color: var(--xiaotao-color);
         }
@@ -246,6 +254,10 @@
 .xiaorou{
     .btn-wrapper{
         box-shadow: 0px 1px 2px 1px var(--xiaorou-color);
+        &:hover{
+            transition: box-shadow .13s linear;
+            box-shadow: 0px 2px 3px 1px var(--xiaorou-color);
+        }
         .btn-name{
             color: var(--xiaorou-color);
         }
@@ -264,6 +276,10 @@
 .reine{
     .btn-wrapper{
         box-shadow: 0px 1px 2px 1px var(--reine-color);
+        &:hover{
+            transition: box-shadow .13s linear;
+            box-shadow: 0px 2px 3px 1px var(--reine-color);
+        }
         .btn-name{
             color: var(--reine-color);
         }
@@ -282,6 +298,10 @@
 .ailurus{
     .btn-wrapper{
         box-shadow: 0px 1px 2px 1px var(--ailurus-color);
+        &:hover{
+            transition: box-shadow .13s linear;
+            box-shadow: 0px 2px 3px 1px var(--ailurus-color);
+        }
         .btn-name{
             color: var(--ailurus-color);
         }

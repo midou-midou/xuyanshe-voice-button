@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
-import { Fragment } from "react";
-import VoicePanel from '../../VoicePanel'
-import AudioPanel from '../../AudioPanel'
-import AnnoPanel from '../../AnnoPanel'
+import { Fragment, Suspense, lazy } from "react";
+import { Skeleton } from "antd";
+import AudioPanel from '../../Panel/AudioPanel'
+const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
+const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
 
 function XiaoRou(){
     const voice = useSelector(state => state.getVoiceData.xiaorou);
@@ -10,10 +11,14 @@ function XiaoRou(){
     return (
         <Fragment>
             <section className="panel-root">
-                <AnnoPanel up="小柔"/>
-                <VoicePanel voice={voice} theme="xiaorou"/>
+                <Suspense fallback={<Skeleton active />} >
+                    <AnnoPanel up="小柔"/>
+                </Suspense>
+                <Suspense fallback={<Skeleton active />} >
+                    <VoicePanel voice={voice} theme="xiaorou"/>
+                </Suspense>
             </section>
-            <AudioPanel up="xiaorou"/>
+            <AudioPanel voice={voice} up="xiaorou"/>
         </Fragment>
     );
 }

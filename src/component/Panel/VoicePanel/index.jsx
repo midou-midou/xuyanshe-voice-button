@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import { useSelector } from 'react-redux';
-import VoiceBtn from '../VoiceBtn'
+import VoiceBtn from '../../VoiceBtn'
 
 function VoicePanel(props){
     const {voice, theme} = props;
@@ -12,8 +12,11 @@ function VoicePanel(props){
             {
                 voice.map((tags, clifkey) => {
                     return (
-                        <div className={"panel-container "+ theme} key={clifkey}>
-                            <div className="panel-tags">{tags.clfy}</div>
+                        <div className={"panel-container voicePanelZoomIn "+ theme} key={clifkey}>
+                            <div className="panel-info-container">
+                                <div className="panel-tags">{tags.clfy}</div>
+                                <div className="panel-alias heimu">{tags.alias}</div>
+                            </div>
                             <div className="panel-btn-container">
                             {
                                 tags.voice.map((oneSound, voiceKey) => {

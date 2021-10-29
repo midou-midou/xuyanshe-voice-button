@@ -4,16 +4,44 @@
     box-shadow: 0 .1rem .2rem var(--shadow-color);
     background-color: var(--panel-bg-color);
     
-    .panel-tags{
+    .panel-info-container{
+        padding: .5rem 0 0 0;
+        
+        div{
+            display: inline-block;
+        }
+        
+        .panel-tags{
         font-size: 1.4rem;
-        font-weight: 700;
+        font-weight: 650;
         padding: 1rem;
         color: var(--global-font-color);
-    }
 
+        &::after{
+           content: ' - '; 
+            }
+        }
+
+        .panel-alias{
+            font-size: 1rem;
+            font-weight: 500;
+            padding: .3rem .5rem; 
+        }
+    }
+    
     .panel-btn-container{
+        padding: .5rem 0;
         display: flex;
         flex-wrap: wrap
+    }
+
+    .heimu{ 
+        width: auto;
+        background-color: #252525; 
+        color: #252525; 
+        text-shadow: none; 
+
+        &:hover{ transition: color .13s linear; color: whitesmoke;}
     }
     
 }
@@ -50,15 +78,7 @@
             animation: oneBeat 1s;
         }
 
-        .control-btn-reclick{
-            animation: oneBeat 1s;
-        }
-
         .cbtn-bg-click{
-            animation: pulse 1s;
-        }
-
-        .cbtn-bg-reclick{
             animation: pulse 1s;
         }
 
@@ -77,39 +97,62 @@
     
 }
 
-// audio panel 动画
-@keyframes oneBeat {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    
-    50% {
-        -webkit-transform: scale(0.85);
-        transform: scale(0.85);
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
 .annoPanel-container{
     display: flex;
     justify-content: center;
-    padding: .5rem 2rem;
+    padding: 2rem 1rem;
     align-items: center;
-    
-    .profile{
-        width: 6rem;
-        height: 6rem;
+    position: relative;
+
+    .profile-container{
+        position: relative;
         margin: 0 1rem;
-        border-radius: 3rem;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        
+        .profile{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 3rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .profile-border{
+            position: absolute;
+            top: 0;
+            width: 6rem;
+            height: 6rem;
+            background-color: transparent;
+            border-radius: 3rem;
+        }
+
+        .profile-info{
+            display: none;
+            font-weight: 600;
+            padding: .3rem .2rem;
+            border-radius: .6rem;
+            background-color: red;
+            border: 1px solid white;
+            text-align: center;
+            cursor: pointer;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .live{
+            border: 1.7px solid red;
+            animation: liveOn 2s infinite linear;
+        }
+
+        .liveInfo{
+            display: block;
+        }
+        
     }
+    
+    
 
     #danmu-collect{
         width: 20%;
@@ -167,10 +210,61 @@
             text-shadow: none; 
 
             &:hover{ transition: color .13s linear ; color: #d0e6ff; }
-
-        
         }
         
+    }
+
+    .site-inner-leftimg{
+        width: var(--head-img-wh);
+        height: var(--head-img-wh);
+        position: absolute;
+        left: var(--head-img-padding);
+        bottom: 0;
+        background-image: url(https://static.xiaoblogs.cn/img/headleft.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .site-inner-rightimg{
+        width: var(--head-img-wh);
+        height: var(--head-img-wh);
+        position: absolute;
+        bottom: 0;
+        right: var(--head-img-padding);
+        background-image: url(https://static.xiaoblogs.cn/img/headright.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    // mobile适配
+    @media screen and (max-width: 680px){
+        --head-img-padding: 1.5rem;
+        --head-img-wh: 3rem;
+    }
+
+    @media screen and (min-width: 680px){
+        --head-img-padding: 5rem;
+        --head-img-wh: 10rem;
+        
+    }
+    
+}
+
+.danmaku-container-panel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    .danmaku-container{
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        div{
+            width: auto !important;
+        }
     }
     
 }
@@ -256,4 +350,65 @@
         }
     }
     
+}
+
+
+// 动画
+// audio panel 按钮动画
+@keyframes oneBeat {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    50% {
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+// 入场动画
+.siteinfoZoomIn{
+    --zoomInDelay: 0;
+    animation: zoomIn 1s;
+    animation-delay: calc(1s * var(--zoomInDelay));
+}
+.drawPanelZoomIn{
+    --zoomInDelay: 0;
+    animation: zoomIn 1s;
+    animation-delay: calc(1s * var(--zoomInDelay));
+}
+.dynamicZoomIn{
+    --zoomInDelay: 0;
+    animation: zoomIn 1s;
+    animation-delay: calc(1s * var(--zoomInDelay));
+}
+.voicePanelZoomIn{
+    --zoomInDelay: 0;
+    animation: zoomIn 1s;
+    animation-delay: calc(1s * var(--zoomInDelay));
+}
+
+// live on 动画
+@keyframes liveOn {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0%;
+    }
 }

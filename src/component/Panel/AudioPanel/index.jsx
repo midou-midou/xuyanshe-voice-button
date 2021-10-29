@@ -2,14 +2,14 @@ import { Component, createRef } from "react";
 import { connect } from "react-redux";
 import PubSub from 'pubsub-js';
 import { IntlProvider, FormattedMessage } from 'react-intl';
-import store from '../../store/store';
-import { NO_LOOP, ALL_VOICE_LOOP, ONE_LOOP } from '../../config/enmu'
+import store from '../../../store/store';
+import { NO_LOOP, ALL_VOICE_LOOP, ONE_LOOP } from '../../../config/enmu'
 import {
     createPlayStopAction,
     createPlayerStateAction,
     createRandomAction,
     createPlayingAction
-} from '../../store/actions/audio'
+} from '../../../store/actions/audio'
 
 class AudioPanel extends Component {
 
@@ -32,11 +32,10 @@ class AudioPanel extends Component {
         let _playlist = new Map();
         let _playlistIndex = [];
         this.props.voice.map((tags, clifkey) => 
-            tags.voice.map((oneSound, voiceKey) => {
-                _playlist.set(clifkey*100+voiceKey, oneSound);
-                _playlistIndex.push(clifkey*100+voiceKey);
-                return null;
-            })
+            tags.voice.map((oneSound, voiceKey) => (
+                _playlist.set(clifkey*100+voiceKey, oneSound),
+                _playlistIndex.push(clifkey*100+voiceKey)
+            ))
         )
         this.setState(()=>({
             playList: _playlist,
@@ -129,7 +128,7 @@ class AudioPanel extends Component {
         }
     }
 
-    // 播放动画
+    // 播放动画 & 清除动画
     playAnima = (myref) => {
         myref.current.classList.add('cbtn-bg-click');
         myref.current.firstChild.classList.add('control-btn-click');
