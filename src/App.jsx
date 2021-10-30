@@ -7,6 +7,7 @@ import SiteInfo from './component/Panel/SiteInfo';
 import Footer from './component/Footer';
 import Reine from './component/Vup/Reine';
 import Ailurus from './component/Vup/Ailurus';
+import Console from './component/utills/Console';
 
 import './source/sass/index.scss';
 
@@ -23,6 +24,7 @@ function App() {
 				<Redirect to="/xx"/>
 			</Switch>
 			<Footer />
+			<Console />
 		</Fragment>
 	);
 }

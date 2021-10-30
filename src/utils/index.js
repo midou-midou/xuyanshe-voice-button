@@ -60,7 +60,7 @@ const getBiliLive = async (liveroomId) => {
     }
     let state = NO_LIVE;
     try{
-        const livedata = await (await fetch(`https://api.xiaoblogs.cn/live?id=${liveroomId}`, {referrerPolicy:'no-referrer'})).json();
+        const livedata = await (await fetch(`https://xysbtn.xiaoblogs.cn/live?id=${liveroomId}`, {referrerPolicy:'no-referrer'})).json();
         state = livedata.data.live_status;
     }catch(err){
         console.log("请求出错",err);

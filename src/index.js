@@ -12,8 +12,8 @@ ReactDOM.render(
         <BrowserRouter>
             <Provider store={store}>
                 <Nav />
-                <FloatNavLink />
                 <App />
+                <FloatNavLink />
            </Provider>
         </BrowserRouter>
     </React.StrictMode>,
