@@ -11,6 +11,7 @@ const site = {
     beian: {
         wangan: '',
         icp: '渝ICP备19003460号'
-    }
+    },
+    contribute: []
 }
 export default site;
