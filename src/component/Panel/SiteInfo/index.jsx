@@ -5,7 +5,7 @@ function SiteInfo() {
             <div className="site-info">
                 <p className="site-inner site-title">\ 欢迎来到虚研社按钮 /</p>
                 <p className="site-inner site-gray heimu">收录一些奇怪的，严🈲外传的，可以在公众场合大声播放的，无限循环的可爱的声音</p>
-                <p className="site-inner site-important">此项目处于初期，还缺少大量的<span style={{textDecoration: 'underline',color: '#082567',fontWeight: 'bloder'}}>可爱声音、网站功能</span>。期望各位粉丝能多多助力，一同维护这个项目</p>
+                <p className="site-inner site-important">此项目处于初期，还缺少大量的<span style={{textDecoration: 'underline',color: 'var(--link-blue)',fontWeight: 'bloder'}}>可爱声音、网站功能</span>。期望各位粉丝能多多助力，一同维护这个项目</p>
                 <p className="site-inner site-important"><span style={{color: 'red',fontWeight: 'bloder'}}>黑色区域下有好康的！！！</span></p>
                 <p className="site-inner site-important"><span style={{color: 'red',fontWeight: 'bloder'}}>右下角的按钮可以切换页面哦</span></p>
                 <p className="site-inner site-important">此项目链接：

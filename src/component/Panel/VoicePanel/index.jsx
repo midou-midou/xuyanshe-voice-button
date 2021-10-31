@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { IntlProvider } from 'react-intl';
+import { FormattedMessage, IntlProvider } from 'react-intl';
 import { useSelector } from 'react-redux';
 import VoiceBtn from '../../VoiceBtn'
 
@@ -14,8 +14,12 @@ function VoicePanel(props){
                     return (
                         <div className={"panel-container voicePanelZoomIn "+ theme} key={clifkey}>
                             <div className="panel-info-container">
-                                <div className="panel-tags">{tags.clfy}</div>
-                                <div className="panel-alias heimu">{tags.alias}</div>
+                                <IntlProvider locale={lang} messages={tags.clfy}>
+                                    <div className="panel-tags"><FormattedMessage id={lang}></FormattedMessage></div>
+                                </IntlProvider>
+                                <IntlProvider locale={lang} messages={tags.alias}>
+                                    <div className="panel-alias heimu"><FormattedMessage id={lang}></FormattedMessage></div>
+                                </IntlProvider>
                             </div>
                             <div className="panel-btn-container">
                             {

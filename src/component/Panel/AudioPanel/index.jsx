@@ -24,6 +24,7 @@ class AudioPanel extends Component {
         this.playstopbtn = createRef();
         this.loopbtn = createRef();
         this.randombtn = createRef();
+        this.audioInfo = createRef();
         this.timer = setTimeout(()=>{},1000);
     }
 
@@ -58,7 +59,13 @@ class AudioPanel extends Component {
     }
 
     // 组件更新后执行
-    componentDidUpdate(){
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.lang !== this.props.lang){
+            return null;
+        }
+        if(this.props.playingVoiceData.desc !== prevProps.playingVoiceData.desc){
+            this.audioInfo.current.classList.add('audio-info-show');
+        }
         switch(this.props.isLoop){
             case NO_LOOP:
                 return;
@@ -141,8 +148,11 @@ class AudioPanel extends Component {
     render() { 
         return ( 
             <div className="audioPanel-container">
-                <IntlProvider locale={this.props.lang} messages={this.props.playingVoiceData.desc || {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}>
-                    <div className="audioinfo animate__animated animate__zoomIn">
+                <IntlProvider locale={this.props.lang} messages={this.props.playingVoiceData.desc}>
+                    <div 
+                        className="audioinfo audio-info-show"
+                        ref={this.audioInfo} 
+                        onAnimationEnd={() => {this.audioInfo.current.classList.remove('audio-info-show');}}>
                         <FormattedMessage id={this.props.lang}></FormattedMessage>
                     </div>
                 </IntlProvider>

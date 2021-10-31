@@ -24,7 +24,7 @@ Demo [点这里](https://xynbtn.gitee.io)
 - [ ] i18n 国际化
 - [ ] Dark mode 夜间模式
 - [ ] RSS
-- [ ] 更多音声资源 - 需要各位朋友的支援
+- [ ] 更多音声资源
 - [ ] 粉丝音声组件
 - [ ] 友链
 - [ ] ……
@@ -70,7 +70,8 @@ yarn start
 ```js
  xiaoxi:[
         {
-            clfy: '小希叫你起床',                        // clfy: 为音声的分类
+            clfy: {zh:'小希叫你起床',en:'',jp:''},      // clfy: 音声的分类
+            alias: {zh:'',en:'',jp:''},				  // ailas: 音声分类信息整活解释
             voice:[
                 {
                     path: 'bunengzaishuila-xx.mp3',   // 音声文件名，音声的完整路径会根据siteInfo配置中的cloud字段自动拼装

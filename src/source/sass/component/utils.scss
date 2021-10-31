@@ -1,0 +1,108 @@
+// i18n
+.i18n-container{
+    position: absolute;
+    top: .8rem;
+    left: .5rem;
+    font-size: 1.1rem;
+    color: var(--info-font-color);
+
+    .i18n-show{
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+
+        .i18n-info{
+            margin: 0 .5rem;
+            font-weight: 600;
+        }
+        
+    }
+
+    .i18n-droplist{
+        display: none;
+        background-color: var(--i18n-bg);
+        border-radius: .3rem;
+        margin: 1rem 0 0 0;
+        box-shadow: 0 .15rem .2rem .1rem var(--shadow-color);
+
+        .i18n-item{
+            box-sizing: border-box;
+            padding: .5rem 1.2rem;
+            text-align: center;
+            font-size: 1rem;
+            border-radius: .3rem;
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgba(37,157,212,0.2);
+                transition: background-color .13s linear;
+            }
+            
+        }
+        
+    }
+
+    .active{
+        display: block;
+        animation: slideInFromBottom .2s linear;
+    }
+
+}
+
+// darkmode
+.darkmode-btn{
+    position: absolute;
+    top: .6rem;
+    right: .5rem;
+    cursor: pointer;
+
+    .darkmode-container{
+        display: flex;
+        position: relative;
+        align-items: center;
+        border: .15rem solid var(--link-blue);
+        border-radius: 1.5rem;
+    }
+
+    .darkmode-sun{
+        padding: .2rem;
+    }
+
+    .darkmode-moon{
+        padding: .2rem;
+    }
+
+    .darkmode-mask{
+        position: absolute;
+        top: .17rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: .6rem;
+        background-color: var(--link-blue);
+    }
+
+    .left{
+        left: .19rem;
+    }
+
+    .right{
+        right: .19rem;
+    }
+    
+}
+
+// animation
+@keyframes slideInFromBottom {
+    0%{
+        transform: translate3d(0, 20%, 0);
+        opacity: 0%;
+    }
+    50%{
+        transform: translate3d(0, 10%, 0);
+        opacity: 50%;
+    }
+    100%{
+        transform: translate3d(0, 0, 0);
+        opacity: 100%;
+    }
+}

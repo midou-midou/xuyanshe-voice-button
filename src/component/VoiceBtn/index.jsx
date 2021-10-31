@@ -44,19 +44,25 @@ class VoiceBtn extends Component {
     }
 
     // 更新后
-    componentDidUpdate(prevProps, prevState){  
+    componentDidUpdate(prevProps, prevState){
+        // i18n
+        if(this.props.lang !== prevProps.lang){
+            return null;
+        }  
         // 选取当前播放的音声
         if(this.props.currentIndex === this.state.playingIndex){
-            this.watchPlayState(this.props.onevoice, prevState);
+            this.watchPlayState(this.props.onevoice);
         }
     }
 
     // 监听按钮状态
-    watchPlayState = (voice, prevState) => {
+    watchPlayState = (voice) => {
+        // stop全部音声
         if(this.state.isAllStop){
             this.stopVoice()
             return;
-        }else if(this.props.currentIndex === this.state.hitIndex && !this.state.isPlay){
+        }
+        if(this.props.currentIndex === this.state.hitIndex && !this.state.isPlay){
             this.randomVoice();
             return;
         }else if(this.state.isPlay){
@@ -88,15 +94,20 @@ class VoiceBtn extends Component {
 
     // 停止按钮音声
     stopVoice = () => {
-        this.voiceButton.current.classList.remove('wrapper-click');
-        if(this.state.playerList.length !== 0){
-            this.state.playerList.map((item, key) => item.pause());
+        if(this.state.isPlay){
+            this.voiceButton.current.classList.remove('wrapper-click');
+            if(this.state.playerList.length !== 0){
+                this.state.playerList.map((item, key) => item.pause());
+            }
+            store.dispatch(createChangePlayingIndex(-1));
+            this.setState({
+                isPlay: false,
+                playerList: JSON.parse(JSON.stringify([]))
+            })
+            return;
+        }else{
+            return;
         }
-        store.dispatch(createChangePlayingIndex(-1));
-        this.setState({
-            isPlay: false,
-            playerList: JSON.parse(JSON.stringify([]))
-        })
     }
 
     // 点击播放音声

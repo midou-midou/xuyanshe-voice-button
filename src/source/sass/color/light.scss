@@ -1,12 +1,16 @@
-:root{
-    --nav-font-color: white;
-    --nav-bg-color: #1c264a;
+.light{
+    --info-font-color: #1c264a;
+    --nav-bg-color: #ffffff;
     --shadow-color: #f0f0f0;
     --background-color: #f6f6f6;
     --panel-bg-color: #ffffff;
     --global-font-color: #999999;
-    --btn-bg-color: #d6d7df;
     --link-blue: #259dd4;
+    --btn-bg: white;
+    --audio-panel: rgba(255,255,255,.7);
+    --audio-font-color: black;
+    --audio-hover-color: #999999;
+    --i18n-bg: #FFFAFA;
 
     --xiaoxi-color: #CD3951;
     --xiaotao-color: #bba5d7;

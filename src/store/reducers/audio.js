@@ -18,7 +18,7 @@ import { NO_LOOP } from '../../config/enmu'
 // playingList: 播放的音声列表
 
 var playingVoice = {
-    voice: {},
+    voice: {path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}},
     isPlay: false,
     isAllStop: false,
     isLoop: NO_LOOP,
@@ -47,7 +47,7 @@ export default function playerReducer(preState = playingVoice, action){
             preState.isPlay = false;
             preState.isAllStop = true;
             preState.isLoop = NO_LOOP;
-            preState.voice = JSON.parse(JSON.stringify({}));
+            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
             newState = JSON.parse(JSON.stringify(preState));
             return newState;
         case CHANGEPLAYINGINDEX:
@@ -61,7 +61,7 @@ export default function playerReducer(preState = playingVoice, action){
             newState = JSON.parse(JSON.stringify(preState));
             return newState;
         case CLEARVOICEINFO:
-            preState.voice = JSON.parse(JSON.stringify({}));
+            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
             preState.playingIndex = -1;
             newState = JSON.parse(JSON.stringify(preState));
             return newState;

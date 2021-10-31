@@ -6,7 +6,7 @@ const vupData = [
         abbr: 'xx',
         color: '#CD3951',
         profile: 'https://static.xiaoblogs.cn/img/xx.png',
-        icon: 'https://static.xiaoblogs.cn/img/AMD.png',
+        icon: 'https://static.xiaoblogs.cn/img/Amd1.png',
         liveroom: '4138602',
         desc: ['希酱','χ型AI','土妹子','豪宅毁灭者','王二狗','希某人','沙雕希']
     },
@@ -25,7 +25,7 @@ const vupData = [
         name: '小柔',
         abbr: 'xr',
         color: '#89dedb',
-        icon: 'https://static.xiaoblogs.cn/img/rgd.png',
+        icon: 'https://static.xiaoblogs.cn/img/rouguangdeng.png',
         liveroom: '22696954',
         profile: 'https://static.xiaoblogs.cn/img/xr.png',
         desc: ['孙女','柔宝','肉包','花呗三太子','御姐','马尾','温柔','怕羞']

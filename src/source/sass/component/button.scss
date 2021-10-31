@@ -32,7 +32,7 @@
         width: calc(100% - 5px);
         height: calc(100% - 5px);
         border-radius: calc(var(--btn-radius));
-        background-color: white;
+        background-color: var(--btn-bg);
     }
 
     .left-mask{

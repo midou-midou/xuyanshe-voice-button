@@ -50,11 +50,16 @@
     width: 100%;
     position: sticky;
     bottom: 0;
-    background-color: rgba(255,255,255,.7);
+    background-color: var(--audio-panel);
+    color: var(--audio-font-color);
 
     .audioinfo{
         text-align: center;
         padding: 1rem 0 .5rem 0;
+    }
+
+    .audio-info-show{
+        animation: zoomIn 1s;
     }
     
     .audioControl-container{
@@ -71,7 +76,7 @@
         }
 
         div:hover{
-            background-color: #e8e8e8;
+            background-color: var(--audio-hover-color);
         }
 
         .control-btn-click{
@@ -103,6 +108,7 @@
     padding: 2rem 1rem;
     align-items: center;
     position: relative;
+    color: var(--info-font-color);
 
     .profile-container{
         position: relative;
@@ -276,6 +282,7 @@
     margin: 1rem 1rem 1rem;
     padding-top: 0.5rem;
     border-top: 0.1rem solid var(--global-shadow);
+    color: var(--info-font-color);
 
     a{
         color: var(--link-blue);
