@@ -1,3 +1,17 @@
+.nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    // mobile适配
+    @media screen and (max-width: 680px){
+        display: none;
+    }
+
+    @media screen and (min-width: 680px){
+        
+    }
+}
+
 .navbar{
     width: 100%;
     height: 3rem;
@@ -5,8 +19,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-bottom:.2rem solid var(--nav-bg-color);
-    background-color: white;
+    border-bottom:.1rem solid var(--global-font-color);
+    background-color: var(--nav-bg-color);
     
     .nav-item{
         margin: 0 1rem;
@@ -45,15 +59,6 @@
     .top-nav-active{
         border-bottom: .15rem solid var(--link-blue);
     }
-
-    // mobile适配
-    @media screen and (max-width: 680px){
-        display: none;
-    }
-
-    @media screen and (min-width: 680px){
-        
-    }
     
 }
 
@@ -67,7 +72,7 @@
     border-radius: 1.4rem;
     cursor: pointer;
     border: .1rem solid #bdbebd;
-    box-shadow: 0 1px 2px 2px white;
+    box-shadow: 0 1px 2px 2px var(--shadow-color);
 
     i{
         position: absolute;

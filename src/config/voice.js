@@ -4,8 +4,8 @@
 const voiceData = {
     xiaoxi:[
         {
-            clfy: '小希叫你起床',
-            alias: '\"叫床\"(bushi',
+            clfy: {zh: '小希叫你起床', en: '', jp: ''},
+            alias: {zh: '\"叫床\"(bushi', en: '', jp: ''},
             voice:[
                 {
                     path: 'jiaoqichuang-xx.mp3',
@@ -73,8 +73,8 @@ const voiceData = {
             ]
         },
         {
-            clfy: '小希的鼓励',
-            alias: '希爹你看看你过去多励志',
+            clfy: {zh: '小希的鼓励', en: '', jp: ''},
+            alias: {zh: '希爹你看看你过去多励志', en: '', jp: ''},
             voice:[
                 {
                     path: '7jg07-m2fp9.mp3',
@@ -135,8 +135,8 @@ const voiceData = {
             ]
         },
         {
-            clfy: '小希动物园',
-            alias: 'We Bought A Zoo',
+            clfy: {zh: '小希动物园', en: '', jp: ''},
+            alias: {zh: 'We Bought A Zoo', en: '', jp: ''},
             voice:[
                 {
                     path: 'xx-dog2.mp3',
@@ -199,8 +199,8 @@ const voiceData = {
     ],
     xiaotao:[
         {
-            clfy: '桃桃的三年',
-            alias: '┭┮﹏┭┮',
+            clfy: {zh: '桃桃的三年', en: '', jp: ''},
+            alias: {zh: '┭┮﹏┭┮', en: '', jp: ''},
             voice:[
                 {
                     path: 'xt-sannianle1.mp3',
@@ -277,8 +277,8 @@ const voiceData = {
             ]
         },
         {
-            clfy: '桃桃妹妹',
-            alias: '谁会认这个妹妹呢?',
+            clfy: {zh: '桃桃妹妹', en: '', jp: ''},
+            alias: {zh: '谁会认这个妹妹呢?', en: '', jp: ''},
             voice:[
                 {
                     path: 'xt-buxintengrenjia.mp3',
@@ -341,8 +341,8 @@ const voiceData = {
     ],
     xiaorou:[
         {
-            clfy: '',
-            alias: '',
+            clfy: {zh: '', en: '', jp: ''},
+            alias: {zh: '',en: '', jp: ''},
             voice:[
                 {
                     path: '',
@@ -365,8 +365,8 @@ const voiceData = {
     ],
     reine:[
         {
-            clfy: '待添加',
-            alias: '',
+            clfy: {zh: '', en: '', jp: ''},
+            alias: {zh: '',en: '', jp: ''},
             voice:[
                 {
                     path: '',
@@ -389,8 +389,8 @@ const voiceData = {
     ],
     ailurus:[
         {
-            clfy: '待添加',
-            alias: '',
+            clfy: {zh: '', en: '', jp: ''},
+            alias: {zh: '',en: '', jp: ''},
             voice:[
                 {
                     path: '',
