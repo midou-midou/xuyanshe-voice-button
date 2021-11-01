@@ -11,13 +11,13 @@ class DanmuPanel extends Component {
         }
         this.danmaku = null;
         this.danmakuRef = createRef();
-        this.timer = setInterval(() => {}, 2000);
     }
 
     componentDidMount(){
         this.danmaku = new Danmaku({
             container: this.danmakuRef.current
         })
+        // this.showHowUseInfo();
         PubSub.subscribe('emitDanmu', (_, state) => {
             if(this.state.isShowHowUseInfo){
                 this.setState(state);
@@ -25,11 +25,13 @@ class DanmuPanel extends Component {
             let hit = Math.floor(Math.random() * (this.props.vupInfo.desc.length - 1));
             this.emitDanmu(this.props.vupInfo.desc[hit]);
         });
-        this.showHowUseInfo();
+        this.timer = setInterval(() => this.showHowUseInfo(), 5000);
     }
 
     componentDidUpdate(){
-        clearInterval(this.timer);
+        if(this.timer){
+            clearInterval(this.timer);
+        }
     }
 
     componentWillUnmount(){
@@ -41,9 +43,7 @@ class DanmuPanel extends Component {
 
     // 弹幕新手引导
     showHowUseInfo = () => {
-        if(this.timer){
-            this.timer = setInterval(() => {this.emitDanmu('点击音声按钮可以发送弹幕哦(¬‿¬)')}, 5000);
-        }
+        this.emitDanmu('点击音声按钮可以发送弹幕哦(¬‿¬)');
     }
 
     // 发送弹幕
