@@ -28,8 +28,8 @@ class DanmuPanel extends Component {
         this.timer = setInterval(() => this.showHowUseInfo(), 5000);
     }
 
-    componentDidUpdate(){
-        if(this.timer){
+    componentDidUpdate(prevProps, prevState){
+        if(this.timer && prevState !== this.state){
             clearInterval(this.timer);
         }
     }
