@@ -1,30 +1,39 @@
-import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { useRef } from 'react';
-
+import { useRef, Fragment, useState, useEffect } from 'react';
+import Sidebar from '../Sidebar';
 
 function FloatNavLink() {
     const vup = useSelector((state) => state.getVupData);
     const navbar = useRef(null);
+    const [isShow, setShow] = useState(false);
 
+    // 右下角按钮动画
     const playAnim = () => {
         navbar.current.classList.toggle('not-active-e');
         navbar.current.classList.toggle('active-e');
     }
+
+    // toTop
+    const toTop = () => {
+        window.scrollTo(0,0);
+    }
+
+    // 设置sidebar是否显示状态
+    const setShowState = () => {
+        setShow(isShow? false: true);
+    }
     
     return (
-        <div className="float-navbar not-active-e" onClick={playAnim} ref={navbar}>
-            <i className="fas fa-ellipsis-h"></i>
-            <div className="float-nav-container">
-                {
-                    vup.map((v, k) => {
-                        return (
-                            <NavLink activeClassName="float-nav-item-active" className={`float-nav-item ${v.abbr}`} style={{backgroundImage: `url(${v.profile})`}} key={k} to={"/"+v.abbr}></NavLink>
-                        )
-                    })  
-                }
-            </div>
-        </div>      
+        <Fragment>
+            <Sidebar setShowState={setShowState} isShowSidebar={isShow} vup={vup}/>
+            <div className="float-navbar not-active-e" onClick={playAnim} ref={navbar}>
+                <i className="fas fa-ellipsis-h"></i>
+                <div className="float-nav-container">
+                    <div className="float-nav-item toTop" onClick={toTop}><i className="fas fa-arrow-up"></i></div>
+                    <div className="float-nav-item showSidebar" onClick={setShowState}><i className="fas fa-bars"></i></div>
+                </div>
+            </div> 
+        </Fragment>
     )
 }
 

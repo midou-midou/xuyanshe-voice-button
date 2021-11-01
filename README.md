@@ -21,8 +21,8 @@ Demo [点这里](https://xynbtn.gitee.io)
 
 ## TODO
 
-- [ ] i18n 国际化
-- [ ] Dark mode 夜间模式
+- [x] i18n 国际化
+- [x] Dark mode 夜间模式
 - [ ] RSS
 - [ ] 更多音声资源
 - [ ] 粉丝音声组件
