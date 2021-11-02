@@ -48,42 +48,43 @@ class VoiceBtn extends Component {
         // i18n
         if(this.props.lang !== prevProps.lang){
             return null;
-        }  
+        }
+        // stop当前音声  
+        if(this.state.isAllStop && prevState.isAllStop !== this.state.isAllStop){
+            this.stopVoice();
+            return;
+        }
         // 选取当前播放的音声
         if(this.props.currentIndex === this.state.playingIndex){
             this.watchPlayState(this.props.onevoice);
+            return;
         }
     }
 
     // 监听按钮状态
     watchPlayState = (voice) => {
-        // stop全部音声
-        if(this.state.isAllStop){
-            this.stopVoice()
-            return;
-        }
         if(this.props.currentIndex === this.state.hitIndex && !this.state.isPlay){
             this.randomVoice();
             return;
         }else if(this.state.isPlay){
             if(this.state.playerList.length > 0){
-                this.voiceButton.current.classList.remove('wrapper-click');
                 this.voiceButton.current.classList.add('wrapper-click');
-            }
-            if(this.state.playerList.length === 0){
-                this.voiceButton.current.classList.remove('wrapper-click');
+                return;
             }
         }else if(!this.state.isPlay){
-            this.voiceButton.current.classList.remove('wrapper-click');
             switch(this.state.isLoop){
                 case NO_LOOP:
                     store.dispatch(createClearPlayerInfo());
                     return;
                 case ONE_LOOP:
-                    this._playerPlay(voice);
+                    // this._playerPlay(voice);
+                    this.playVoice();
                     return;
                 case ALL_VOICE_LOOP:
-                    this._playerPlay(voice, this.loopAll);
+                    this._playerPlay(voice, () => {
+                        this.loopAll();
+                        this.clearAnimation();
+                    });
                     return;
                 default:
                     return;
@@ -95,7 +96,7 @@ class VoiceBtn extends Component {
     // 停止按钮音声
     stopVoice = () => {
         if(this.state.isPlay){
-            this.voiceButton.current.classList.remove('wrapper-click');
+            this.clearAnimation()
             if(this.state.playerList.length !== 0){
                 this.state.playerList.map((item, key) => item.pause());
             }
@@ -113,7 +114,7 @@ class VoiceBtn extends Component {
     // 点击播放音声
     playVoice = () => {
         this._playerPlay(this.props.onevoice, 
-            () => {this.voiceButton.current.classList.remove('wrapper-click')},
+            () => {this.clearAnimation()},
             () => {
                 store.dispatch(createPlayingAction({onevoice: this.props.onevoice, currentIndex: this.props.currentIndex}));
                 this.emitDanmu();
@@ -125,7 +126,7 @@ class VoiceBtn extends Component {
     randomVoice = () => {
         this._playerPlay(
             this.props.onevoice,
-            () => {},
+            () => {this.clearAnimation()},
             () => {store.dispatch(createRandomAction({onevoice: this.props.onevoice, hitIndex: -1}))}
         );
     }
@@ -162,15 +163,13 @@ class VoiceBtn extends Component {
             // console.log("music stop");
             let _playerList = this.state.playerList;
             _playerList.shift();
-            this.setState({
-                playerList: [..._playerList]
-            })
             if(stopcb){
                 stopcb();
             }
-            if(this.state.playerList.length === 0){
-                this.setState({isPlay: false})
-            }
+            this.setState({
+                playerList: [..._playerList],
+                isPlay: false
+            })
         }
         audio.onerror = () => {
             console.error("音频播放失败");
@@ -180,6 +179,11 @@ class VoiceBtn extends Component {
     // 发送随机音声弹幕
     emitDanmu = () => {
         PubSub.publishSync('emitDanmu', {isShowHowUseInfo: false});
+    }
+
+    // clear animation
+    clearAnimation = () => {
+        this.voiceButton.current.classList.remove('wrapper-click');
     }
 
     render() { 
