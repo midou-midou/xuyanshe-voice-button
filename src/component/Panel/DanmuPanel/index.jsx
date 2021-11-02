@@ -38,7 +38,7 @@ class DanmuPanel extends Component {
         if(this.timer){
             clearInterval(this.timer);
         }
-        this.danmaku.destroy();
+        // this.danmaku.destroy();
     }
 
     // 弹幕新手引导

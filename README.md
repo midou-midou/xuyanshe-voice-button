@@ -17,13 +17,12 @@
 
 ## 在线演示 Demo
 
-Demo [点这里](https://xynbtn.gitee.io)
+Demo [点这里](https://xysbtn.xiaoblogs.cn)
 
 ## TODO
 
 - [x] i18n 国际化
 - [x] Dark mode 夜间模式
-- [ ] RSS
 - [ ] 更多音声资源
 - [ ] 粉丝音声组件
 - [ ] 友链

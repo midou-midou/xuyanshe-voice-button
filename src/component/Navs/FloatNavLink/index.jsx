@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { useRef, Fragment, useState, useEffect } from 'react';
+import { useRef, Fragment, useState } from 'react';
 import Sidebar from '../Sidebar';
 
 function FloatNavLink() {
