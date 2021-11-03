@@ -24,7 +24,7 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "redux": "^4.1.1",
-    "reselect": "^4.0.0",
+    "reselect": "^4.1.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
