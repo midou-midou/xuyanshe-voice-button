@@ -4,6 +4,8 @@ import { Fragment, lazy, Suspense } from "react";
 import AudioPanel from '../../Panel/AudioPanel'
 import { Skeleton } from "antd";
 // import AnnoPanel from '../../Panel/AnnoPanel'
+import FriendBtn from "../../utills/FriendBtn";
+
 const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
 const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
 
@@ -19,6 +21,7 @@ function XiaoXi(){
                 <Suspense fallback={<Skeleton active/>}>
                     <VoicePanel voice={voice} theme="xiaoxi"/>
                 </Suspense>
+                <FriendBtn />
             </section>
             <AudioPanel voice={voice} up="xiaoxi"/>
         </Fragment>

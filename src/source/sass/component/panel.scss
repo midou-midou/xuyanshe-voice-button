@@ -12,13 +12,15 @@
         }
         
         .panel-tags{
-        font-size: 1.4rem;
-        font-weight: 650;
-        padding: 1rem;
-        color: var(--global-font-color);
+            font-size: 1.4rem;
+            font-weight: 650;
+            padding: 1rem;
+            color: var(--global-font-color);
+        }
 
-        &::after{
-           content: ' - '; 
+        .voice{
+            &::after{
+                content: ' - '; 
             }
         }
 

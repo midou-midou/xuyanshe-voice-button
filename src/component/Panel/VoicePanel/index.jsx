@@ -15,7 +15,7 @@ function VoicePanel(props){
                         <div className={"panel-container voicePanelZoomIn "+ theme} key={clifkey}>
                             <div className="panel-info-container">
                                 <IntlProvider locale={lang} messages={tags.clfy}>
-                                    <div className="panel-tags"><FormattedMessage id={lang}></FormattedMessage></div>
+                                    <div className="panel-tags voice"><FormattedMessage id={lang}></FormattedMessage></div>
                                 </IntlProvider>
                                 <IntlProvider locale={lang} messages={tags.alias}>
                                     <div className="panel-alias heimu"><FormattedMessage id={lang}></FormattedMessage></div>
