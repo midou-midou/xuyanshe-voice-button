@@ -117,6 +117,7 @@
             transform-origin: 0% 0%; 
             transform: rotate(-90deg);
         }
+        
     }
 
     // mobile适配
@@ -130,9 +131,32 @@
         --btn-height: 2.5rem;
         --btn-font-size: .8rem;
         --btn-radius: 1.25rem;
-        
     }
 
+}
+
+.btn-friend{
+    box-shadow: 0px 1px 2px 1px var(--friend-color);
+    &:hover{
+        transition: box-shadow .13s linear;
+        box-shadow: 0px 2px 3px 1px var(--friend-color);
+    }
+    a.friend-name{
+        text-decoration: none;
+        color: var(--btn-bg);
+    }
+}
+
+.btn-support{
+    box-shadow: 0px 1px 2px 1px var(--support-color);
+    &:hover{
+        transition: box-shadow .13s linear;
+        box-shadow: 0px 2px 3px 1px var(--support-color);
+    }
+    a.support-name{
+        text-decoration: none;
+        color: var(--btn-bg);
+    }
 }
 
 // 按钮 & 进度条动画
@@ -316,3 +340,4 @@
         }
     }
 }
+

@@ -2,6 +2,8 @@ import { useSelector } from "react-redux";
 import { Fragment, Suspense, lazy } from "react";
 import { Skeleton } from "antd";
 import AudioPanel from '../../Panel/AudioPanel'
+import FriendBtn from "../../utills/FriendBtn";
+
 const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
 const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
 
@@ -17,6 +19,7 @@ function XiaoRou(){
                 <Suspense fallback={<Skeleton active />} >
                     <VoicePanel voice={voice} theme="xiaorou"/>
                 </Suspense>
+                <FriendBtn />
             </section>
             <AudioPanel voice={voice} up="xiaorou"/>
         </Fragment>
