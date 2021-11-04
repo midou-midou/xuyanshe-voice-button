@@ -199,6 +199,12 @@
                 display: inline-block;
                 margin: 0 0 0 .5rem;
             }
+
+            i.fa-heart{
+                font-size: 1rem;
+                color: red;
+                animation: oneBeat .6s linear infinite;
+            }
             
         }
 
