@@ -130,7 +130,7 @@ exports.ailurus = [
             {
                 path: 'all-jiezilian.mp3',
                 desc: {
-                    zh: '从没见过如此__的up住',
+                    zh: '从没见过如此__的up主',
                     en: '',
                     jp: ''
                 }

@@ -18,6 +18,11 @@ const site = {
             name: '豹按钮 (:3っ)∋',
             link: 'https://haruka.cmyr.ltd',
             color: '#ffaea6'
+        },
+        {
+            name: 'Hiiro按钮',
+            link: 'https://hiiro.club',
+            color: '#f5c1bb'
         }
     ],
     supports: [
@@ -55,6 +60,21 @@ const site = {
             uid: '38145917',
             name: '王者之位i',
             tag: '小希'
+        },
+        {
+            uid: '670852382',
+            name: '小希小桃录播组',
+            tag: '小希'
+        },
+        {
+            uid: '524880733',
+            name: 'c--b--b',
+            tag: '兰音'
+        },
+        {
+            uid: '31278580',
+            name: 'Popura-',
+            tag: '小柔'
         }
     ],
     translateSupport: [
