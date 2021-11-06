@@ -1,5 +1,88 @@
 exports.xiaoxi = [
     {
+        isNew: true,
+        clfy: {zh: '新音声', en: '', jp: ''},
+        alias: {zh: 'NewVoice', en: '', jp: ''},
+        voice: [
+            {
+                path: 'xx-a.mp3',
+                desc: {
+                    zh: 'a',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-aiup.mp3',
+                desc: {
+                    zh: '乂↑',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-chuci.mp3',
+                desc: {
+                    zh: '出赤(初次',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-dairuai.mp3',
+                desc: {
+                    zh: 'dairuai',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-meituguo.mp3',
+                desc: {
+                    zh: '土妹子说自己没土过',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-sldd.mp3',
+                desc: {
+                    zh: '帅老DD',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
+        clfy: {zh: '典', en: '', jp: ''},
+        alias: {zh: '典中典', en: '', jp: ''},
+        voice: [
+            {
+                path: 'xx-sldd.mp3',
+                desc: {
+                    zh: '帅老DD',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
+        clfy: {zh: '土妹子', en: '', jp: ''},
+        alias: {zh: '土', en: '', jp: ''},
+        voice: [
+            {
+                path: 'xx-meituguo.mp3',
+                desc: {
+                    zh: '土妹子说自己没土过',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
         clfy: {zh: 'AI PUBG', en: '', jp: ''},
         alias: {zh: '能赢吗', en: '', jp: ''},
         voice:[
@@ -364,7 +447,7 @@ exports.xiaoxi = [
         ]
     },
     {
-        clfy: {zh: '变态', en: '', jp: ''},
+        clfy: {zh: '怪叫', en: '', jp: ''},
         alias: {zh: '变态吗?',en: '', jp: ''},
         voice:[
             {
@@ -427,6 +510,38 @@ exports.xiaoxi = [
                 path: 'xx-zoukai.mp3',
                 desc: {
                     zh: '走开啊',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-a.mp3',
+                desc: {
+                    zh: 'a',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-aiup.mp3',
+                desc: {
+                    zh: '乂↑',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-dairuai.mp3',
+                desc: {
+                    zh: 'dairuai',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xx-chuci.mp3',
+                desc: {
+                    zh: '出赤(初次',
                     en: '',
                     jp: ''
                 }

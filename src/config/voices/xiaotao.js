@@ -1,5 +1,110 @@
 exports.xiaotao = [
     {
+        isNew: true,
+        clfy: {zh: '新音声', en: '', jp: ''},
+        alias: {zh: 'NewVoice', en: '', jp: ''},
+        voice: [
+            {
+                path: 'xt-csraple.mp3',
+                desc: {
+                    zh: '质问土妹子',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xt-dapenti.mp3',
+                desc: {
+                    zh: '阿秋',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xt-meizuoguoma.mp3',
+                desc: {
+                    zh: '没有做过吗(咬牙切齿',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xt-sldd.mp3',
+                desc: {
+                    zh: '帅老DD',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xt-sxs.mp3',
+                desc: {
+                    zh: '说相声',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xt-xndys.mp3',
+                desc: {
+                    zh: '虚拟德云社',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
+        clfy: {zh: '第一印象词', en: '', jp: ''},
+        alias: {zh: '典中典', en: '', jp: ''},
+        voice: [
+            {
+                path: 'xt-sldd.mp3',
+                desc: {
+                    zh: '帅老DD',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
+        clfy: {zh: '相声潜质', en: '', jp: ''},
+        alias: {zh: '桃dg', en: '', jp: ''},
+        voice: [
+            {
+                path: 'xt-sxs.mp3',
+                desc: {
+                    zh: '说相声',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'xt-xndys.mp3',
+                desc: {
+                    zh: '虚拟德云社',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
+        clfy: {zh: '音声', en: '', jp: ''},
+        alias: {zh: '声音', en: '', jp: ''},
+        voice: [
+            {
+                path: 'xt-dapenti.mp3',
+                desc: {
+                    zh: '阿秋',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
     clfy: {zh: '桃桃的三年', en: '', jp: ''},
     alias: {zh: '┭┮﹏┭┮', en: '', jp: ''},
     voice:[
@@ -133,6 +238,14 @@ exports.xiaotao = [
             path: 'xt-mmrangggshesi.mp3',
             desc: {
                 zh: '妹让哥社死,哥不得不_',
+                en: '',
+                jp: ''
+            }
+        },
+        {
+            path: 'xt-meizuoguoma.mp3',
+            desc: {
+                zh: '没有做过吗(咬牙切齿',
                 en: '',
                 jp: ''
             }

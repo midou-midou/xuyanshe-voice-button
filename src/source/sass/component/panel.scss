@@ -3,6 +3,7 @@
     margin: 1rem;
     box-shadow: 0 .1rem .2rem var(--shadow-color);
     background-color: var(--panel-bg-color);
+    position: relative;
     
     .panel-info-container{
         padding: .5rem 0 0 0;
@@ -44,6 +45,17 @@
         text-shadow: none; 
 
         &:hover{ transition: color .13s linear; color: whitesmoke;}
+    }
+
+    // 显示最新的音声panel右上角的标致
+    .panel-new{
+        display: none;
+        position: absolute;
+        right: 0;
+    }
+
+    .isNew{
+        display: block;
     }
     
 }

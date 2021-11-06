@@ -1,5 +1,76 @@
 exports.ailurus = [
     {
+        isNew: true,
+        clfy: {zh: '新音声', en: '', jp: ''},
+        alias: {zh: 'NewVoice', en: '', jp: ''},
+        voice: [
+            {
+                path: 'all-bnghm.mp3',
+                desc: {
+                    zh: '别难过好吗',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-chugui.mp3',
+                desc: {
+                    zh: '当熊友们D别人的时候我不会难过的',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-fuyan.mp3',
+                desc: {
+                    zh: '养熊人现在就开始敷衍我了',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-ee.mp3',
+                desc: {
+                    zh: '呃呃',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-pdl.mp3',
+                desc: {
+                    zh: '骗到了',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-ssdbs.mp3',
+                desc: {
+                    zh: '养熊人说的不算，我说了才算',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-gcq.mp3',
+                desc: {
+                    zh: '熊の喘气(像另一种动物',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-pu.mp3',
+                desc: {
+                    zh: '噗',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
         clfy: {zh: 'DNA里的音声', en: '', jp: ''},
         alias: {zh: '圣音',en: '', jp: ''},
         voice:[
@@ -33,6 +104,30 @@ exports.ailurus = [
         clfy: {zh: '养熊人必听', en: '', jp: ''},
         alias: {zh: '先养gachi后就变成……',en: '', jp: ''},
         voice:[
+            {
+                path: 'all-bnghm.mp3',
+                desc: {
+                    zh: '别难过好吗',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-chugui.mp3',
+                desc: {
+                    zh: '当熊友们D别人的时候我不会难过的',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-fuyan.mp3',
+                desc: {
+                    zh: '养熊人现在就开始敷衍我了',
+                    en: '',
+                    jp: ''
+                }
+            },
             {
                 path: 'all-wohaoxiangnim.mp3',
                 desc: {
@@ -106,6 +201,14 @@ exports.ailurus = [
                 }
             },
             {
+                path: 'all-pdl.mp3',
+                desc: {
+                    zh: '骗到了',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
                 path: 'all-qijibaihuai.mp3',
                 desc: {
                     zh: '让养熊人办了你',
@@ -131,6 +234,20 @@ exports.ailurus = [
                 path: 'all-jiezilian.mp3',
                 desc: {
                     zh: '从没见过如此__的up主',
+                    en: '',
+                    jp: ''
+                }
+            }
+        ]
+    },
+    {
+        clfy: {zh: '屑', en: '', jp: ''},
+        alias: {zh: '真想给__',en: '', jp: ''},
+        voice:[
+            {
+                path: 'all-ssdbs.mp3',
+                desc: {
+                    zh: '养熊人说的不算，我说了才算',
                     en: '',
                     jp: ''
                 }
@@ -260,7 +377,7 @@ exports.ailurus = [
         ]
     },
     {
-        clfy: {zh: '礼貌露露', en: '', jp: ''},
+        clfy: {zh: '真假礼貌露露', en: '', jp: ''},
         alias: {zh: '不怕困难',en: '', jp: ''},
         voice:[
             {
@@ -359,6 +476,36 @@ exports.ailurus = [
                 }
             }
             
+        ]
+    },
+    {
+        clfy: {zh: '露露声音', en: '', jp: ''},
+        alias: {zh: '对应上面听',en: '', jp: ''},
+        voice:[
+            {
+                path: 'all-ee.mp3',
+                desc: {
+                    zh: '呃呃',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-gcq.mp3',
+                desc: {
+                    zh: '熊の喘气(像另一种动物',
+                    en: '',
+                    jp: ''
+                }
+            },
+            {
+                path: 'all-pu.mp3',
+                desc: {
+                    zh: '噗',
+                    en: '',
+                    jp: ''
+                }
+            }
         ]
     },
     {
