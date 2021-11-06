@@ -8,6 +8,7 @@ import Footer from './component/Footer';
 import Reine from './component/Vup/Reine';
 import Ailurus from './component/Vup/Ailurus';
 import Console from './component/utills/Console';
+import SupportBtn from './component/utills/SupportBtn';
 
 import './source/sass/index.scss';
 
@@ -15,6 +16,7 @@ function App() {
 	return (
 		<Fragment>
 			<SiteInfo />
+			<SupportBtn />
 			<Switch>
 				<Route exact path="/xx" component={XiaoXi}></Route>
 				<Route exact path="/xt" component={XiaoTao}></Route>
