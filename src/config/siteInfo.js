@@ -23,6 +23,11 @@ const site = {
             name: 'Hiiro按钮',
             link: 'https://hiiro.club',
             color: '#f5c1bb'
+        },
+        {
+            name: 'vtuber按钮合集',
+            link: 'https://vbup-osc.github.io/vtuber-voice-button-collection',
+            color: '#00ceff'
         }
     ],
     supports: [
