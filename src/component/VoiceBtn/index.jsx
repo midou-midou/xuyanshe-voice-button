@@ -188,7 +188,7 @@ class VoiceBtn extends Component {
 
     render() { 
         return ( 
-            <div className="btn-wrapper" ref={this.voiceButton}>
+            <div className="btn-wrapper" ref={this.voiceButton} onClick={this.playVoice}>
                 <div className="left-mask mask">
                     <div className="left-top-mask" style={{'--piece': this.state.piece+'s'}}></div>
                     <div className="left-bottom-mask" style={{'--piece': this.state.piece+'s'}}></div>
@@ -202,7 +202,7 @@ class VoiceBtn extends Component {
                     <div className="right-bottom-mask" style={{'--piece': this.state.piece+'s'}}></div>
                 </div>
                 <div className="mask-gray mask"></div>
-                <div onClick={this.playVoice} className="btn-name"><FormattedMessage id={this.props.lang}></FormattedMessage></div>
+                <div className="btn-name"><FormattedMessage id={this.props.lang}></FormattedMessage></div>
             </div>
         );
     }
