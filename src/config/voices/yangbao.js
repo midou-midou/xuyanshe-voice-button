@@ -4,7 +4,7 @@ exports.yangbao = [
         alias: {zh: '杨宝吃瘪现场', en: '', jp: ''},
         voice: [
             {
-                path: 'all-jiehuchibie.mp3',
+                path: 'yb-jiehuchibie.mp3',
                 desc: {
                     zh: '截胡吃瘪',
                     en: '',
