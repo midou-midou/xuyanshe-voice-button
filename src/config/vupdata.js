@@ -49,6 +49,18 @@ const vupData = [
         liveroom: '22746343',
         profile: 'https://static.xiaoblogs.cn/img/ill.png',
         desc: ['小浣熊干脆面','艾福根','266','小熊猫','你干嘛呀！','吃我一拳！']
+    },
+    {
+        uid: '636674318',
+        name: '杨宝',
+        abbr: 'yangbao',
+        color: '#696969',
+        icon: 'https://wx1.sinaimg.cn/large/73197b03ly1gw85j4xb87j200g00g0oi.jpg',
+        // TODO:虚研鱼头像换源
+        liveroom: '22908657',
+        profile: 'https://wx2.sinaimg.cn/large/73197b03ly1gw85j6htiyj20730743zd.jpg',
+        // TODO:杨宝头像换源
+        desc: ['咸鱼神','虚研社经纪人2号','咸鱼之王','虚研狗鱼之主','被狗宝逮捕','绝不迫害旗下艺人']
     }
 ]
 export default vupData;

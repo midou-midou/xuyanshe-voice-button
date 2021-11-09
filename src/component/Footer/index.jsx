@@ -11,11 +11,11 @@ function Footer() {
             <div id="footer-copyright">
                 <span id="c-flag">Copyright © </span>
                 <span id="c-year">{y}</span>
-                <a target="_blank" rel="noreferrer" href={siteInfo.bili}>
+                <a target="_blank" rel="noopener noreferrer" href={siteInfo.bili}>
                     <div className="footer-profile" style={{backgroundImage: `url(${profile})`}}></div>
                 </a>
                 <span id="footer-au-name">
-                    <a target="_blank" rel="noreferrer" href={siteInfo.bili}> {siteInfo.author}</a>
+                    <a target="_blank" rel="noopener noreferrer" href={siteInfo.bili}> {siteInfo.author}</a>
                 </span>
             </div>
             <div className="shield-footer-container">
@@ -33,8 +33,8 @@ function Footer() {
                 <span id="footer-info">Power By <i className="fab fa-react playReact"></i> <a target="_blank" rel="noreferrer" href="https://react.docschina.org/">React</a></span>
             </div>
             <div id="footer-beian">
-                <span id="icp"><a href="http://beian.miit.gov.cn/">{siteInfo.beian.icp}</a></span>
-                <span id="gongan"><a href="http://beian.miit.gov.cn/">{siteInfo.beian.wangan}</a></span>
+                <span id="icp"><a target="_blank" rel="noopener noreferrer" href="http://beian.miit.gov.cn/">{siteInfo.beian.icp}</a></span>
+                <span id="gongan"><a target="_blank" rel="noopener noreferrer" href="http://beian.miit.gov.cn/">{siteInfo.beian.wangan}</a></span>
             </div>
         </div>
      );
