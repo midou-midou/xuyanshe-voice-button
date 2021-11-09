@@ -55,11 +55,9 @@ const vupData = [
         name: '杨宝',
         abbr: 'yangbao',
         color: '#696969',
-        icon: 'https://wx1.sinaimg.cn/large/73197b03ly1gw85j4xb87j200g00g0oi.jpg',
-        // TODO:虚研鱼头像换源
+        icon: 'https://static.xiaoblogs.cn/img/ybhead.jpg',
         liveroom: '22908657',
-        profile: 'https://wx2.sinaimg.cn/large/73197b03ly1gw85j6htiyj20730743zd.jpg',
-        // TODO:杨宝头像换源
+        profile: 'https://static.xiaoblogs.cn/img/ybprofile.jpg',
         desc: ['咸鱼神','虚研社经纪人2号','咸鱼之王','虚研狗鱼之主','被狗宝逮捕','绝不迫害旗下艺人']
     }
 ]
