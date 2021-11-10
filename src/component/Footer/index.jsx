@@ -30,7 +30,7 @@ function Footer() {
                 <span id="footer-info">本网站为粉丝行为，与虚研社官方无任何关联</span>
             </div>
             <div id="footer-powerby">
-                <span id="footer-info">Power By <i className="fab fa-react playReact"></i> <a target="_blank" rel="noreferrer" href="https://react.docschina.org/">React</a></span>
+                <span id="footer-info">Power By <i className="iconfont icon-react i-playReact"></i> <a target="_blank" rel="noreferrer" href="https://react.docschina.org/">React</a></span>
             </div>
             <div id="footer-beian">
                 <span id="icp"><a target="_blank" rel="noopener noreferrer" href="http://beian.miit.gov.cn/">{siteInfo.beian.icp}</a></span>

@@ -68,22 +68,18 @@ yarn start
 在配置目录下的`voice.js`文件中，在`voiceData`对象下添加如下的配置
 
 ```js
- xiaoxi:[
-        {
-            clfy: {zh:'小希叫你起床',en:'',jp:''},      // clfy: 音声的分类
-            alias: {zh:'',en:'',jp:''},				  // ailas: 音声分类信息整活解释
-            voice:[
-                {
-                    path: 'bunengzaishuila-xx.mp3',   // 音声文件名，音声的完整路径会根据siteInfo配置中的cloud字段自动拼装
-                    desc: {     					  // 按钮显示的文字，根据i18n，需要三种语言
-                        zh: '不能再睡啦！快起床吧',
-                        en: '',
-                        jp: ''
-                    }
-                }
-            ]
-        },
-    ]
+ xiaoxi:[{
+     clfy: {zh:'小希叫你起床',en:'',jp:''},      // clfy: 音声的分类
+     alias: {zh:'',en:'',jp:''},				  // ailas: 音声分类信息整活解释
+     voice:[{
+         path: 'bunengzaishuila-xx.mp3',   // 音声文件名，音声的完整路径会根据siteInfo配置中的cloud字段自动拼装
+         desc: {     					  // 按钮显示的文字，根据i18n，需要三种语言
+             zh: '不能再睡啦！快起床吧',
+             en: '',
+             jp: ''
+         }
+     }]
+ }]
 ```
 
 ### 新音声文件上传

@@ -27,10 +27,10 @@ function FloatNavLink() {
         <Fragment>
             <Sidebar setShowState={setShowState} isShowSidebar={isShow} vup={vup}/>
             <div className="float-navbar not-active-e" onClick={playAnim} ref={navbar}>
-                <i className="fas fa-ellipsis-h"></i>
+                <i className="iconfont icon-yemiandingbulangongnenganniu-gengduo-hei i-sandian"></i>
                 <div className="float-nav-container">
-                    <div className="float-nav-item toTop" onClick={toTop}><i className="fas fa-arrow-up"></i></div>
-                    <div className="float-nav-item showSidebar" onClick={setShowState}><i className="fas fa-bars"></i></div>
+                    <div className="float-nav-item toTop" onClick={toTop}><i className="iconfont icon-ictotop"></i></div>
+                    <div className="float-nav-item showSidebar" onClick={setShowState}><i className="iconfont icon-sidebar"></i></div>
                 </div>
             </div> 
         </Fragment>
