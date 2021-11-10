@@ -8,7 +8,8 @@ import {
     createPlayStopAction,
     createPlayerStateAction,
     createRandomAction,
-    createPlayingAction
+    createPlayingAction,
+    createClearPlayerInfo
 } from '../../../store/actions/audio'
 
 class AudioPanel extends Component {
@@ -83,7 +84,9 @@ class AudioPanel extends Component {
 
     // 卸载
     componentWillUnmount(){
+        store.dispatch(createClearPlayerInfo());
         PubSub.unsubscribe('nextVoice');
+        this.props.loop(NO_LOOP);
         clearTimeout(this.timer);
     }
 
