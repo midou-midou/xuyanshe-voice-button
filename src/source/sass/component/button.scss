@@ -9,17 +9,20 @@
     align-items: center;
     cursor: pointer;
     position: relative;
+    box-shadow: 0px 1px 1px 1px var(--shadow-color);
+
+    &:hover{
+        transition: box-shadow .13s linear;
+        box-shadow: 0px 2px 2px 1px var(--shadow-color);
+    }
 
     .btn-name{
         position: relative;
         font-size: var(--btn-font-size);
-        box-sizing: border-box;
-        word-wrap:break-word;
-        font-weight: 700;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        word-wrap: break-word;
+        font-weight: 600;
+        letter-spacing: .5px;
+        color: var(--btn-bg);
     }
 
     div.mask{
@@ -32,7 +35,7 @@
         width: calc(100% - 5px);
         height: calc(100% - 5px);
         border-radius: calc(var(--btn-radius));
-        background-color: var(--btn-bg);
+        // background-color: var(--btn-bg);
     }
 
     .left-mask{
@@ -45,6 +48,7 @@
             height: 50%;
             position: absolute;
             transform: rotate(-90deg);
+            background-color: var(--btn-mask-color);
         }
         .left-top-mask{
             --delay: 5;
@@ -71,11 +75,13 @@
     .middle-mask-container{
         width: calc(100% - 2rem);
         height: var(--btn-height);
+        
         div{
             width: 100%;
             height: 50%;
             position: absolute;
             visibility: hidden;
+            background-color: var(--btn-mask-color);
         }
         .middle-top-mask{
             --delay: 0;
@@ -96,6 +102,8 @@
             width: 100%;
             height: 50%;
             position: absolute;
+            background-color: var(--btn-mask-color);
+
         }
         .right-top-mask{
             --delay: 1;
@@ -136,10 +144,10 @@
 }
 
 .btn-friend{
-    box-shadow: 0px 1px 2px 1px var(--friend-color);
+    box-shadow: 0px 1px 1px 1px var(--shadow-color);
     &:hover{
         transition: box-shadow .13s linear;
-        box-shadow: 0px 2px 3px 1px var(--friend-color);
+        box-shadow: 0px 2px 2px 1px var(--shadow-color);
     }
     a.friend-name{
         text-decoration: none;
@@ -148,10 +156,10 @@
 }
 
 .btn-support{
-    box-shadow: 0px 1px 2px 1px var(--support-color);
+    box-shadow: 0px 1px 1px 1px var(--shadow-color);
     &:hover{
         transition: box-shadow .13s linear;
-        box-shadow: 0px 2px 3px 1px var(--support-color);
+        box-shadow: 0px 2px 2px 1px var(--shadow-color);
     }
     a.support-name{
         text-decoration: none;
@@ -233,43 +241,15 @@
 // 每一个人的主题色
 .xiaoxi{
     .btn-wrapper{
-        box-shadow: 0px 1px 2px 1px var(--xiaoxi-color);
-        &:hover{
-            transition: box-shadow .13s linear;
-            box-shadow: 0px 2px 3px 1px var(--xiaoxi-color);
-        }   
-        .btn-name{
-            color: var(--xiaoxi-color);
-        }
-        div.left-mask div{
-            background-color: var(--xiaoxi-color);
-        }
-        div.right-mask div{
-            background-color: var(--xiaoxi-color);
-        }
-        div.middle-mask-container div{
+        div.mask-gray{
             background-color: var(--xiaoxi-color);
         }
     }
 }
 
 .xiaotao{
-    .btn-wrapper{
-        box-shadow: 0px 1px 2px 1px var(--xiaotao-color);
-        &:hover{
-            transition: box-shadow .13s linear;
-            box-shadow: 0px 2px 3px 1px var(--xiaotao-color);
-        } 
-        .btn-name{
-            color: var(--xiaotao-color);
-        }
-        div.left-mask div{
-            background-color: var(--xiaotao-color);
-        }
-        div.right-mask div{
-            background-color: var(--xiaotao-color);
-        }
-        div.middle-mask-container div{
+    .btn-wrapper{ 
+        div.mask-gray{
             background-color: var(--xiaotao-color);
         }
     }
@@ -277,21 +257,7 @@
 
 .xiaorou{
     .btn-wrapper{
-        box-shadow: 0px 1px 2px 1px var(--xiaorou-color);
-        &:hover{
-            transition: box-shadow .13s linear;
-            box-shadow: 0px 2px 3px 1px var(--xiaorou-color);
-        }
-        .btn-name{
-            color: var(--xiaorou-color);
-        }
-        div.left-mask div{
-            background-color: var(--xiaorou-color);
-        }
-        div.right-mask div{
-            background-color: var(--xiaorou-color);
-        }
-        div.middle-mask-container div{
+        div.mask-gray{
             background-color: var(--xiaorou-color);
         }
     }
@@ -299,21 +265,7 @@
 
 .reine{
     .btn-wrapper{
-        box-shadow: 0px 1px 2px 1px var(--reine-color);
-        &:hover{
-            transition: box-shadow .13s linear;
-            box-shadow: 0px 2px 3px 1px var(--reine-color);
-        }
-        .btn-name{
-            color: var(--reine-color);
-        }
-        div.left-mask div{
-            background-color: var(--reine-color);
-        }
-        div.right-mask div{
-            background-color: var(--reine-color);
-        }
-        div.middle-mask-container div{
+        div.mask-gray{
             background-color: var(--reine-color);
         }
     }
@@ -321,21 +273,7 @@
 
 .ailurus{
     .btn-wrapper{
-        box-shadow: 0px 1px 2px 1px var(--ailurus-color);
-        &:hover{
-            transition: box-shadow .13s linear;
-            box-shadow: 0px 2px 3px 1px var(--ailurus-color);
-        }
-        .btn-name{
-            color: var(--ailurus-color);
-        }
-        div.left-mask div{
-            background-color: var(--ailurus-color);
-        }
-        div.right-mask div{
-            background-color: var(--ailurus-color);
-        }
-        div.middle-mask-container div{
+        div.mask-gray{
             background-color: var(--ailurus-color);
         }
     }
@@ -343,21 +281,7 @@
 
 .yangbao{
     .btn-wrapper{
-        box-shadow: 0px 1px 2px 1px var(--yangbao-color);
-        &:hover{
-            transition: box-shadow .13s linear;
-            box-shadow: 0px 2px 3px 1px var(--yangbao-color);
-        }
-        .btn-name{
-            color: var(--yangbao-color);
-        }
-        div.left-mask div{
-            background-color: var(--yangbao-color);
-        }
-        div.right-mask div{
-            background-color: var(--yangbao-color);
-        }
-        div.middle-mask-container div{
+        div.mask-gray{
             background-color: var(--yangbao-color);
         }
     }

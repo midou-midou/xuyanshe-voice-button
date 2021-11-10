@@ -20,10 +20,10 @@ function Footer() {
             </div>
             <div className="shield-footer-container">
                 <div className="shield-github-star">
-                    <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/MIMONATCH/xuyanshe-voice-button" />
-                    <img alt="GitHub forks" src="https://img.shields.io/github/forks/MIMONATCH/xuyanshe-voice-button" />
-                    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/MIMONATCH/xuyanshe-voice-button" />
-                    <img alt="GitHub" src="https://img.shields.io/github/license/MIMONATCH/xuyanshe-voice-button" />
+                    <img src="https://img.shields.io/github/package-json/v/MIMONATCH/xuyanshe-voice-button" />
+                    <img src="https://img.shields.io/github/forks/MIMONATCH/xuyanshe-voice-button" />
+                    <img src="https://img.shields.io/github/stars/MIMONATCH/xuyanshe-voice-button" />
+                    <img src="https://img.shields.io/github/license/MIMONATCH/xuyanshe-voice-button" />
                 </div>
             </div>
             <div id="footer-powerby">
