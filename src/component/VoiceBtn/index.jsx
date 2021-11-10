@@ -61,6 +61,13 @@ class VoiceBtn extends Component {
         }
     }
 
+    // 卸载
+    componentWillUnmount(){
+        if(this.props.currentIndex === this.state.playingIndex){
+            this.stopVoice();
+        }
+    }
+
     // 监听按钮状态
     watchPlayState = (voice) => {
         if(this.props.currentIndex === this.state.hitIndex && !this.state.isPlay){

@@ -7,7 +7,7 @@ function SiteInfo() {
                 <p className="site-inner site-gray heimu">收录一些奇怪的，严🈲外传的，可以在公众场合大声播放的，无限循环的可爱的声音</p>
                 <p className="site-inner site-important">本站有大量<span style={{textDecoration: 'underline',color: 'var(--link-blue)',fontWeight: 'bloder'}}>可爱声音哦</span></p>
                 <p className="site-inner site-important">特别感谢各位切片man <i className="iconfont icon-heart-fill i-heart"></i> 以及各家录播组的支持</p>
-                <p className="site-inner site-important"><span style={{color: 'skyblue',fontWeight: 'bloder'}}>鼠标可以移到黑色区域，手机可以点击。右下角的按钮可以切换页面哦</span></p>
+                <p className="site-inner site-important"><span style={{color: 'skyblue',fontWeight: 'bloder'}}>右下角的按钮可以切换页面哦</span></p>
                 <p className="site-inner site-important">此项目链接：
                     <i className="iconfont icon-github" style={{color: '#7b379f'}}></i>
                     <a target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline',color: 'var(--link-blue)',fontWeight: 'bold'}} href="https://github.com/MIMONATCH/xuyanshe-voice-button">GitHub</a>
