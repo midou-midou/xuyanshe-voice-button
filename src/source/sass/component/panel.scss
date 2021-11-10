@@ -1,3 +1,4 @@
+// 音声卡片默认样式
 .panel-container{
     border-radius: .2rem;
     margin: 1rem;
@@ -7,6 +8,8 @@
     
     .panel-info-container{
         padding: .5rem 0 0 0;
+        display: flex;
+        align-items: center;
         
         div{
             display: inline-block;
@@ -59,7 +62,7 @@
     }
     
 }
-
+// 音声控制卡片默认样式
 .audioPanel-container{
     width: 100%;
     position: sticky;
@@ -115,7 +118,7 @@
     }
     
 }
-
+// 网站公告默认样式 & danmaku组件默认样式
 .annoPanel-container{
     display: flex;
     justify-content: center;
@@ -294,7 +297,7 @@
     }
     
 }
-
+// 网站Footer组件默认样式
 .footer-container-panel{
     display: flex;
     flex-direction: column;
