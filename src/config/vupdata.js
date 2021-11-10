@@ -6,7 +6,6 @@ const vupData = [
         abbr: 'xx',
         color: '#CD3951',
         profile: 'https://static.xiaoblogs.cn/img/xx.png',
-        icon: 'https://static.xiaoblogs.cn/img/Amd1.png',
         liveroom: '4138602',
         desc: ['希酱','χ型AI','土妹子','豪宅毁灭者','王二狗','希某人','沙雕希']
     },
@@ -16,7 +15,6 @@ const vupData = [
         abbr: 'xt',
         color: '#DCCAE8',
         profile: 'https://static.xiaoblogs.cn/img/xt.png',
-        icon: 'https://static.xiaoblogs.cn/img/intel.png',
         liveroom: '4138602',
         desc: ['τ','桃桃','豚豚','逵逵','茶茶','棒棒','豆罐罐豆','板板','兆兆']
     },
@@ -25,7 +23,6 @@ const vupData = [
         name: '小柔',
         abbr: 'xr',
         color: '#89dedb',
-        icon: 'https://static.xiaoblogs.cn/img/rouguangdeng.png',
         liveroom: '22696954',
         profile: 'https://static.xiaoblogs.cn/img/xr.png',
         desc: ['孙女','柔宝','肉包','花呗三太子','御姐','马尾','温柔','怕羞']
@@ -35,7 +32,6 @@ const vupData = [
         name: '兰音',
         abbr: 'reine',
         color: '#a272f4',
-        icon: 'https://static.xiaoblogs.cn/img/yht.png',
         liveroom: '22696653',
         profile: 'https://static.xiaoblogs.cn/img/ly.png',
         desc: ['兰兰','六边形战士','月亮国公主','数学95分','胸毛','麻辣兔头']
@@ -45,7 +41,6 @@ const vupData = [
         name: '艾露露',
         abbr: 'ailurus',
         color: '#fdc888',
-        icon: 'https://static.xiaoblogs.cn/img/hx.png',
         liveroom: '22746343',
         profile: 'https://static.xiaoblogs.cn/img/ill.png',
         desc: ['小浣熊干脆面','艾福根','266','小熊猫','你干嘛呀！','吃我一拳！']
@@ -55,7 +50,6 @@ const vupData = [
         name: '杨宝',
         abbr: 'yangbao',
         color: '#696969',
-        icon: 'https://static.xiaoblogs.cn/img/ybhead.jpg',
         liveroom: '22908657',
         profile: 'https://static.xiaoblogs.cn/img/ybprofile.jpg',
         desc: ['咸鱼神','虚研社经纪人2号','咸鱼之王','虚研狗鱼之主','被狗宝逮捕','绝不迫害旗下艺人']

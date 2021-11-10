@@ -12,7 +12,7 @@ function Nav(){
                 vup.map((v,k) => {
                     return (
                         <NavLink activeClassName="top-nav-active" className="nav-item" key={k} to={"/"+v.abbr}>
-                            <div className={`nav-small-item ${v.abbr}`}><div className="nav-icon" style={{backgroundImage: `url(${v.icon})`}}></div> {v.name}</div>
+                            <div className={`nav-small-item ${v.abbr}`}>{v.name}</div>
                         </NavLink>
                     )
                 })

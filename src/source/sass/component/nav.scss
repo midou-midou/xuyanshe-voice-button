@@ -30,12 +30,6 @@
         text-decoration: none;
         border-bottom: .15rem solid transparent;
 
-        .nav-icon{
-            width: 1rem;
-            height: 1rem;
-            display: inline-block;
-        }
-
         .nav-small-item{
             width: 100%;
             height: 100%;
@@ -132,7 +126,7 @@
 }
 
 .active-e{
-    i.fa-ellipsis-h{
+    i.i-sandian{
         animation: eli-route .7s ease forwards;
     }
     .toTop{

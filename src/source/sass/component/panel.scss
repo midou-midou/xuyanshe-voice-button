@@ -7,32 +7,26 @@
     position: relative;
     
     .panel-info-container{
-        padding: .5rem 0 0 0;
         display: flex;
         align-items: center;
+        position: relative;
         
         div{
             display: inline-block;
         }
         
         .panel-tags{
-            font-size: 1.4rem;
-            font-weight: 650;
-            padding: 1rem;
-            color: var(--global-font-color);
-        }
-
-        .voice{
-            &::after{
-                content: ' - '; 
-            }
+            font-weight: 600;
+            margin: 1rem 1rem 0 1rem;
+            color: var(--info-font-color);
         }
 
         .panel-alias{
-            font-size: 1rem;
-            font-weight: 500;
-            padding: .3rem .5rem; 
+            margin: 1rem 0 0 0;
+            font-weight: 500; 
+            color: var(--global-font-color);
         }
+
     }
     
     .panel-btn-container{
@@ -55,10 +49,35 @@
         display: none;
         position: absolute;
         right: 0;
+
+        i.i-new{
+            color: #d81e06;
+            font-size: 4rem;
+        }
+        
     }
 
     .isNew{
         display: block;
+    }
+
+    // mobile适配
+    @media screen and (max-width: 680px){
+        .panel-tags{
+            font-size: 1.1rem;
+        }
+        .panel-alias{
+            font-size: 1.1rem;
+        }
+    }
+
+    @media screen and (min-width: 680px){
+        .panel-tags{
+            font-size: 1.4rem;
+        }
+        .panel-alias{
+            font-size: 1.4rem;
+        }
     }
     
 }
@@ -85,7 +104,9 @@
         justify-content: center;
 
         div{
-            font-size: 1.7rem;
+            i{
+                font-size: 1.7rem;
+            }
             margin: 0 1.2rem .5rem 1.2rem;
             padding: .5rem;
             border-radius: 2rem;
@@ -203,10 +224,9 @@
         .site-important{
             font-size: .9rem;
 
-            svg{
-                width: .9rem;
-                height: .9rem;
-                display: inline-block;
+            i.i-gitee{
+                font-size: 1.1rem;
+                color: red;
                 margin: 0 0 0 .5rem;
             }
 
@@ -215,7 +235,7 @@
                 margin: 0 0 0 .5rem;
             }
 
-            i.fa-heart{
+            i.i-heart{
                 font-size: 1rem;
                 color: red;
                 animation: oneBeat .6s linear infinite;
@@ -352,7 +372,7 @@
 
     #footer-powerby{
 
-        .playReact{
+        .i-playReact{
             animation: route-react 10s linear infinite;
         }
 
