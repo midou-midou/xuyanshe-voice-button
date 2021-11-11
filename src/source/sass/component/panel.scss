@@ -402,6 +402,64 @@
     
 }
 
+// 动态卡片样式
+.dynamic-card{
+    padding: 1rem;
+
+    .dynamic-card-title{
+        font-weight: 600;
+        color: var(--info-font-color);
+    }
+
+    .dynamic-info{
+        margin: .7rem 0;
+        line-height: 1rem;
+
+        .dynamic-title{
+            display: block;
+            color: var(--link-blue);
+            text-decoration: underline;
+            margin: 0 0 .5rem 0;
+        }
+
+        .dynamic-time{
+            font-size: .5rem;
+            color: var(--audio-font-color);
+        }
+    }
+
+    .dynamic-content{
+        color: var(--global-font-color);
+        line-height: 1.5rem;
+        letter-spacing: .5px;
+        iframe, br, img, img[alt]{
+            display: none !important;
+        }
+    }
+
+    
+
+    // mobile适配
+    @media screen and (max-width: 680px){
+        .dynamic-card-title{
+            font-size: 1.1rem;
+        }
+        .dynamic-content{
+            font-size: .8rem;
+        }
+    }
+
+    @media screen and (min-width: 680px){
+        .dynamic-card-title{
+            font-size: 1.3rem;
+        }
+        .dynamic-content{
+            font-size: .9rem;
+        }
+    }
+    
+}
+
 
 // 动画
 // audio panel 按钮动画

@@ -2,9 +2,10 @@ import { useSelector } from "react-redux";
 import { Fragment, lazy, Suspense } from "react";
 // import VoicePanel from '../../Panel/VoicePanel'
 import AudioPanel from '../../Panel/AudioPanel'
-import { Skeleton } from "antd";
 // import AnnoPanel from '../../Panel/AnnoPanel'
 import FriendBtn from "../../utills/FriendBtn";
+import Dynamic from "../../utills/Dynamic";
+import Loading from "../../utills/Loading";
 
 const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
 const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
@@ -15,10 +16,11 @@ function XiaoXi(){
     return (
         <Fragment>
             <section className="panel-root">
-                <Suspense fallback={<Skeleton active/>}>
+                <Suspense fallback={<Loading />}>
                     <AnnoPanel up="小希"/>
                 </Suspense>
-                <Suspense fallback={<Skeleton active/>}>
+                <Dynamic uid="5563350" />
+                <Suspense fallback={<Loading />}>
                     <VoicePanel voice={voice} theme="xiaoxi"/>
                 </Suspense>
                 <FriendBtn />

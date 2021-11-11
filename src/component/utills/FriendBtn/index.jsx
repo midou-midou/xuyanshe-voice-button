@@ -17,7 +17,7 @@ function FriendBtn() {
                 {
                     friendsInfo.map((item, key) => 
                         <div className="btn-wrapper btn-friend" style={{backgroundColor: `${item.color}`,'--friend-color':`${item.color}`}} key={key}>
-                            <a className="btn-name friend-name" target="_blank" href={item.link}>{item.name}</a>
+                            <a className="btn-name friend-name" target="_blank" rel="noopener noreferrer" href={item.link}>{item.name}</a>
                         </div>
                     )
                 }
