@@ -23,7 +23,7 @@ function SupportBtn() {
                         let color = findVup(vup, item.tag).color;
                         return (
                             <div className="btn-wrapper btn-support" style={{backgroundColor: `${color}`,'--support-color':`${color}`}} key={key}>
-                                <a className="btn-name support-name" target="_blank" href={`${linkBase}${item.uid}`}>{item.name}</a>
+                                <a className="btn-name support-name" target="_blank" rel="noopener noreferrer" href={`${linkBase}${item.uid}`}>{item.name}</a>
                             </div>
                         )
                     })
@@ -39,7 +39,7 @@ function SupportBtn() {
                     tsupportInfo.map((item, key) => {
                         return (
                             <div className="btn-wrapper btn-support" style={{backgroundColor: `var(--link-blue)`,'--support-color':`var(--link-blue)`}} key={key}>
-                                <a className="btn-name support-name" target="_blank" href={`${linkBase}${item.uid}`}>{item.name}</a>
+                                <a className="btn-name support-name" target="_blank" rel="noopener noreferrer" href={`${linkBase}${item.uid}`}>{item.name}</a>
                             </div>
                         )
                     })

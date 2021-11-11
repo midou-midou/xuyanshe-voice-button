@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import { Fragment, Suspense, lazy } from "react";
-import { Skeleton } from "antd";
 import AudioPanel from '../../Panel/AudioPanel'
 import FriendBtn from "../../utills/FriendBtn";
+import Loading from "../../utills/Loading";
+import Dynamic from "../../utills/Dynamic";
 
 const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
 const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
@@ -13,10 +14,11 @@ function Ailurus(){
     return (
         <Fragment>
             <section className="panel-root">
-                <Suspense fallback={<Skeleton active />} >
+                <Suspense fallback={<Loading />} >
                     <AnnoPanel up="艾露露"/>
                 </Suspense>
-                <Suspense fallback={<Skeleton active />} >
+                <Dynamic uid="1501380958" />
+                <Suspense fallback={<Loading />} >
                     <VoicePanel voice={voice} theme="ailurus"/>
                 </Suspense>
                 <FriendBtn />

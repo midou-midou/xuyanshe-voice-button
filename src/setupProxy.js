@@ -2,10 +2,10 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
    
 module.exports = function(app) {
     app.use(
-        createProxyMiddleware('/biliapi', {
-            target: 'https://api.xiaoblogs.cn/live',
+        createProxyMiddleware('/rss', {
+            target: 'https://xysbtn.xiaoblogs.cn/rss',
             changeOrigin: true,
-            pathRewrite: {'^/biliapi': ''}
+            pathRewrite: {'^/rss': ''}
         })
     )
 }
