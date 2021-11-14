@@ -23,6 +23,16 @@ class Dynamic extends Component {
     componentDidUpdate(){
         if(!this.state.isLoading){
             this.dref.current.innerHTML = this.state.dynamicInner;
+            let waitDel = [];
+            for(let i=0;i<this.dref.current.childNodes.length;i++){
+                let tName = this.dref.current.childNodes[i].tagName;
+                if(tName === 'IFRAME' || tName === 'IMG' || tName === 'BR'){
+                    waitDel.push(this.dref.current.childNodes[i]);
+                }
+            }
+            for(let i of waitDel){
+                this.dref.current.removeChild(i);
+            }
         }
     }
 

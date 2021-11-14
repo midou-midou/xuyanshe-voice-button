@@ -71,6 +71,9 @@
     cursor: pointer;
     border: .1rem solid #bdbebd;
     box-shadow: 0 1px 2px 2px var(--shadow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     i{
         position: absolute;
