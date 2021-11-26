@@ -10,14 +10,18 @@ import Ailurus from './component/Vup/Ailurus';
 import YangBao from './component/Vup/YangBao';
 import Console from './component/utills/Console';
 import SupportBtn from './component/utills/SupportBtn';
+import NavPanel from './component/Panel/NavPanel';
+import { useSelector } from 'react-redux';
 
 import './source/sass/index.scss';
 
 function App() {
+	const vups = useSelector((state) => state.getVupData);
 	return (
 		<Fragment>
 			<SiteInfo />
 			<SupportBtn />
+			<NavPanel vups={vups}/>
 			<Switch>
 				<Route exact path="/xx" component={XiaoXi}></Route>
 				<Route exact path="/xt" component={XiaoTao}></Route>

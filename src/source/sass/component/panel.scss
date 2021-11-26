@@ -457,6 +457,30 @@
     
 }
 
+// index mobile 导航
+.indexNavPanel{
+    .indexNav-Container{
+    display: flex;
+    justify-content: center;
+    
+    }
+
+    .indexNav-info{
+        padding: .2rem 0 .5rem 0;
+        font-size: .9rem;
+        color: skyblue;
+        font-weight: bolder;
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 680px){
+    .indexNavPanel{
+        display: none;
+    }
+}
+
 
 // 动画
 // audio panel 按钮动画

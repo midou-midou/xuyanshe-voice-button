@@ -32,17 +32,6 @@ function Sidebar(props) {
         <div className="sidebar-noshow" ref={sidebarRef}>
             <div className="sidebar-mask" onClick={props.setShowState} onAnimationEnd={() => {sidebarRef.current.classList.add('sidebar-noshow');}}></div>
             <div className="sidebar-container" >
-                <div className="sidebar-item">
-                    <div className="sidebar-info">点击头像即可传送</div>
-                </div>
-                <hr />
-                {props.vup.map((v, k) => {
-                    return (
-                        <div className="sidebar-item" key={k}>
-                            <NavLink activeClassName="sidebar-item-active" className="sidebar-vup-icon" style={{backgroundImage: `url(${v.profile})`}} to={"/"+v.abbr}></NavLink>
-                        </div>
-                    )
-                })}
                 <hr />
                 <div className="sidebar-item">
                     <div className="sidebar-info">夜间模式切换</div>

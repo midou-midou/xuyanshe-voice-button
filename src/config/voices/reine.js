@@ -6,7 +6,7 @@ exports.reine = [
             {
                 path: 'ly-mingyan1.mp3',
                 desc: {
-                    zh: 'So TM kimoji warui!!!',
+                    zh: 'sotmkimojiwarui',
                     en: '',
                     jp: ''
                 }
