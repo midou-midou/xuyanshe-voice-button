@@ -12,6 +12,8 @@ import {
 } from '../../store/actions/audio'
 
 import 'animate.css';
+import 'antd/dist/antd.css'
+import { message } from 'antd';
 
 class VoiceBtn extends Component {
     
@@ -179,7 +181,7 @@ class VoiceBtn extends Component {
             })
         }
         audio.onerror = () => {
-            console.error("音频播放失败");
+            message.error("音频播放失败");
         }
     }
 

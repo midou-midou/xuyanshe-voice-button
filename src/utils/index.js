@@ -40,16 +40,19 @@ const getAudioSecond = (dura) => {
 }
 
 // 获取bili头像
-const getBiliProfileUrl = (biliId) => {
+const getBiliProfileUrl = async (biliId) => {
     if(!biliId){
         console.error(`${biliId}不存在`);
         return;
     }
     biliId = parseInt(biliId);
-    // TODO: next version will do
-    // const profileUrl = await (await fetch(`http://localhost:3000/bApi?mid=${biliId}`)).json();
-    const profileUrl = "https://static.xiaoblogs.cn/img/head.jpg";
-    return profileUrl;
+    try{
+        const res = await (await fetch(`https://xysbtn.xiaoblogs.cn/userinfo?mid=${biliId}`, {referrerPolicy: 'no-referrer'})).json();
+        const profileUrl = res.data.face.toString();
+        return profileUrl;
+    }catch(err){
+        console.log("请求出错",err);
+    }
 }
 
 // 获取bili直播间info

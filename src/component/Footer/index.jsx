@@ -4,7 +4,7 @@ import { getBiliProfileUrl } from '../../utils/index';
 function Footer() {
     const y = new Date().getFullYear();
     const siteInfo = useSelector(state => state.getSiteInfo);
-    const profile = getBiliProfileUrl('123');
+    const profile = 'https://static.xiaoblogs.cn/img/head.jpg';
 
     return ( 
         <div className="footer-container-panel">

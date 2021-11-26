@@ -1,6 +1,9 @@
 import { Component, createRef } from "react";
 import Loading from "../Loading";
+import { message } from "antd";
 import dayjs from "dayjs";
+
+import 'antd/dist/antd.css'
 
 class Dynamic extends Component {
     constructor(props) {
@@ -60,7 +63,7 @@ class Dynamic extends Component {
             })
         }
         catch{
-            console.error(`获得uid：${this.props.uid}的动态失败`);
+            message.error(`获得uid：${this.props.uid}的动态失败`);
         }
     }
     
