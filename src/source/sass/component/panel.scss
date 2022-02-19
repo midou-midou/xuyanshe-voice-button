@@ -501,9 +501,8 @@
 // index mobile 导航
 .indexNavPanel{
     .indexNav-Container{
-    display: flex;
-    justify-content: center;
-    
+        display: flex;
+        justify-content: center;
     }
 
     .indexNav-info{
@@ -517,7 +516,7 @@
 
 @media screen and (max-width: 680px){
     .indexNavPanel{
-        display: none;
+        display: block;
     }
     .feature-panel-container{
         top: 1rem;

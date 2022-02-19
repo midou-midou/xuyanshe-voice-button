@@ -27,7 +27,7 @@ Demo [点这里](https://xysbtn.xiaoblogs.cn)
 - [x] 粉丝音声组件
 - [x] 友链
 - [x] 动态
-- [ ] 音声排列组合
+- [x] 音声排列组合
 - [ ] ……
 
 ## 安装
@@ -91,7 +91,7 @@ yarn start
 
 ## 提交
 
-- **PR请提交到dev分支，main分支暂不支持PR**
+- **PR请提交到dev分支，main分支不支持PR**
 - **git commit请遵循commit规范**
 - **issue的提交可以在gitee或GitHub上提交**
 
