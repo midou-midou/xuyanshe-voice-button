@@ -28,6 +28,11 @@ const site = {
             name: 'vtuber按钮合集',
             link: 'https://vbup-osc.github.io/vtuber-voice-button-collection',
             color: '#00ceff'
+        },
+        {
+            name: '老余的甜蜜小家',
+            link: 'http://yuyy.info',
+            color: '#7fdcac'
         }
     ],
     supports: [
