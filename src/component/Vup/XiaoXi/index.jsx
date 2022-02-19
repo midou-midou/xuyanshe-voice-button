@@ -1,17 +1,26 @@
 import { useSelector } from "react-redux";
-import { Fragment, lazy, Suspense } from "react";
+import { Fragment, lazy, Suspense, useEffect } from "react";
 // import VoicePanel from '../../Panel/VoicePanel'
 import AudioPanel from '../../Panel/AudioPanel'
 // import AnnoPanel from '../../Panel/AnnoPanel'
 import FriendBtn from "../../utills/FriendBtn";
 import Dynamic from "../../utills/Dynamic";
 import Loading from "../../utills/Loading";
+import { useDispatch } from "react-redux";
+import {
+    createSetSiteThemeAction
+} from '../../../store/actions/site'
 
 const AnnoPanel = lazy(() => import('../../Panel/AnnoPanel'));
 const VoicePanel = lazy(() => import('../../Panel/VoicePanel'));
 
 function XiaoXi(){
     const voice = useSelector(state => state.getVoiceData.xiaoxi);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(createSetSiteThemeAction("xiaoxi"));
+    }, [])
     
     return (
         <Fragment>

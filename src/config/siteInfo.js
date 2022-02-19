@@ -88,6 +88,7 @@ const site = {
             name: '阻油Ts喧嚣',
             tag: ''
         }
-    ]
+    ],
+    sitetheme: "xiaoxi"
 }
 export default site;

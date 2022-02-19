@@ -167,6 +167,26 @@
     }
 }
 
+.btn-permutation{
+    background: linear-gradient(120deg, var(--xiaoxi-color), var(--ailurus-color));
+    animation: feature-btn 2s linear infinite;
+}
+
+.panel-pin-btn{
+    position: absolute;
+    right: .7rem;
+    top: .7rem;
+    padding: .5rem;
+    cursor: pointer;
+    i{
+        color: var(--audio-font-color);
+    }
+    &:hover{
+        background-color: var(--audio-hover-color);
+        border-radius: 2rem;
+    }
+}
+
 // 按钮 & 进度条动画
 .wrapper-click{
     animation: oneBeat 0.45s ease-out;
@@ -238,12 +258,27 @@
     }
 }
 
+@keyframes feature-btn {
+    0%{
+        box-shadow: 0 0 10px var(--xiaorou-color);
+    }
+    100%{
+        box-shadow: 0 0 5px var(--xiaotao-color),
+        0 0 10px var(--xiaotao-color),
+        0 0 15px var(--xiaotao-color),
+        0 0 30px var(--xiaotao-color);
+    }
+}
+
 // 每一个人的主题色
 .xiaoxi{
     .btn-wrapper{
         div.mask-gray{
             background-color: var(--xiaoxi-color);
         }
+    }
+    .btn-per{
+        background-color: var(--xiaoxi-color);
     }
 }
 
@@ -253,6 +288,9 @@
             background-color: var(--xiaotao-color);
         }
     }
+    .btn-per{
+        background-color: var(--xiaotao-color);
+    }
 }
 
 .xiaorou{
@@ -260,6 +298,9 @@
         div.mask-gray{
             background-color: var(--xiaorou-color);
         }
+    }
+    .btn-per{
+        background-color: var(--xiaorou-color);
     }
 }
 
@@ -269,6 +310,9 @@
             background-color: var(--reine-color);
         }
     }
+    .btn-per{
+        background-color: var(--reine-color);
+    }
 }
 
 .ailurus{
@@ -277,6 +321,9 @@
             background-color: var(--ailurus-color);
         }
     }
+    .btn-per{
+        background-color: var(--ailurus-color);
+    }
 }
 
 .yangbao{
@@ -284,5 +331,8 @@
         div.mask-gray{
             background-color: var(--yangbao-color);
         }
+    }
+    .btn-per{
+        background-color: var(--yangbao-color);
     }
 }
