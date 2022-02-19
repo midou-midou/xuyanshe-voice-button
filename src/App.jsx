@@ -8,7 +8,6 @@ import SiteInfo from './component/Panel/SiteInfo';
 import Footer from './component/Footer';
 import Reine from './component/Vup/Reine';
 import Ailurus from './component/Vup/Ailurus';
-import YangBao from './component/Vup/YangBao';
 import Console from './component/utills/Console';
 import SupportBtn from './component/utills/SupportBtn';
 import NavPanel from './component/Panel/NavPanel';
@@ -33,7 +32,6 @@ function App() {
 				<Route exact path="/xr" component={XiaoRou}></Route>
 				<Route exact path="/reine" component={Reine}></Route>
 				<Route exact path="/ailurus" component={Ailurus}></Route>
-				<Route exact path="/yangbao" component={YangBao}></Route>
 				<Redirect to="/xx"/>
 			</Switch>
 			<Footer />

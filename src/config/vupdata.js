@@ -1,4 +1,3 @@
-
 const vupData = [
     {
         uid: '5563350',
@@ -44,15 +43,6 @@ const vupData = [
         liveroom: '22746343',
         profile: 'https://static.xiaoblogs.cn/img/ill.png',
         desc: ['小浣熊干脆面','艾福根','266','小熊猫','你干嘛呀！','吃我一拳！']
-    },
-    {
-        uid: '636674318',
-        name: '杨宝',
-        abbr: 'yangbao',
-        color: '#696969',
-        liveroom: '22908657',
-        profile: 'https://static.xiaoblogs.cn/img/ybprofile.jpg',
-        desc: ['咸鱼神','虚研社经纪人2号','咸鱼之王','虚研狗鱼之主','被狗宝逮捕','绝不迫害旗下艺人']
     }
 ]
 export default vupData;
