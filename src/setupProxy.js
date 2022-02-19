@@ -2,10 +2,10 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
    
 module.exports = function(app) {
     app.use(
-        createProxyMiddleware('/bApi', {
-            target: 'https://xysbtn.xiaoblogs.cn/userinfo',
+        createProxyMiddleware('/api', {
+            target: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com',
             changeOrigin: true,
-            pathRewrite: {'^/bApi': ''}
+            pathRewrite: {'^/api': ''}
         })
     )
 }

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { getBiliProfileUrl } from '../../utils/index';
+// import { getBiliProfileUrl } from '../../utils/index';
 
 function Footer() {
     const y = new Date().getFullYear();
@@ -20,10 +20,10 @@ function Footer() {
             </div>
             <div className="shield-footer-container">
                 <div className="shield-github-star">
-                    <img src="https://img.shields.io/github/package-json/v/MIMONATCH/xuyanshe-voice-button" />
-                    <img src="https://img.shields.io/github/forks/MIMONATCH/xuyanshe-voice-button" />
-                    <img src="https://img.shields.io/github/stars/MIMONATCH/xuyanshe-voice-button" />
-                    <img src="https://img.shields.io/github/license/MIMONATCH/xuyanshe-voice-button" />
+                    <img alt="github" src="https://img.shields.io/github/package-json/v/MIMONATCH/xuyanshe-voice-button" />
+                    <img alt="fork" src="https://img.shields.io/github/forks/MIMONATCH/xuyanshe-voice-button" />
+                    <img alt="star" src="https://img.shields.io/github/stars/MIMONATCH/xuyanshe-voice-button" />
+                    <img alt="license" src="https://img.shields.io/github/license/MIMONATCH/xuyanshe-voice-button" />
                 </div>
             </div>
             <div id="footer-powerby">

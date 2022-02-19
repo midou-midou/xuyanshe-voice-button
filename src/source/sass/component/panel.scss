@@ -1,3 +1,42 @@
+// panel滚动条样式
+.panel-root{
+    overflow: auto;
+    &::-webkit-scrollbar{
+        width: .5rem;
+        height: .1rem;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        border-radius: .1rem;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);   
+    }
+
+    &::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: var(--panel-bg-color);
+    }
+
+    // 每个人的颜色
+    &.xiaoxi::-webkit-scrollbar-thumb{
+        background-color: var(--xiaoxi-color);
+    }
+
+    &.xiaotao::-webkit-scrollbar-thumb{
+        background-color: var(--xiaotao-color);
+    }
+
+    &.xiaorou::-webkit-scrollbar-thumb{
+        background-color: var(--xiaorou-color);
+    }
+
+    &.reine::-webkit-scrollbar-thumb{
+        background-color: var(--reine-color);
+    }
+
+    &.ailurus::-webkit-scrollbar-thumb{
+        background-color: var(--ailurus-color);
+    }
+}
 // 音声卡片默认样式
 .panel-container{
     border-radius: .2rem;
@@ -86,8 +125,10 @@
     width: 100%;
     position: sticky;
     bottom: 0;
+    z-index: 11;
     background-color: var(--audio-panel);
     color: var(--audio-font-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
 
     .audioinfo{
         text-align: center;
@@ -474,11 +515,143 @@
     }
 }
 
+@media screen and (max-width: 680px){
+    .indexNavPanel{
+        display: none;
+    }
+    .feature-panel-container{
+        top: 1rem;
+    }
+}
 
 @media screen and (min-width: 680px){
     .indexNavPanel{
         display: none;
     }
+    .feature-panel-container{
+        top: 4rem;
+    }
+}
+
+// 功能面版
+.feature-panel-container{
+    z-index: 9;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    opacity: .8;
+    backdrop-filter: blur(1px);
+}
+
+// 排列组合面板
+.per-panel-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    i{
+        font-size: 1.7rem;
+        color: var(--audio-font-color);
+    }
+    
+    .per-btnlist-container{
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        .per-btnlist{
+            display: flex;
+            flex-shrink: 0;
+            text-shadow: none;
+            opacity: 1;
+
+            .btn-per-mask{
+                word-break: keep-all;
+                .xiaoxi{
+                    background-color: var(--xiaoxi-color);
+                }
+    
+                .xiaotao{
+                    background-color: var(--xiaotao-color);
+                }
+    
+                .xiaorou{
+                    background-color: var(--xiaorou-color);
+                }
+    
+                .reine{
+                    background-color: var(--reine-color);
+                }
+    
+                .ailurus{
+                    background-color: var(--ailurus-color);
+                }
+            }
+        }
+
+        &::-webkit-scrollbar{
+            width: .1rem;
+            height: .5rem;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            border-radius: .25rem;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);   
+        }
+
+        &::-webkit-scrollbar-track{
+            border-radius: .25rem;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: #EDEDED;
+        }
+
+        // 每个人的颜色
+        &.xiaoxi::-webkit-scrollbar-thumb{
+            background-color: var(--xiaoxi-color);
+        }
+
+        &.xiaotao::-webkit-scrollbar-thumb{
+            background-color: var(--xiaotao-color);
+        }
+
+        &.xiaorou::-webkit-scrollbar-thumb{
+            background-color: var(--xiaorou-color);
+        }
+
+        &.reine::-webkit-scrollbar-thumb{
+            background-color: var(--reine-color);
+        }
+
+        &.ailurus::-webkit-scrollbar-thumb{
+            background-color: var(--ailurus-color);
+        }
+    }
+
+    .per-control{
+        display: flex;
+        align-items: center;
+
+
+        div{
+            margin: 0 .1rem;
+            padding: .5rem;
+            border-radius: 2rem;
+            cursor: pointer;
+        }
+
+        div:hover{
+            background-color: var(--audio-hover-color);
+        }
+    }
+    
+}
+
+// 面版pin到页面上
+.panel-pinup{
+    position: sticky;
+}
+
+// 面板不pin
+.panel-not-pinup{
+    position: relative;
+    top: 0rem;
 }
 
 

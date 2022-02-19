@@ -14,6 +14,7 @@ function SiteInfo() {
                     <a target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline',color: 'var(--link-blue)',fontWeight: '700'}} href="https://gitee.com/mimonarchrd/xuyanshe-voice-button">Gitee</a>
                 </p>
                 <p className="site-inner">\ 欢迎来玩 /</p>
+                <p className="site-inner site-important">作者：<a target="_blank" rel="noopener noreferrer" href="https://space.bilibili.com/9964933">_米豆</a></p>
                 <div className="shields-container">
                     <img alt="GitHub issues" src="https://img.shields.io/github/issues/MIMONATCH/xuyanshe-voice-button" />
                     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/MIMONATCH/xuyanshe-voice-button" />

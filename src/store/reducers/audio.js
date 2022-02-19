@@ -4,7 +4,11 @@ import {
     STOPVOICE,
     CLEARVOICEINFO,
     RANDOMVOICE,
-    CHANGEPLAYINGINDEX
+    CHANGEPLAYINGINDEX,
+    SETPERMUTATIONSTATE,
+    SETPERMUTATIONLIST,
+    ADDPERMUTATIONLISTITEM,
+    CHANGEPLAYINGSTATE
 } from '../constant'
 import { NO_LOOP } from '../../config/enmu'
 
@@ -22,50 +26,65 @@ var playingVoice = {
     isPlay: false,
     isAllStop: false,
     isLoop: NO_LOOP,
+    isPermutation: false,
     playingIndex: -1,
     hitIndex: -1,
-    playingList: []
+    playingList: [],
+    permutationList: []
 };
 
 export default function playerReducer(preState = playingVoice, action){
     const { data, type } = action;
-    let newState;
-    switch(type){
-        case PLAYINGVOICE:
-            preState = Object.assign(preState, {voice: data.onevoice});
-            preState.isPlay = true;
-            preState.isAllStop = false;
-            preState.playingIndex = data.currentIndex;
-            preState.playingList.push(data.onevoice);
-            newState = JSON.parse(JSON.stringify(preState));
-            return newState;
-        case LOOPONEVOICE:
-            preState.isLoop = data;
-            newState = JSON.parse(JSON.stringify(preState));
-            return newState;
-        case STOPVOICE:
-            preState.isPlay = false;
-            preState.isAllStop = true;
-            preState.isLoop = NO_LOOP;
-            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
-            newState = JSON.parse(JSON.stringify(preState));
-            return newState;
-        case CHANGEPLAYINGINDEX:
-            preState.playingIndex = data;
-            newState = JSON.parse(JSON.stringify(preState));
-            return newState;
-        case RANDOMVOICE:
-            preState = Object.assign(preState, {voice: data.onevoice});
-            preState.isPlay = true;
-            preState.hitIndex = data.hitIndex;
-            newState = JSON.parse(JSON.stringify(preState));
-            return newState;
-        case CLEARVOICEINFO:
-            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
-            preState.playingIndex = -1;
-            newState = JSON.parse(JSON.stringify(preState));
-            return newState;
-        default:
-            return preState;
+    // 播放器相关
+    if(type === PLAYINGVOICE){
+        preState = Object.assign(preState, {voice: data.onevoice});
+        preState.isPlay = true;
+        preState.isAllStop = false;
+        preState.playingIndex = data.currentIndex;
+        preState.playingList.push(data.onevoice);
     }
+    if(type === LOOPONEVOICE){
+        preState.isLoop = data;
+    }
+    if(type === STOPVOICE){
+        preState.isPlay = false;
+        preState.isAllStop = true;
+        preState.isLoop = NO_LOOP;
+        preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
+    }
+    if(type === CHANGEPLAYINGINDEX){
+        preState.playingIndex = data;
+    }
+    if(type === RANDOMVOICE){
+        preState = Object.assign(preState, {voice: data.onevoice});
+        preState.isPlay = true;
+        preState.hitIndex = data.hitIndex;
+    }
+    if(type === CLEARVOICEINFO){
+        preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
+        preState.isPlay = false;
+        preState.playingIndex = -1;
+    }
+    if(type === CHANGEPLAYINGSTATE){
+        preState.isPlay = !preState.isPlay;
+    }
+    // 排列组合相关
+    if(type === SETPERMUTATIONSTATE){
+        preState.isPermutation = !preState.isPermutation;
+        if(!preState.isPermutation){
+            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
+            preState.permutationList = [];
+            preState.isPlay = false;
+        }else{
+            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "正在使用排列组合，如要退出，请再此点击排列组合按钮", en: "no music", jp: ""}}));
+        }
+    }
+    if(type === SETPERMUTATIONLIST){
+        preState.permutationList = data;
+    }
+    if(type === ADDPERMUTATIONLISTITEM){
+        preState.permutationList.push(data);
+    }
+    let newState = JSON.parse(JSON.stringify(preState));
+    return newState;
 }

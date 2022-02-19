@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { connect } from 'react-redux';
 
-function DarkLight() {
+function DarkLight(props) {
     const [isSwitch, setSwitch] = useState(window.matchMedia('(prefers-color-scheme: light)').matches);
     const maskRef = useRef(null);
     
@@ -9,15 +10,17 @@ function DarkLight() {
         if(isSwitch){
             maskRef.current.classList.remove('right');
             maskRef.current.classList.add('left');
-            mount.classList.remove('dark');
-            mount.classList.add('light');
+            // mount.classList.remove('dark');
+            // mount.classList.add('light');
+            mount.className = `light panel-root ${props.sitetheme}`;
         }else{
             maskRef.current.classList.remove('left');
             maskRef.current.classList.add('right');
-            mount.classList.remove('light');
-            mount.classList.add('dark');
+            // mount.classList.remove('light');
+            // mount.classList.add('dark');
+            mount.className = `dark panel-root ${props.sitetheme}`;
         }
-    },[isSwitch])
+    },[isSwitch, props.sitetheme])
     
     const switchMode = () => {
         setSwitch(isSwitch ? false : true);
@@ -38,4 +41,8 @@ function DarkLight() {
     );
 }
 
-export default DarkLight;
+export default connect(
+    state => ({
+        sitetheme: state.getSiteInfo.sitetheme
+    }),{}
+)(DarkLight);

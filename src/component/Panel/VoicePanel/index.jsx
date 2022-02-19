@@ -1,4 +1,4 @@
-import { Fragment, useRef } from 'react';
+import { Fragment } from 'react';
 import { FormattedMessage, IntlProvider } from 'react-intl';
 import { useSelector } from 'react-redux';
 import VoiceBtn from '../../VoiceBtn'
@@ -30,7 +30,7 @@ function VoicePanel(props){
                                 tags.voice.map((oneSound, voiceKey) => {
                                     return (
                                         <IntlProvider locale={lang} messages={oneSound.desc} key={voiceKey}>
-                                            <VoiceBtn onevoice={oneSound} currentIndex={clifkey*100+voiceKey} lang={lang} />
+                                            <VoiceBtn onevoice={oneSound} currentIndex={clifkey*100+voiceKey} lang={lang} theme={theme}/>
                                         </IntlProvider>
                                     );
                                 })

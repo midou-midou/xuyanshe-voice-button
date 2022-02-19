@@ -8,7 +8,8 @@ import {
     createPlayingAction,
     createChangePlayingIndex,
     createRandomAction,
-    createClearPlayerInfo
+    createClearPlayerInfo,
+    createSetPermutationListItemAction
 } from '../../store/actions/audio'
 
 import 'animate.css';
@@ -23,10 +24,12 @@ class VoiceBtn extends Component {
         this.state = { 
             animaList: [],
             isPlay: false,
+            isPlayerPlaying: storeState.playingVoice.isPlay,
             isAllStop: storeState.playingVoice.isAllStop,
             isLoop: storeState.playingVoice.isLoop,
             playingIndex: storeState.playingVoice.playingIndex,
             hitIndex: storeState.playingVoice.hitIndex,
+            permunationState: storeState.playingVoice.isPermutation,
             playerList: []
         }
         this.voiceButton = createRef();
@@ -40,7 +43,9 @@ class VoiceBtn extends Component {
                 isAllStop: storeState.playingVoice.isAllStop,
                 isLoop: storeState.playingVoice.isLoop,
                 playingIndex: storeState.playingVoice.playingIndex,
-                hitIndex: storeState.playingVoice.hitIndex
+                hitIndex: storeState.playingVoice.hitIndex,
+                permunationState: storeState.playingVoice.isPermutation,
+                isPlayerPlaying: storeState.playingVoice.isPlay
             }));
         });
     }
@@ -122,6 +127,15 @@ class VoiceBtn extends Component {
 
     // 点击播放音声
     playVoice = () => {
+        // 排列组合模式开启
+        if(this.state.permunationState){
+            if(this.state.isPlayerPlaying){
+                message.error("请等待当前列表播放完毕后在添加");
+                return;
+            }
+            store.dispatch(createSetPermutationListItemAction({theme: this.props.theme, data: this.props.onevoice}));
+            return;
+        }
         this._playerPlay(this.props.onevoice, 
             () => {this.clearAnimation()},
             () => {
@@ -149,7 +163,7 @@ class VoiceBtn extends Component {
     _playerPlay = (voice, stopcb, playcb) => {
         const audio = new Audio();
         audio.src = pathComplete(voice);
-        audio.preload = 'meta';
+        // audio.preload = 'metadata';
         audio.load();
         let _playerList = this.state.playerList;
         _playerList.push(audio);

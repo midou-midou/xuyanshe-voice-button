@@ -62,8 +62,8 @@
 
 .float-navbar{
     position: fixed;
-    bottom: 7rem;
-    right: 2rem;
+    bottom: 7.5rem;
+    right: 1.5rem;
     width: 2.6rem;
     height: 2.6rem;
     background-color: #bdbebd;
@@ -74,6 +74,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 11;
 
     i{
         position: absolute;
