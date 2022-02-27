@@ -1,6 +1,12 @@
 // profile: 头像url
 // github: github url
 // bili: bilibili url
+// cloud: cos或oos
+// beian: ICP备案号和网安备案
+// friends: 友链
+// support: 音声支援榜 
+// translateSupport： 翻译支持
+// sitetheme: 站点主题色（xiaoxi、xiaotao、xiaorou、reine、ailurus）
 const site = {
     title: '',
     anno: '',
@@ -12,7 +18,6 @@ const site = {
         wangan: '',
         icp: '渝ICP备19003460号'
     },
-    contribute: [],
     friends:[
         {
             name: '豹按钮 (:3っ)∋',
@@ -33,6 +38,11 @@ const site = {
             name: '老余的甜蜜小家',
             link: 'http://yuyy.info',
             color: '#7fdcac'
+        },
+        {
+            name: '彼岸霜滢Eliro按钮',
+            link: 'https://eliro.top/',
+            color: '#9af0ff'
         }
     ],
     supports: [

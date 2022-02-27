@@ -1,6 +1,6 @@
 {
   "name": "xxxtvb",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "private": true,
   "dependencies": {
     "@commitlint/cli": "^14.1.0",
