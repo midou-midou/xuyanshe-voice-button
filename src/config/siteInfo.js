@@ -95,13 +95,11 @@ const site = {
             uid: '31278580',
             name: 'Popura-',
             tag: '小柔'
-        }
-    ],
-    translateSupport: [
+        },
         {
             uid: '404477750',
             name: '阻油Ts喧嚣',
-            tag: ''
+            tag: '小希'
         }
     ],
     sitetheme: "xiaoxi"
