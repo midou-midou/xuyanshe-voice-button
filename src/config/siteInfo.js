@@ -10,7 +10,8 @@
 const site = {
     title: '',
     anno: '',
-    author: 'midou',
+    authoruid: '9964933',
+    author: '_米豆',
     github: '',
     bili: 'https://space.bilibili.com/9964933',
     cloud: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com',

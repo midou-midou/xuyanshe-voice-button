@@ -19,6 +19,11 @@
 
 Demo [点这里](https://xysbtn.xiaoblogs.cn)
 
+## 附属项目
+
+- [MIMONATCH/xysbtnRss: 虚研社按钮RSS代理Bot🤖 (github.com)](https://github.com/MIMONATCH/xysbtnRss)
+- [MIMONATCH/xysbtnProfileGetter: 虚研社按钮头像Getter (github.com)](https://github.com/MIMONATCH/xysbtnProfileGetter)
+
 ## TODO
 
 - [x] i18n 国际化

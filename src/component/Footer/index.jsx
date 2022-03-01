@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
 // import { getBiliProfileUrl } from '../../utils/index';
 
 function Footer() {
     const y = new Date().getFullYear();
     const siteInfo = useSelector(state => state.getSiteInfo);
-    const profile = 'https://static.xiaoblogs.cn/img/head.jpg';
+    let [linkbase] = useState('https://xysbtn.xiaoblogs.cn/profile/');
 
     return ( 
         <div className="footer-container-panel">
@@ -12,7 +13,7 @@ function Footer() {
                 <span id="c-flag">Copyright © </span>
                 <span id="c-year">{y}</span>
                 <a target="_blank" rel="noopener noreferrer" href={siteInfo.bili}>
-                    <div className="footer-profile" style={{backgroundImage: `url(${profile})`}}></div>
+                    <div className="footer-profile" style={{backgroundImage: `url(${linkbase}${siteInfo.authoruid}.jpg)`}}></div>
                 </a>
                 <span id="footer-au-name">
                     <a target="_blank" rel="noopener noreferrer" href={siteInfo.bili}> {siteInfo.author}</a>
