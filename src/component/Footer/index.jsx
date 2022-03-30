@@ -1,13 +1,16 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useState } from "react"
+import { useSelector } from "react-redux"
+import { IntlProvider, FormattedMessage} from 'react-intl'
 // import { getBiliProfileUrl } from '../../utils/index';
 
 function Footer() {
-    const y = new Date().getFullYear();
-    const siteInfo = useSelector(state => state.getSiteInfo);
-    let [linkbase] = useState('https://xysbtn.xiaoblogs.cn/profile/');
+    const y = new Date().getFullYear()
+    const siteInfo = useSelector(state => state.getSiteInfo)
+    let [linkbase] = useState('https://xysbtn.xiaoblogs.cn/profile/')
+    const [footInfo, _] = useState({zh: '本网站为粉丝行为，与虚研社官方无任何关联', en: '', jp: ''})
+    const lang = useSelector((state) => state.getLang)
 
-    return ( 
+    return (
         <div className="footer-container-panel">
             <div id="footer-copyright">
                 <span id="c-flag">Copyright © </span>
@@ -28,7 +31,7 @@ function Footer() {
                 </div>
             </div>
             <div id="footer-powerby">
-                <span id="footer-info">本网站为粉丝行为，与虚研社官方无任何关联</span>
+                <span id="footer-info"><IntlProvider locale={lang} messages={footInfo}><FormattedMessage id={lang}></FormattedMessage></IntlProvider></span>
             </div>
             <div id="footer-powerby">
                 <span id="footer-info">Power By <i className="iconfont icon-react i-playReact"></i> <a target="_blank" rel="noreferrer" href="https://react.docschina.org/">React</a></span>

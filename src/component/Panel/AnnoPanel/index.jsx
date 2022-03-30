@@ -70,7 +70,7 @@ function AnnoPanel(props) {
                 <div className="profile-container">
                     <div className="profile" style={{backgroundImage: `url(${linkbase}${vup.uid}.jpg)`}}></div>
                     <div className="profile-border" ref={profileBorderRef}></div>
-                    <div className="profile-info" ref={liveInfoRef}><a target="_blank" rel="noopener noreferrer" href={`https://live.bilibili.com/${vup.liveroom}`}>直播中</a></div>
+                    <div className="profile-info" ref={liveInfoRef}><a target="_blank" rel="noopener noreferrer" href={`https://live.bilibili.com/${vup.liveroom}`}>Live</a></div>
                 </div>
             </div>
         );

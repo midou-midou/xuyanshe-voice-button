@@ -21,7 +21,11 @@ class AudioPanel extends Component {
             playingList: [],
             playList: new Map(),
             playListIndex: [],
-            loopInfo: ['啥都不循环','单曲循环','循环当前页面全部音频']
+            loopInfo: [
+                {zh: '啥都不循环', en: '', jp: ''},
+                {zh: '单曲循环', en: '', jp: ''},
+                {zh: '循环当前页面全部音频', en: '', jp: ''}
+            ]
         }
         this.playstopbtn = createRef();
         this.loopbtn = createRef();
@@ -177,13 +181,17 @@ class AudioPanel extends Component {
                     <div className="audioPanel-loop"  onClick={this.changeLoopState} ref={this.loopbtn} title="洗脑"><i className="iconfont icon-xunhuanbofang"></i></div>
                     <div className="audioPanel-random"  onClick={this.random} ref={this.randombtn} title="盲盒"><i className="iconfont icon-suijibofang"></i></div>
                 </div>
-                <div className="loopInfo"><span>{this.state.loopInfo[this.props.isLoop]}</span></div>
+                <div className="loopInfo">
+                    <span>
+                        <IntlProvider locale={this.props.lang} messages={this.state.loopInfo[this.props.isLoop]}></IntlProvider>
+                    </span>
+                </div>
             </div>
         );
     }
 }
 
-// container component
+// UI component
 export default connect(
     state => ({
         isPlay: state.playingVoice.isPlay,

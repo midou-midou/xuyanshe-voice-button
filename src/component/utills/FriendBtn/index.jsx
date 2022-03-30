@@ -1,7 +1,5 @@
 import { useSelector } from "react-redux";
 import { FormattedMessage, IntlProvider } from 'react-intl';
-import { useState } from "react";
-
 
 function FriendBtn() {
     const friendsInfo = useSelector(state => state.getSiteInfo.friends);

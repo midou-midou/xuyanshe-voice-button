@@ -8,8 +8,8 @@
 // translateSupport： 翻译支持
 // sitetheme: 站点主题色（xiaoxi、xiaotao、xiaorou、reine、ailurus）
 const site = {
-    title: '',
-    anno: '',
+    title: {zh: '', en: '', jp: ''},
+    anno: {zh: '', en: '', jp: ''},
     authoruid: '9964933',
     author: '_米豆',
     github: '',
