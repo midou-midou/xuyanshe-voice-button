@@ -183,7 +183,9 @@ class AudioPanel extends Component {
                 </div>
                 <div className="loopInfo">
                     <span>
-                        <IntlProvider locale={this.props.lang} messages={this.state.loopInfo[this.props.isLoop]}></IntlProvider>
+                        <IntlProvider locale={this.props.lang} messages={this.state.loopInfo[this.props.isLoop]}>
+                            <FormattedMessage id={this.props.lang}></FormattedMessage>
+                        </IntlProvider>
                     </span>
                 </div>
             </div>
