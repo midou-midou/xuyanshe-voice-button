@@ -177,9 +177,9 @@ class AudioPanel extends Component {
                     </div>
                 </IntlProvider>
                 <div className="audioControl-container">
-                    <div className="audioPanel-playstop"  onClick={this.stopAllVoice} ref={this.playstopbtn} title="别走"><i className="iconfont icon-jingledan-tingzhibofang"></i></div>
-                    <div className="audioPanel-loop"  onClick={this.changeLoopState} ref={this.loopbtn} title="洗脑"><i className="iconfont icon-xunhuanbofang"></i></div>
-                    <div className="audioPanel-random"  onClick={this.random} ref={this.randombtn} title="盲盒"><i className="iconfont icon-suijibofang"></i></div>
+                    <div className="audioPanel-playstop"  onClick={this.stopAllVoice} ref={this.playstopbtn} ><i className="iconfont icon-jingledan-tingzhibofang"></i></div>
+                    <div className="audioPanel-loop"  onClick={this.changeLoopState} ref={this.loopbtn} ><i className="iconfont icon-xunhuanbofang"></i></div>
+                    <div className="audioPanel-random"  onClick={this.random} ref={this.randombtn} ><i className="iconfont icon-suijibofang"></i></div>
                 </div>
                 <div className="loopInfo">
                     <span>
