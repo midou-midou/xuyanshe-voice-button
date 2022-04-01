@@ -7,7 +7,7 @@ function Footer() {
     const y = new Date().getFullYear()
     const siteInfo = useSelector(state => state.getSiteInfo)
     let [linkbase] = useState('https://xysbtn.xiaoblogs.cn/profile/')
-    const [footInfo, _] = useState({zh: '本网站为粉丝行为，与虚研社官方无任何关联', en: '', jp: ''})
+    const [footInfo, _] = useState({zh: '本网站为粉丝行为，与虚研社官方无任何关联', en: '', jp: '当サイトはファンの行為で、虚研社の公式とは何の関係もありません'})
     const lang = useSelector((state) => state.getLang)
 
     return (

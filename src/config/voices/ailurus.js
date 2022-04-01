@@ -456,7 +456,7 @@ exports.ailurus = [
                 desc: {
                     zh: '哈哈嘿呵-呵呵呵~',
                     en: '',
-                    jp: ''
+                    jp: 'ハハハ--ハハ'
                 }
             },
             {

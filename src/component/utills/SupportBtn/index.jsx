@@ -14,7 +14,7 @@ function SupportBtn() {
     return (  
         <div className="panel-container siteinfoZoomIn">
             <div className="panel-info-container">
-                <IntlProvider locale={lang} messages={{zh:'音声&翻译支持',en:'Voice Support',jp:''}}>
+                <IntlProvider locale={lang} messages={{zh:'音声&翻译支持',en:'Voice Support',jp:'リソースと翻訳のサポート'}}>
                     <div className="panel-tags"><FormattedMessage id={lang}></FormattedMessage></div>
                 </IntlProvider>
             </div>
