@@ -22,9 +22,9 @@ class AudioPanel extends Component {
             playList: new Map(),
             playListIndex: [],
             loopInfo: [
-                {zh: '啥都不循环', en: '', jp: ''},
-                {zh: '单曲循环', en: '', jp: ''},
-                {zh: '循环当前页面全部音频', en: '', jp: ''}
+                {zh: '啥都不循环', en: '', jp: 'ループなし'},
+                {zh: '单曲循环', en: '', jp: 'シングルサイクル'},
+                {zh: '循环当前页面全部音频', en: '', jp: 'すべての音をループ'}
             ]
         }
         this.playstopbtn = createRef();

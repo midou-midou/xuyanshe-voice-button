@@ -22,7 +22,7 @@ import { NO_LOOP } from '../../config/enmu'
 // playingList: 播放的音声列表
 
 var playingVoice = {
-    voice: {path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}},
+    voice: {path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: "再生中のオーディオはありません"}},
     isPlay: false,
     isAllStop: false,
     isLoop: NO_LOOP,
@@ -50,7 +50,7 @@ export default function playerReducer(preState = playingVoice, action){
         preState.isPlay = false;
         preState.isAllStop = true;
         preState.isLoop = NO_LOOP;
-        preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
+        preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: "再生中のオーディオはありません"}}));
     }
     if(type === CHANGEPLAYINGINDEX){
         preState.playingIndex = data;
@@ -61,7 +61,7 @@ export default function playerReducer(preState = playingVoice, action){
         preState.hitIndex = data.hitIndex;
     }
     if(type === CLEARVOICEINFO){
-        preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
+        preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: "再生中のオーディオはありません"}}));
         preState.isPlay = false;
         preState.playingIndex = -1;
     }
@@ -72,11 +72,11 @@ export default function playerReducer(preState = playingVoice, action){
     if(type === SETPERMUTATIONSTATE){
         preState.isPermutation = !preState.isPermutation;
         if(!preState.isPermutation){
-            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: ""}}));
+            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "还没有要播放的音频呢", en: "no music", jp: "再生中のオーディオはありません"}}));
             preState.permutationList = [];
             preState.isPlay = false;
         }else{
-            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "正在使用排列组合，如要退出，请再此点击排列组合按钮", en: "no music", jp: ""}}));
+            preState.voice = JSON.parse(JSON.stringify({path: '', desc: {zh: "正在使用排列组合，如要退出，请再次点击排列组合按钮", en: "no music", jp: "カスタムオーディオで連続再生中  止めたいなら  機能ボタンを再度クリックしてください"}}));
         }
     }
     if(type === SETPERMUTATIONLIST){

@@ -7,7 +7,7 @@ function NavPanel(props) {
     const info = {
         zh: '点击上面的头像即可到达对应up的页面',
         en: '',
-        jp: ''
+        jp: '上の画像をクリックすると、対応するBilBilのトップページに着きます。'
     }
     
     return ( 
