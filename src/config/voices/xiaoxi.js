@@ -1,15 +1,15 @@
 exports.xiaoxi = [
     {
         isNew: true,
-        clfy: {zh: '新音声', en: '', jp: ''},
-        alias: {zh: 'NewVoice', en: '', jp: ''},
+        clfy: {zh: '新音声', en: '', jp: '新しい声'},
+        alias: {zh: 'NewVoice', en: '', jp: '新しい声'},
         voice: [
             {
                 path: 'xx-a.mp3',
                 desc: {
                     zh: 'a',
                     en: '',
-                    jp: ''
+                    jp: '変な声*1'
                 }
             },
             {
@@ -17,7 +17,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '乂↑',
                     en: '',
-                    jp: ''
+                    jp: '変な声*2'
                 }
             },
             {
@@ -25,7 +25,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '出赤(初次',
                     en: '',
-                    jp: ''
+                    jp: 'Chuchi?(初めて'
                 }
             },
             {
@@ -33,7 +33,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: 'dairuai',
                     en: '',
-                    jp: ''
+                    jp: '変な声*3'
                 }
             },
             {
@@ -41,7 +41,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '土妹子说自己没土过',
                     en: '',
-                    jp: ''
+                    jp: '土の妹は自分が土ではないと言った。'
                 }
             },
             {
@@ -49,49 +49,49 @@ exports.xiaoxi = [
                 desc: {
                     zh: '帅老DD',
                     en: '',
-                    jp: ''
+                    jp: '観客DD'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '典', en: '', jp: ''},
-        alias: {zh: '典中典', en: '', jp: ''},
+        clfy: {zh: '典', en: '', jp: 'クラシック'},
+        alias: {zh: '典中典', en: '', jp: '経典の中の経典'},
         voice: [
             {
                 path: 'xx-sldd.mp3',
                 desc: {
                     zh: '帅老DD',
                     en: '',
-                    jp: ''
+                    jp: '観客DD'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '土妹子', en: '', jp: ''},
-        alias: {zh: '土', en: '', jp: ''},
+        clfy: {zh: '土妹子', en: '', jp: '土の妹'},
+        alias: {zh: '土', en: '', jp: '土'},
         voice: [
             {
                 path: 'xx-meituguo.mp3',
                 desc: {
                     zh: '土妹子说自己没土过',
                     en: '',
-                    jp: ''
+                    jp: '土の妹は自分が土ではないと言った。'
                 }
             }
         ]
     },
     {
-        clfy: {zh: 'AI PUBG', en: '', jp: ''},
-        alias: {zh: '能赢吗', en: '', jp: ''},
+        clfy: {zh: 'AI PUBG', en: '', jp: 'AI PUBG'},
+        alias: {zh: '能赢吗', en: '', jp: '勝てるかな'},
         voice:[
             {
                 path: 'xx-nihaoa.mp3',
                 desc: {
                     zh: '你好啊兄die~',
                     en: '',
-                    jp: ''
+                    jp: 'こんにちは'
                 }
             },
             {
@@ -99,7 +99,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '你好我是AI小希',
                     en: '',
-                    jp: ''
+                    jp: 'こんにちはAI Xiaoxiです'
                 }
             },
             {
@@ -107,7 +107,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: 'AI就是机器人',
                     en: '',
-                    jp: ''
+                    jp: 'AIはロボット'
                 }
             },
             {
@@ -115,7 +115,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: 'B站来的',
                     en: '',
-                    jp: ''
+                    jp: 'bilbilから来ました'
                 }
             },
             {
@@ -123,7 +123,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: 'B站就是同性交友网站?',
                     en: '',
-                    jp: ''
+                    jp: 'bilbilは同性の交友サイトです'
                 }
             },
             {
@@ -131,7 +131,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '怎么称呼你呢',
                     en: '',
-                    jp: ''
+                    jp: 'あなたを何と呼ぶの'
                 }
             },
             {
@@ -139,7 +139,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '巧了吗这不是,我也是小希',
                     en: '',
-                    jp: ''
+                    jp: 'これは偶然ではありませんか。私もXiaoxiと申します。'
                 }
             },
             {
@@ -147,7 +147,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '变声器能有我这么可爱吗',
                     en: '',
-                    jp: ''
+                    jp: '変声器の音は私がかわいいですか?'
                 }
             },
             {
@@ -155,7 +155,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '枪法能这么厉害',
                     en: '',
-                    jp: ''
+                    jp: '銃法はこんなにすごいの?'
                 }
             },
             {
@@ -163,7 +163,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '有敌人小心呀',
                     en: '',
-                    jp: ''
+                    jp: '敵がいるから気をつけろ'
                 }
             },
             {
@@ -171,7 +171,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '那边有敌人',
                     en: '',
-                    jp: ''
+                    jp: 'あそこに敵がいる'
                 }
             },
             {
@@ -179,7 +179,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '我给你点物资吧',
                     en: '',
-                    jp: ''
+                    jp: '物資をあげましょう。'
                 }
             },
             {
@@ -187,7 +187,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '小心小心',
                     en: '',
-                    jp: ''
+                    jp: '気をつけて'
                 }
             },
             {
@@ -195,7 +195,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '打他打他~',
                     en: '',
-                    jp: ''
+                    jp: '彼を殴ってやる~'
                 }
             },
             {
@@ -203,7 +203,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '打他打他⬆',
                     en: '',
-                    jp: ''
+                    jp: '彼を殴ってやる!'
                 }
             },
             {
@@ -211,7 +211,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '哎可惜',
                     en: '',
-                    jp: ''
+                    jp: 'ああ、残念ですね。'
                 }
             },
             {
@@ -219,7 +219,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '啊~?',
                     en: '',
-                    jp: ''
+                    jp: '変な声*4'
                 }
             },
             {
@@ -227,7 +227,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '马上',
                     en: '',
-                    jp: ''
+                    jp: 'すぐ'
                 }
             },
             {
@@ -235,7 +235,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '魂淡',
                     en: '',
-                    jp: ''
+                    jp: 'ばか'
                 }
             },
             {
@@ -243,7 +243,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '花Q（KizunaAI bushi',
                     en: '',
-                    jp: ''
+                    jp: 'F**k（KizunaAI bushi '
                 }
             },
             {
@@ -251,7 +251,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '好!',
                     en: '',
-                    jp: ''
+                    jp: 'よし!'
                 }
             },
             {
@@ -259,7 +259,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '毒圈快过来了',
                     en: '',
-                    jp: ''
+                    jp: '毒の輪がもうすぐ来る'
                 }
             },
             {
@@ -267,7 +267,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '趴下~趴下~',
                     en: '',
-                    jp: ''
+                    jp: '伏せろ~伏せろ~'
                 }
             },
             {
@@ -275,7 +275,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '听得见我说话吗',
                     en: '',
-                    jp: ''
+                    jp: '聞こえるか?'
                 }
             },
             {
@@ -283,7 +283,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '喂?',
                     en: '',
-                    jp: ''
+                    jp: 'もしもし?'
                 }
             },
             {
@@ -291,7 +291,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '有辆车',
                     en: '',
-                    jp: ''
+                    jp: '車がある'
                 }
             },
             {
@@ -299,7 +299,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '我来开',
                     en: '',
-                    jp: ''
+                    jp: '私が運転します'
                 }
             },
             {
@@ -307,7 +307,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '这边这边',
                     en: '',
-                    jp: ''
+                    jp: 'こちらこちら'
                 }
             },
             {
@@ -315,7 +315,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '我需要枪',
                     en: '',
-                    jp: ''
+                    jp: '銃が必要だ'
                 }
             },
             {
@@ -323,7 +323,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '我需要药',
                     en: '',
-                    jp: ''
+                    jp: '薬が必要だ'
                 }
             },
             {
@@ -331,15 +331,15 @@ exports.xiaoxi = [
                 desc: {
                     zh: '我中枪了',
                     en: '',
-                    jp: ''
+                    jp: '撃たれた'
                 }
             },
             {
                 path: 'xx-wbddl.mp3',
                 desc: {
-                    zh: '我被打到了',
+                    zh: '我被打倒了',
                     en: '',
-                    jp: ''
+                    jp: '倒された'
                 }
             },
             {
@@ -347,7 +347,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '我不行了,靠你们了',
                     en: '',
-                    jp: ''
+                    jp: '私はもうだめだ,君たちに頼っている。'
                 }
             },
             {
@@ -355,7 +355,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '加油我们是最棒的',
                     en: '',
-                    jp: ''
+                    jp: '頑張れ私たちは最高だ'
                 }
             },
             {
@@ -363,7 +363,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '你们安心的去吧,剩下的交给我啦',
                     en: '',
-                    jp: ''
+                    jp: '安心して行ってください。残りは私に任せてください。'
                 }
             },
             {
@@ -371,7 +371,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '小希比你还大呢',
                     en: '',
-                    jp: ''
+                    jp: 'Xiaoxiはあなたより大きいですね。'
                 }
             },
             {
@@ -379,21 +379,21 @@ exports.xiaoxi = [
                 desc: {
                     zh: '小希比你还大呢1',
                     en: '',
-                    jp: ''
+                    jp: 'Xiaoxiはあなたより大きいですね!'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '小希动物园', en: '', jp: ''},
-        alias: {zh: 'We Bought A Zoo', en: '', jp: ''},
+        clfy: {zh: '小希动物园', en: '', jp: 'Xiaoxi動物園'},
+        alias: {zh: 'We Bought A Zoo', en: '', jp: 'We Bought A Zoo'},
         voice:[
             {
                 path: 'xx-dog2.mp3',
                 desc: {
                     zh: '哈士奇叫',
                     en: '',
-                    jp: ''
+                    jp: 'ハスキーの鳴き声'
                 }
             },
             {
@@ -401,7 +401,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '哈士奇又叫',
                     en: '',
-                    jp: ''
+                    jp: 'ハスキーの鳴き声は2回目'
                 }
             },
             {
@@ -409,7 +409,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '鸡叫',
                     en: '',
-                    jp: ''
+                    jp: 'ニワトリの鳴き声'
                 }
             },
             {
@@ -417,7 +417,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '骆驼叫',
                     en: '',
-                    jp: ''
+                    jp: 'ラクダの鳴き声'
                 }
             },
             {
@@ -425,7 +425,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '鸟叫',
                     en: '',
-                    jp: ''
+                    jp: '鳥の鳴き声'
                 }
             },
             {
@@ -433,7 +433,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '狼叫?',
                     en: '',
-                    jp: ''
+                    jp: 'オオカミの鳴き声?'
                 }
             },
             {
@@ -441,21 +441,21 @@ exports.xiaoxi = [
                 desc: {
                     zh: '羊驼叫',
                     en: '',
-                    jp: ''
+                    jp: 'アルパカの鳴き声'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '怪叫', en: '', jp: ''},
-        alias: {zh: '变态吗?',en: '', jp: ''},
+        clfy: {zh: '怪叫', en: '', jp: 'おかしい'},
+        alias: {zh: '变态吗?',en: '', jp: '変態か?'},
         voice:[
             {
                 path: 'xx-aa.mp3',
                 desc: {
                     zh: '啊啊啊啊啊啊啊啊',
                     en: '',
-                    jp: ''
+                    jp: '変な声*5'
                 }
             },
             {
@@ -463,7 +463,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '变态',
                     en: '',
-                    jp: ''
+                    jp: 'へんたい'
                 }
             },
             {
@@ -471,7 +471,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '下片',
                     en: '',
-                    jp: ''
+                    jp: 'アンダスライス'
                 }
             },
             {
@@ -479,7 +479,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '嗝~',
                     en: '',
-                    jp: ''
+                    jp: 'しゃっくり~'
                 }
             },
             {
@@ -487,7 +487,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '滚*n',
                     en: '',
-                    jp: ''
+                    jp: '出て行け*n'
                 }
             },
             {
@@ -495,7 +495,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '老公老公老公老公老公老公老公',
                     en: '',
-                    jp: ''
+                    jp: '旦那*n'
                 }
             },
             {
@@ -503,7 +503,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '别摸我＞﹏＜',
                     en: '',
-                    jp: ''
+                    jp: '触らないで＞﹏＜'
                 }
             },
             {
@@ -511,7 +511,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '走开啊',
                     en: '',
-                    jp: ''
+                    jp: '出て行け'
                 }
             },
             {
@@ -519,7 +519,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: 'a',
                     en: '',
-                    jp: ''
+                    jp: '再び変な声を出す*1'
                 }
             },
             {
@@ -527,7 +527,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '乂↑',
                     en: '',
-                    jp: ''
+                    jp: '再び変な声を出す*2'
                 }
             },
             {
@@ -535,7 +535,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: 'dairuai',
                     en: '',
-                    jp: ''
+                    jp: '再び変な声を出す*3'
                 }
             },
             {
@@ -543,28 +543,28 @@ exports.xiaoxi = [
                 desc: {
                     zh: '出赤(初次',
                     en: '',
-                    jp: ''
+                    jp: 'Chuchi?(初めて'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '小希叫你起床', en: '', jp: ''},
-        alias: {zh: '\"叫床\"(bushi', en: '', jp: ''},
+        clfy: {zh: '小希叫你起床', en: '', jp: 'Xiaoxiはあなたを起こします'},
+        alias: {zh: '\"叫床\"(bushi', en: '', jp: '起こしてくれ'},
         voice:[
             {
                 path: 'jiaoqichuang-xx.mp3',
                 desc: {
                     zh: '叫起床',
                     en: 'wakeup',
-                    jp: ''
+                    jp: '起こしてくれ'
                 }
             },
             {
                 path: 'bunengzaishuila-xx.mp3',
                 desc: {
                     zh: '不能再睡啦！快起床吧',
-                    en: ''
+                    en: 'もう寝られない!早く起きなさい'
                 }
             },
             {
@@ -572,7 +572,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '早上好！早上啦！今天一天也要元气满满哦！',
                     en: '',
-                    jp: ''
+                    jp: 'おはようございます、今日も1日元気で'
                 }
             },
             {
@@ -580,7 +580,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '再睡下去的话，小希会生气哦',
                     en: '',
-                    jp: ''
+                    jp: 'これ以上寝たらXiaoxiが怒るよ'
                 }
             },
             {
@@ -588,7 +588,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '喂喂喂，再不起来要迟到了',
                     en: '',
-                    jp: ''
+                    jp: 'おいおい起きないと遅刻するぞ'
                 }
             },
             {
@@ -596,7 +596,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '喵喵喵喵喵喵喵喵喵',
                     en: '',
-                    jp: ''
+                    jp: '猫の鳴き方を習う'
                 }
             },
             {
@@ -604,7 +604,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '今天你也很努力啦！好好休息吧！',
                     en: '',
-                    jp: ''
+                    jp: '今日も頑張ったね!ゆっくり休みましょう。'
                 }
             },
             {
@@ -612,21 +612,21 @@ exports.xiaoxi = [
                 desc: {
                     zh: '晚安，明天的小希也会叫你起床哦',
                     en: '',
-                    jp: ''
+                    jp: 'おやすみ、明日のXiaoxiも起こしてあげるよ'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '小希的鼓励', en: '', jp: ''},
-        alias: {zh: '希爹你看看你过去多励志', en: '', jp: ''},
+        clfy: {zh: '小希的鼓励', en: '', jp: 'Xiaoxiの励まし'},
+        alias: {zh: '希爹你看看你过去多励志', en: '', jp: 'Xiaoxi！君の過去を見てごらん'},
         voice:[
             {
                 path: '7jg07-m2fp9.mp3',
                 desc: {
                     zh: 'hi，我是虚拟up主小希',
                     en: '',
-                    jp: ''
+                    jp: 'hi、私はビデオの作者Xiaoxiです'
                 }
             },
             {
@@ -634,7 +634,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '奔跑吧，怀抱着重要的东西',
                     en: '',
-                    jp: ''
+                    jp: '頑張りましょう！大切なものを抱いて'
                 }
             },
             {
@@ -642,7 +642,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '不论风雨，小希一直都在你的身边',
                     en: '',
-                    jp: ''
+                    jp: 'どんなに困難があっても、Xiaoxiはずっとあなたのそばにいます。'
                 }
             },
             {
@@ -650,7 +650,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '世界很大，也很美丽！你不这么觉得吗？',
                     en: '',
-                    jp: ''
+                    jp: '世界はとても大きくて、とても美しいです!そう思わないの?'
                 }
             },
             {
@@ -658,7 +658,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '谁都有失败，但是一定可以再重启',
                     en: '',
-                    jp: ''
+                    jp: '誰もが失敗を経験したことがあるが、毎回再び行動することができる。'
                 }
             },
             {
@@ -666,7 +666,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '因为每天都只有二十四小时一千四百四十分钟',
                     en: '',
-                    jp: ''
+                    jp: '毎日24時間1440分しかないので'
                 }
             },
             {
@@ -674,7 +674,7 @@ exports.xiaoxi = [
                 desc: {
                     zh: '只靠一个人无法战斗，小希也在陪着你！',
                     en: '',
-                    jp: ''
+                    jp: '一人では戦えない。だからXiaoxiもあなたと一緒にいます'
                 }
             }
         ]

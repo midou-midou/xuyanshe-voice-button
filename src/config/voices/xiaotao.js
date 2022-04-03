@@ -1,15 +1,15 @@
 exports.xiaotao = [
     {
         isNew: true,
-        clfy: {zh: '新音声', en: '', jp: ''},
-        alias: {zh: 'NewVoice', en: '', jp: ''},
+        clfy: {zh: '新音声', en: '', jp: '新しい声'},
+        alias: {zh: 'NewVoice', en: '', jp: '新しい声'},
         voice: [
             {
                 path: 'xt-csraple.mp3',
                 desc: {
                     zh: '质问土妹子',
                     en: '',
-                    jp: ''
+                    jp: '土妹子に質問する'
                 }
             },
             {
@@ -17,7 +17,7 @@ exports.xiaotao = [
                 desc: {
                     zh: '阿秋',
                     en: '',
-                    jp: ''
+                    jp: 'クシャミ'
                 }
             },
             {
@@ -25,7 +25,7 @@ exports.xiaotao = [
                 desc: {
                     zh: '没有做过吗(咬牙切齿',
                     en: '',
-                    jp: ''
+                    jp: 'やったことないの!(歯を食いしばる'
                 }
             },
             {
@@ -33,7 +33,7 @@ exports.xiaotao = [
                 desc: {
                     zh: '帅老DD',
                     en: '',
-                    jp: ''
+                    jp: '観客DD'
                 }
             },
             {
@@ -41,7 +41,7 @@ exports.xiaotao = [
                 desc: {
                     zh: '说相声',
                     en: '',
-                    jp: ''
+                    jp: '漫才をする'
                 }
             },
             {
@@ -49,35 +49,35 @@ exports.xiaotao = [
                 desc: {
                     zh: '虚拟德云社',
                     en: '',
-                    jp: ''
+                    jp: '仮想ドイツ'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '第一印象词', en: '', jp: ''},
-        alias: {zh: '典中典', en: '', jp: ''},
+        clfy: {zh: '第一印象词', en: '', jp: '第一映像語'},
+        alias: {zh: '典中典', en: '', jp: '経典の中の経典'},
         voice: [
             {
                 path: 'xt-sldd.mp3',
                 desc: {
                     zh: '帅老DD',
                     en: '',
-                    jp: ''
+                    jp: '観客DD'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '相声潜质', en: '', jp: ''},
-        alias: {zh: '桃dg', en: '', jp: ''},
+        clfy: {zh: '相声潜质', en: '', jp: '漫才の底力'},
+        alias: {zh: '桃dg', en: '', jp: 'Tao dg'},
         voice: [
             {
                 path: 'xt-sxs.mp3',
                 desc: {
                     zh: '说相声',
                     en: '',
-                    jp: ''
+                    jp: '漫才をする'
                 }
             },
             {
@@ -85,35 +85,35 @@ exports.xiaotao = [
                 desc: {
                     zh: '虚拟德云社',
                     en: '',
-                    jp: ''
+                    jp: '仮想ドイツ'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '音声', en: '', jp: ''},
-        alias: {zh: '声音', en: '', jp: ''},
+        clfy: {zh: '音声', en: '', jp: 'サウンド'},
+        alias: {zh: '声音', en: '', jp: 'サウンド'},
         voice: [
             {
                 path: 'xt-dapenti.mp3',
                 desc: {
                     zh: '阿秋',
                     en: '',
-                    jp: ''
+                    jp: 'クシャミ'
                 }
             }
         ]
     },
     {
-    clfy: {zh: '桃桃的三年', en: '', jp: ''},
-    alias: {zh: '┭┮﹏┭┮', en: '', jp: ''},
+    clfy: {zh: '桃桃的三年', en: '', jp: 'TaoTaoの3年間'},
+    alias: {zh: '┭┮﹏┭┮', en: '', jp: '┭┮﹏┭┮(に感銘を与える'},
     voice:[
         {
             path: 'xt-sannianle1.mp3',
             desc: {
                 zh: '我们在一起三年了',
                 en: '',
-                jp: ''
+                jp: '私たちは3年間一緒にいました。'
             }
         },
         {
@@ -121,7 +121,7 @@ exports.xiaotao = [
             desc: {
                 zh: '陪伴是最长情的告白',
                 en: '',
-                jp: ''
+                jp: '付き添いは一番長い告白'
             }
         },
         {
@@ -129,7 +129,7 @@ exports.xiaotao = [
             desc: {
                 zh: '届到了好多爱',
                 en: '',
-                jp: ''
+                jp: 'たくさんの愛を手に入れた'
             }
         },
         {
@@ -137,7 +137,7 @@ exports.xiaotao = [
             desc: {
                 zh: '带着帅老弟弟成长',
                 en: '',
-                jp: ''
+                jp: '観客を連れて成長する'
             }
         },
         {
@@ -145,7 +145,7 @@ exports.xiaotao = [
             desc: {
                 zh: '度过∞个三年',
                 en: '',
-                jp: ''
+                jp: '無数の3年間を過ごす'
             }
         },
         {
@@ -153,7 +153,7 @@ exports.xiaotao = [
             desc: {
                 zh: '带来快乐',
                 en: '',
-                jp: ''
+                jp: '喜びをもたらす'
             }
         },
         {
@@ -161,7 +161,7 @@ exports.xiaotao = [
             desc: {
                 zh: '给您吹安眠曲',
                 en: '',
-                jp: ''
+                jp: '安眠曲を吹いてあげる'
             }
         },
         {
@@ -169,7 +169,7 @@ exports.xiaotao = [
             desc: {
                 zh: '生命中有你',
                 en: '',
-                jp: ''
+                jp: 'あなたがいる'
             }
         },
         {
@@ -177,21 +177,21 @@ exports.xiaotao = [
             desc: {
                 zh: '爱你们!',
                 en: '',
-                jp: ''
+                jp: 'あなた達を愛します！'
             }
         }
     ]
 },
 {
-    clfy: {zh: '桃桃妹妹', en: '', jp: ''},
-    alias: {zh: '谁会认这个妹妹呢?', en: '', jp: ''},
+    clfy: {zh: '桃桃妹妹', en: '', jp: 'Taotao妹'},
+    alias: {zh: '谁会认这个妹妹呢?', en: '', jp: '誰がこの妹を欲しがるの?'},
     voice:[
         {
             path: 'xt-buxintengrenjia.mp3',
             desc: {
                 zh: '哥哥不心疼人家',
                 en: '',
-                jp: ''
+                jp: '兄は私をかわいがらない。'
             }
         },
         {
@@ -199,7 +199,7 @@ exports.xiaotao = [
             desc: {
                 zh: '妹妹很开心,因为哥哥耳机坏了',
                 en: '',
-                jp: ''
+                jp: '妹はとても楽しくて、兄のイヤホンが壊れたためです'
             }
         },
         {
@@ -207,7 +207,7 @@ exports.xiaotao = [
             desc: {
                 zh: '心疼giegie',
                 en: '',
-                jp: ''
+                jp: 'Giegieをかわいがる'
             }
         },
         {
@@ -215,7 +215,7 @@ exports.xiaotao = [
             desc: {
                 zh: '多看妹妹一眼',
                 en: '',
-                jp: ''
+                jp: '妹をちらっと見る'
             }
         },
         {
@@ -223,7 +223,7 @@ exports.xiaotao = [
             desc: {
                 zh: '妹妹擦玻璃',
                 en: '',
-                jp: ''
+                jp: '妹がガラスを拭く'
             }
         },
         {
@@ -231,7 +231,7 @@ exports.xiaotao = [
             desc: {
                 zh: '妹妹又擦玻璃',
                 en: '',
-                jp: ''
+                jp: '妹はまたガラスを拭く'
             }
         },
         {
@@ -239,7 +239,7 @@ exports.xiaotao = [
             desc: {
                 zh: '妹让哥社死,哥不得不_',
                 en: '',
-                jp: ''
+                jp: '妹は私の会社を死なせ、兄は_'
             }
         },
         {
@@ -247,7 +247,7 @@ exports.xiaotao = [
             desc: {
                 zh: '没有做过吗(咬牙切齿',
                 en: '',
-                jp: ''
+                jp: 'やったことないの!(歯を食いしばる'
             }
         }
     ]
