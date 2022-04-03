@@ -1,6 +1,6 @@
 exports.xiaorou = [
     {
-        clfy: {zh: '温柔开场白🪔', en: '', jp: '優しい前置き'},
+        clfy: {zh: '温柔开场白🪔', en: '', jp: '優しい前置き🪔'},
         alias: {zh: '只有柔宝有介绍',en: '', jp: 'Roubaoだけはちゃんと紹介して'},
         voice:[
             {
