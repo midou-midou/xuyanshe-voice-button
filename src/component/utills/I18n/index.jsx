@@ -22,9 +22,9 @@ function I18n() {
     // }
 
     // 切换语言 - 日语
-    // const changejpLang = () => {
-    //     dispatch(createChangeLangAction('jp'));
-    // }
+    const changejpLang = () => {
+        dispatch(createChangeLangAction('jp'));
+    }
 
     // 语言下拉菜单动画
     const isShowList = () => {
@@ -43,8 +43,8 @@ function I18n() {
             </div>
             <div className="i18n-droplist" ref={droplist}>
                 <div className="i18n-item" onClick={changezhLang} >{locale['zh']}</div>
-                <div className="i18n-item" style={{cursor:'not-allowed'}} >{locale['en']}</div>
-                <div className="i18n-item" style={{cursor:'not-allowed'}} >{locale['jp']}</div>
+                <div className="i18n-item" >{locale['en']}</div>
+                <div className="i18n-item" onClick={changejpLang} >{locale['jp']}</div>
             </div>
         </div>
     );

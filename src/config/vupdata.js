@@ -1,7 +1,7 @@
 const vupData = [
     {
         uid: '5563350',
-        name: '小希',
+        name: {zh: '小希', en: '', jp: 'Xiaoxi'},
         abbr: 'xx',
         color: '#CD3951',
         profile: 'https://static.xiaoblogs.cn/img/xx.png',
@@ -10,7 +10,7 @@ const vupData = [
     },
     {
         uid: '5563350',
-        name: '小桃',
+        name: {zh: '小桃', en: '', jp: 'Xiaotao'},
         abbr: 'xt',
         color: '#DCCAE8',
         profile: 'https://static.xiaoblogs.cn/img/xt.png',
@@ -19,7 +19,7 @@ const vupData = [
     },
     {
         uid: '1734978373',
-        name: '小柔',
+        name: {zh: '小柔', en: '', jp: 'Xiaorou'},
         abbr: 'xr',
         color: '#89dedb',
         liveroom: '22696954',
@@ -28,7 +28,7 @@ const vupData = [
     },
     {
         uid: '698029620',
-        name: '兰音',
+        name: {zh: '兰音', en: '', jp: 'Reine'},
         abbr: 'reine',
         color: '#a272f4',
         liveroom: '22696653',
@@ -37,7 +37,7 @@ const vupData = [
     },
     {
         uid: '1501380958',
-        name: '艾露露',
+        name: {zh: '艾露露', en: '', jp: 'Ailurus'},
         abbr: 'ailurus',
         color: '#fdc888',
         liveroom: '22746343',

@@ -22,9 +22,9 @@ class AudioPanel extends Component {
             playList: new Map(),
             playListIndex: [],
             loopInfo: [
-                {zh: '啥都不循环', en: '', jp: ''},
-                {zh: '单曲循环', en: '', jp: ''},
-                {zh: '循环当前页面全部音频', en: '', jp: ''}
+                {zh: '啥都不循环', en: '', jp: 'ループなし'},
+                {zh: '单曲循环', en: '', jp: 'シングルサイクル'},
+                {zh: '循环当前页面全部音频', en: '', jp: 'すべての音をループ'}
             ]
         }
         this.playstopbtn = createRef();
@@ -177,13 +177,15 @@ class AudioPanel extends Component {
                     </div>
                 </IntlProvider>
                 <div className="audioControl-container">
-                    <div className="audioPanel-playstop"  onClick={this.stopAllVoice} ref={this.playstopbtn} title="别走"><i className="iconfont icon-jingledan-tingzhibofang"></i></div>
-                    <div className="audioPanel-loop"  onClick={this.changeLoopState} ref={this.loopbtn} title="洗脑"><i className="iconfont icon-xunhuanbofang"></i></div>
-                    <div className="audioPanel-random"  onClick={this.random} ref={this.randombtn} title="盲盒"><i className="iconfont icon-suijibofang"></i></div>
+                    <div className="audioPanel-playstop"  onClick={this.stopAllVoice} ref={this.playstopbtn} ><i className="iconfont icon-jingledan-tingzhibofang"></i></div>
+                    <div className="audioPanel-loop"  onClick={this.changeLoopState} ref={this.loopbtn} ><i className="iconfont icon-xunhuanbofang"></i></div>
+                    <div className="audioPanel-random"  onClick={this.random} ref={this.randombtn} ><i className="iconfont icon-suijibofang"></i></div>
                 </div>
                 <div className="loopInfo">
                     <span>
-                        <IntlProvider locale={this.props.lang} messages={this.state.loopInfo[this.props.isLoop]}></IntlProvider>
+                        <IntlProvider locale={this.props.lang} messages={this.state.loopInfo[this.props.isLoop]}>
+                            <FormattedMessage id={this.props.lang}></FormattedMessage>
+                        </IntlProvider>
                     </span>
                 </div>
             </div>

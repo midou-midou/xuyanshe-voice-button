@@ -1,15 +1,15 @@
 exports.ailurus = [
     {
         isNew: true,
-        clfy: {zh: '新音声', en: '', jp: ''},
-        alias: {zh: 'NewVoice', en: '', jp: ''},
+        clfy: {zh: '新音声', en: '', jp: '新音声'},
+        alias: {zh: 'NewVoice', en: '', jp: '新音声'},
         voice: [
             {
                 path: 'all-bnghm.mp3',
                 desc: {
                     zh: '别难过好吗',
                     en: '',
-                    jp: ''
+                    jp: '悲しむな'
                 }
             },
             {
@@ -17,7 +17,7 @@ exports.ailurus = [
                 desc: {
                     zh: '当熊友们D别人的时候我不会难过的',
                     en: '',
-                    jp: ''
+                    jp: '観客が私を置き去りにしたとき、私は悲しくありません'
                 }
             },
             {
@@ -25,7 +25,7 @@ exports.ailurus = [
                 desc: {
                     zh: '养熊人现在就开始敷衍我了',
                     en: '',
-                    jp: ''
+                    jp: '今、聴衆は私の質問に勝手に答え始めました！'
                 }
             },
             {
@@ -33,7 +33,7 @@ exports.ailurus = [
                 desc: {
                     zh: '呃呃',
                     en: '',
-                    jp: ''
+                    jp: 'ええと。。。'
                 }
             },
             {
@@ -41,7 +41,7 @@ exports.ailurus = [
                 desc: {
                     zh: '骗到了',
                     en: '',
-                    jp: ''
+                    jp: 'だまされたでしょう'
                 }
             },
             {
@@ -49,7 +49,7 @@ exports.ailurus = [
                 desc: {
                     zh: '养熊人说的不算，我说了才算',
                     en: '',
-                    jp: ''
+                    jp: '観客の言うことはいいえ、私の言うことを聞いてください。'
                 }
             },
             {
@@ -57,7 +57,7 @@ exports.ailurus = [
                 desc: {
                     zh: '熊の喘气(像另一种动物',
                     en: '',
-                    jp: ''
+                    jp: 'Aillurusの喘ぎ声(ある動物のように'
                 }
             },
             {
@@ -65,21 +65,21 @@ exports.ailurus = [
                 desc: {
                     zh: '噗',
                     en: '',
-                    jp: ''
+                    jp: 'ふふ'
                 }
             }
         ]
     },
     {
-        clfy: {zh: 'DNA里的音声', en: '', jp: ''},
-        alias: {zh: '圣音',en: '', jp: ''},
+        clfy: {zh: 'DNA里的音声', en: '', jp: '忘れられない語録'},
+        alias: {zh: '圣音',en: '', jp: '聖音'},
         voice:[
             {
                 path: 'all-niganmaya.mp3',
                 desc: {
                     zh: '你干嘛呀!!!',
                     en: '',
-                    jp: ''
+                    jp: '何してるの!!!'
                 }
             },
             {
@@ -87,7 +87,7 @@ exports.ailurus = [
                 desc: {
                     zh: '吃我一拳!!!',
                     en: '',
-                    jp: ''
+                    jp: 'パンチを食らわせてくれ!!!'
                 }
             },
             {
@@ -95,21 +95,21 @@ exports.ailurus = [
                 desc: {
                     zh: '弹蟑螂',
                     en: '',
-                    jp: ''
+                    jp: 'ゴキブリをはじく'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '养熊人必听', en: '', jp: ''},
-        alias: {zh: '先养gachi后就变成……',en: '', jp: ''},
+        clfy: {zh: '养熊人必听', en: '', jp: '観客が聞かなければならない'},
+        alias: {zh: '先养gachi后就变成……',en: '', jp: 'まず感動して、それから。。。'},
         voice:[
             {
                 path: 'all-bnghm.mp3',
                 desc: {
                     zh: '别难过好吗',
                     en: '',
-                    jp: ''
+                    jp: '悲しむな'
                 }
             },
             {
@@ -117,7 +117,7 @@ exports.ailurus = [
                 desc: {
                     zh: '当熊友们D别人的时候我不会难过的',
                     en: '',
-                    jp: ''
+                    jp: '観客が私を置き去りにしたとき、私は悲しくありません'
                 }
             },
             {
@@ -125,7 +125,7 @@ exports.ailurus = [
                 desc: {
                     zh: '养熊人现在就开始敷衍我了',
                     en: '',
-                    jp: ''
+                    jp: '今、聴衆は私の質問に勝手に答え始めました！'
                 }
             },
             {
@@ -133,7 +133,7 @@ exports.ailurus = [
                 desc: {
                     zh: '我好想养熊人啊啊',
                     en: '',
-                    jp: ''
+                    jp: '観客が恋しいよ'
                 }
             },
             {
@@ -141,7 +141,7 @@ exports.ailurus = [
                 desc: {
                     zh: '感情补不上了~',
                     en: '',
-                    jp: ''
+                    jp: '感情は補うことができない'
                 }
             },
             {
@@ -149,7 +149,7 @@ exports.ailurus = [
                 desc: {
                     zh: '不能没有养!熊!人!',
                     en: '',
-                    jp: ''
+                    jp: '観客がいないわけにはいかない!!'
                 }
             },
             {
@@ -157,7 +157,7 @@ exports.ailurus = [
                 desc: {
                     zh: '养熊人~一块睡吧',
                     en: '',
-                    jp: ''
+                    jp: '観客~一緒に寝よう'
                 }
             },
             {
@@ -165,7 +165,7 @@ exports.ailurus = [
                 desc: {
                     zh: '给养熊人带货',
                     en: '',
-                    jp: ''
+                    jp: '観客に品物を推薦する'
                 }
             },
             {
@@ -173,7 +173,7 @@ exports.ailurus = [
                 desc: {
                     zh: '养熊人赶快磕头',
                     en: '',
-                    jp: ''
+                    jp: '観客は早く正座しなさい'
                 }
             },
             {
@@ -181,7 +181,7 @@ exports.ailurus = [
                 desc: {
                     zh: '养熊人只喜欢吃拳头',
                     en: '',
-                    jp: ''
+                    jp: '観客は私に殴られるのが好きだ。'
                 }
             },
             {
@@ -189,7 +189,7 @@ exports.ailurus = [
                 desc: {
                     zh: '养熊人给我爪巴',
                     en: '',
-                    jp: ''
+                    jp: '観衆はひざまずいて謝罪した'
                 }
             },
             {
@@ -197,7 +197,7 @@ exports.ailurus = [
                 desc: {
                     zh: '给我上!舰!',
                     en: '',
-                    jp: ''
+                    jp: '観客がお金を払ってくれ！'
                 }
             },
             {
@@ -205,7 +205,7 @@ exports.ailurus = [
                 desc: {
                     zh: '骗到了',
                     en: '',
-                    jp: ''
+                    jp: 'だまされたでしょう'
                 }
             },
             {
@@ -213,21 +213,21 @@ exports.ailurus = [
                 desc: {
                     zh: '让养熊人办了你',
                     en: '',
-                    jp: ''
+                    jp: '私は他の人にあなたを殴らせます!'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '自恋露露', en: '', jp: ''},
-        alias: {zh: '反被教育',en: '', jp: ''},
+        clfy: {zh: '自恋露露', en: '', jp: '自己陶酔のAillurus'},
+        alias: {zh: '反被教育',en: '', jp: '逆に教育された'},
         voice:[
             {
                 path: 'all-zilian.mp3',
                 desc: {
                     zh: '自恋',
                     en: '',
-                    jp: ''
+                    jp: '自己陶酔'
                 }
             },
             {
@@ -235,35 +235,35 @@ exports.ailurus = [
                 desc: {
                     zh: '从没见过如此__的up主',
                     en: '',
-                    jp: ''
+                    jp: 'こんなの見たことない...の作者'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '屑', en: '', jp: ''},
-        alias: {zh: '真想给__',en: '', jp: ''},
+        clfy: {zh: '屑', en: '', jp: '無言'},
+        alias: {zh: '真想给__',en: '', jp: 'あげたいなぁ。。。'},
         voice:[
             {
                 path: 'all-ssdbs.mp3',
                 desc: {
                     zh: '养熊人说的不算，我说了才算',
                     en: '',
-                    jp: ''
+                    jp: '観客の言うことはいいえ、私の言うことを聞いてください。'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '禁', en: '', jp: ''},
-        alias: {zh: '请大声播放',en: '', jp: ''},
+        clfy: {zh: '禁', en: '', jp: '禁'},
+        alias: {zh: '请大声播放',en: '', jp: '声を大きくしてください'},
         voice:[
             {
                 path: 'all-jiaochuan.mp3',
                 desc: {
                     zh: '哎呀~哎呀~~哎呀呀~',
                     en: '',
-                    jp: ''
+                    jp: 'やれやれ~やれやれ~やれやれ~'
                 }
             },
             {
@@ -271,7 +271,7 @@ exports.ailurus = [
                 desc: {
                     zh: '妹妹~不能~嗯~再脱了',
                     en: '',
-                    jp: ''
+                    jp: '脱ぎ続けるわけにはいかない~'
                 }
             },
             {
@@ -279,21 +279,21 @@ exports.ailurus = [
                 desc: {
                     zh: '自行脑补吧',
                     en: '',
-                    jp: ''
+                    jp: '自分で幻想しよう'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '发病', en: '', jp: ''},
-        alias: {zh: '胡闹势',en: '', jp: ''},
+        clfy: {zh: '发病', en: '', jp: '突然の異常'},
+        alias: {zh: '胡闹势',en: '', jp: 'むやみに来る'},
         voice:[
             {
                 path: 'all-dahu.mp3',
                 desc: {
                     zh: '打鼾',
                     en: '',
-                    jp: ''
+                    jp: 'いびきをかく'
                 }
             },
             {
@@ -301,7 +301,7 @@ exports.ailurus = [
                 desc: {
                     zh: '重量级-爹~~~~~',
                     en: '',
-                    jp: ''
+                    jp: '超大きな声で--おやじを呼ぶ'
                 }
             },
             {
@@ -309,7 +309,7 @@ exports.ailurus = [
                 desc: {
                     zh: '熊の吟唱',
                     en: '',
-                    jp: ''
+                    jp: 'Aillurusの絶叫'
                 }
             },
             {
@@ -317,7 +317,7 @@ exports.ailurus = [
                 desc: {
                     zh: '和立花瑶捡垃圾',
                     en: '',
-                    jp: ''
+                    jp: '友達とゴミ拾い'
                 }
             },
             {
@@ -325,7 +325,7 @@ exports.ailurus = [
                 desc: {
                     zh: '口臭-承认了',
                     en: '',
-                    jp: ''
+                    jp: '口臭がするのは認めます'
                 }
             },
             {
@@ -333,7 +333,7 @@ exports.ailurus = [
                 desc: {
                     zh: '凉了~凉了~',
                     en: '',
-                    jp: ''
+                    jp: 'しまった~しまった~'
                 }
             },
             {
@@ -341,7 +341,7 @@ exports.ailurus = [
                 desc: {
                     zh: '小柔~没了你我可怎么办呐,呜呜呜~',
                     en: '',
-                    jp: ''
+                    jp: 'Xiaorouがいなくなったらどうする?,Aillurusの泣き声'
                 }
             },
             {
@@ -349,21 +349,21 @@ exports.ailurus = [
                 desc: {
                     zh: 'PrPrPrPrPrPrPr',
                     en: '',
-                    jp: ''
+                    jp: 'Aillurus変な音'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '可爱露露', en: '', jp: ''},
-        alias: {zh: '露露自己说的',en: '', jp: ''},
+        clfy: {zh: '可爱露露', en: '', jp: 'かわいいのAillurus'},
+        alias: {zh: '露露自己说的',en: '', jp: '自分で言う'},
         voice:[
             {
                 path: 'all-llhenkeai2.mp3',
                 desc: {
                     zh: '可爱一',
                     en: '',
-                    jp: ''
+                    jp: 'かわいい 1'
                 }
             },
             {
@@ -371,21 +371,21 @@ exports.ailurus = [
                 desc: {
                     zh: '可爱二',
                     en: '',
-                    jp: ''
+                    jp: 'かわいい 2'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '真假礼貌露露', en: '', jp: ''},
-        alias: {zh: '不怕困难',en: '', jp: ''},
+        clfy: {zh: '真假礼貌露露', en: '', jp: '礼儀正しいと失礼なAillurus'},
+        alias: {zh: '不怕困难',en: '', jp: '困難を恐れない.'},
         voice:[
             {
                 path: 'all-lubozu.mp3',
                 desc: {
                     zh: '喂~录播组在吗',
                     en: '',
-                    jp: ''
+                    jp: 'もしもし、録画チームはいらっしゃいますか。'
                 }
             },
             {
@@ -393,7 +393,7 @@ exports.ailurus = [
                 desc: {
                     zh: '没推流怪熊友是吧',
                     en: '',
-                    jp: ''
+                    jp: 'ウェブサイトは私のコンピュータのデスクトップがなくて、すべて観客のせいです'
                 }
             },
             {
@@ -401,7 +401,7 @@ exports.ailurus = [
                 desc: {
                     zh: '对线-杨宝',
                     en: '',
-                    jp: ''
+                    jp: 'Yangbaoとケンカ'
                 }
             },
             {
@@ -409,7 +409,7 @@ exports.ailurus = [
                 desc: {
                     zh: '艾研社',
                     en: '',
-                    jp: ''
+                    jp: '艾研社'
                 }
             },
             ,
@@ -418,21 +418,21 @@ exports.ailurus = [
                 desc: {
                     zh: '谢谢您内',
                     en: '',
-                    jp: ''
+                    jp: 'ありがとう？あり得ない'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '露露笑', en: '', jp: ''},
-        alias: {zh: '哈蛤铪',en: '', jp: ''},
+        clfy: {zh: '露露笑', en: '', jp: 'Aillurusの笑い声'},
+        alias: {zh: '哈蛤铪',en: '', jp: 'ハハハ'},
         voice:[
             {
                 path: 'all-laugh1.mp3',
                 desc: {
                     zh: '哈~呵呵',
                     en: '',
-                    jp: ''
+                    jp: 'おかしくて窒息した'
                 }
             },
             {
@@ -440,7 +440,7 @@ exports.ailurus = [
                 desc: {
                     zh: '嘻嘻嘻-呵~呵~',
                     en: '',
-                    jp: ''
+                    jp: 'やんちゃな笑い声'
                 }
             },
             {
@@ -448,7 +448,7 @@ exports.ailurus = [
                 desc: {
                     zh: '呵~呵~呵~呵~呵~',
                     en: '',
-                    jp: ''
+                    jp: 'アヒルの声が出るほど笑う'
                 }
             },
             {
@@ -456,7 +456,7 @@ exports.ailurus = [
                 desc: {
                     zh: '哈哈嘿呵-呵呵呵~',
                     en: '',
-                    jp: ''
+                    jp: 'ハハハ--ハハ'
                 }
             },
             {
@@ -464,7 +464,7 @@ exports.ailurus = [
                 desc: {
                     zh: '嘻~嘻~嘻~嘻~嘻~',
                     en: '',
-                    jp: ''
+                    jp: 'おかしくて窒息した 2.0'
                 }
             },
             {
@@ -472,22 +472,22 @@ exports.ailurus = [
                 desc: {
                     zh: '嘻嘻嘻嘻',
                     en: '',
-                    jp: ''
+                    jp: '彼女は満腹だと思いますか？実は彼女は笑っている。'
                 }
             }
             
         ]
     },
     {
-        clfy: {zh: '露露声音', en: '', jp: ''},
-        alias: {zh: '对应上面听',en: '', jp: ''},
+        clfy: {zh: '露露声音', en: '', jp: 'Aillurusの声'},
+        alias: {zh: '对应上面听',en: '', jp: '上と比較する'},
         voice:[
             {
                 path: 'all-ee.mp3',
                 desc: {
                     zh: '呃呃',
                     en: '',
-                    jp: ''
+                    jp: 'ええと。。。'
                 }
             },
             {
@@ -495,7 +495,7 @@ exports.ailurus = [
                 desc: {
                     zh: '熊の喘气(像另一种动物',
                     en: '',
-                    jp: ''
+                    jp: 'Aillurusの喘ぎ声(ある動物のように'
                 }
             },
             {
@@ -503,21 +503,21 @@ exports.ailurus = [
                 desc: {
                     zh: '噗',
                     en: '',
-                    jp: ''
+                    jp: 'ふふ'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '养熊人对露露的话', en: '', jp: ''},
-        alias: {zh: '嘿嘿口水黄豆',en: '', jp: ''},
+        clfy: {zh: '养熊人对露露的话', en: '', jp: '観客の彼女に対する言葉'},
+        alias: {zh: '嘿嘿口水黄豆',en: '', jp: 'まじめでない話'},
         voice:[
             {
                 path: 'all-xiongyou1.mp3',
                 desc: {
                     zh: '@SSBSBB',
                     en: '',
-                    jp: ''
+                    jp: '観客の声?'
                 }
             },
             {
@@ -525,7 +525,7 @@ exports.ailurus = [
                 desc: {
                     zh: '@我的青春恋爱勿语',
                     en: '',
-                    jp: ''
+                    jp: '観客の声 2'
                 }
             }
         ]

@@ -1,28 +1,28 @@
 exports.xiaorou = [
     {
-        clfy: {zh: '温柔开场白🪔', en: '', jp: ''},
-        alias: {zh: '只有柔宝有介绍',en: '', jp: ''},
+        clfy: {zh: '温柔开场白🪔', en: '', jp: '優しい前置き🪔'},
+        alias: {zh: '只有柔宝有介绍',en: '', jp: 'Roubaoだけはちゃんと紹介して'},
         voice:[
             {
                 path: 'xr-xrdzwjs.mp3',
                 desc: {
                     zh: 'Hello',
                     en: '',
-                    jp: ''
+                    jp: 'Hello'
                 }
             }
         ]
     },
     {
-        clfy: {zh: 'AWSL', en: '', jp: ''},
-        alias: {zh: '柔宝,嘿嘿,柔宝,嘿嘿',en: '', jp: ''},
+        clfy: {zh: 'AWSL', en: '', jp: 'あ~死んだ'},
+        alias: {zh: '柔宝,嘿嘿,柔宝,嘿嘿',en: '', jp: 'RoubaoへへっへっRoubao'},
         voice:[
             {
                 path: 'xr-dinggongsanlian.mp3',
                 desc: {
                     zh: '八嘎Hentai无路赛(long',
                     en: '',
-                    jp: ''
+                    jp: 'バカ、変態、うるさい'
                 }
             },
             {
@@ -30,21 +30,21 @@ exports.xiaorou = [
                 desc: {
                     zh: '八嘎Hentai无路赛(short',
                     en: '',
-                    jp: ''
+                    jp: 'バカ、変態、うるさい'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '助力柔宝💚', en: '', jp: ''},
-        alias: {zh: '柔光灯的含金量',en: '', jp: ''},
+        clfy: {zh: '助力柔宝💚', en: '', jp: 'Roubaoを助ける💚'},
+        alias: {zh: '柔光灯的含金量',en: '', jp: '観客の金'},
         voice:[
             {
                 path: 'xr-huaqian.mp3',
                 desc: {
                     zh: '来一个舰长吧',
                     en: '',
-                    jp: ''
+                    jp: 'プレゼントを一つください。'
                 }
             },
             {
@@ -52,21 +52,21 @@ exports.xiaorou = [
                 desc: {
                     zh: '人生最值138',
                     en: '',
-                    jp: ''
+                    jp: 'この2649円のお金は価値があります。'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '三语VUP', en: '', jp: ''},
-        alias: {zh: '现在只有两语',en: '', jp: ''},
+        clfy: {zh: '三语VUP', en: '', jp: '3つの言語.'},
+        alias: {zh: '现在只有两语',en: '', jp: '今は2つの言語しかできません'},
         voice:[
             {
                 path: 'xr-aidegaobai.mp3',
                 desc: {
                     zh: '爱的告白',
                     en: '',
-                    jp: ''
+                    jp: '愛の告白'
                 }
             },
             {
@@ -74,7 +74,7 @@ exports.xiaorou = [
                 desc: {
                     zh: '和某人换家',
                     en: '',
-                    jp: ''
+                    jp: '誰かと「家」を変える'
                 }
             },
             {
@@ -82,7 +82,7 @@ exports.xiaorou = [
                 desc: {
                     zh: '这个距离很害羞',
                     en: '',
-                    jp: ''
+                    jp: 'この距離、恥ずかしいですね'
                 }
             },
             {
@@ -90,21 +90,21 @@ exports.xiaorou = [
                 desc: {
                     zh: '最爱大家了',
                     en: '',
-                    jp: ''
+                    jp: '大好き、みんな'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '温柔柔宝', en: '', jp: ''},
-        alias: {zh: '真好呀',en: '', jp: ''},
+        clfy: {zh: '温柔柔宝', en: '', jp: '優しいRoubao'},
+        alias: {zh: '真好呀',en: '', jp: 'いいね'},
         voice:[
             {
                 path: 'xr-hrb.mp3',
                 desc: {
                     zh: '艾露露真的哭死',
                     en: '',
-                    jp: ''
+                    jp: 'Aillurusは感動しました'
                 }
             },
             {
@@ -112,7 +112,7 @@ exports.xiaorou = [
                 desc: {
                     zh: '和柔宝的距离进了亿点点',
                     en: '',
-                    jp: ''
+                    jp: 'Roubaoにだいぶ近くなりました'
                 }
             },
             {
@@ -120,21 +120,21 @@ exports.xiaorou = [
                 desc: {
                     zh: '我爱死这个世界了',
                     en: '',
-                    jp: ''
+                    jp: '私はこの世界が大好きです。'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '可爱柔宝', en: '', jp: ''},
-        alias: {zh: '可爱',en: '', jp: ''},
+        clfy: {zh: '可爱柔宝', en: '', jp: 'かわいいRoubao'},
+        alias: {zh: '可爱',en: '', jp: 'かわいい'},
         voice:[
             {
                 path: 'xr-bkyl.mp3',
                 desc: {
                     zh: '不可以啦',
                     en: '',
-                    jp: ''
+                    jp: 'だめだ'
                 }
             },
             {
@@ -142,7 +142,7 @@ exports.xiaorou = [
                 desc: {
                     zh: '给我一颗糖吧',
                     en: '',
-                    jp: ''
+                    jp: 'フルーツキャンディをください。'
                 }
             },
             {
@@ -150,7 +150,7 @@ exports.xiaorou = [
                 desc: {
                     zh: '别笑人家啦',
                     en: '',
-                    jp: ''
+                    jp: '笑うなよ'
                 }
             },
             {
@@ -158,7 +158,7 @@ exports.xiaorou = [
                 desc: {
                     zh: 'mua~',
                     en: '',
-                    jp: ''
+                    jp: 'mua~'
                 }
             },
             {
@@ -166,7 +166,7 @@ exports.xiaorou = [
                 desc: {
                     zh: 'Pr',
                     en: '',
-                    jp: ''
+                    jp: 'Pr'
                 }
             },
             {
@@ -174,7 +174,7 @@ exports.xiaorou = [
                 desc: {
                     zh: '我要宕机啦',
                     en: '',
-                    jp: ''
+                    jp: '運転を中止します'
                 }
             },
             {
@@ -182,21 +182,21 @@ exports.xiaorou = [
                 desc: {
                     zh: '最喜欢大家了',
                     en: '',
-                    jp: ''
+                    jp: 'みんな大好き'
                 }
             }
         ]
     },
     {
-        clfy: {zh: '欺负柔宝', en: '', jp: ''},
-        alias: {zh: '某些人坏事做尽',en: '', jp: ''},
+        clfy: {zh: '欺负柔宝', en: '', jp: 'Roubaoをいじめる'},
+        alias: {zh: '某些人坏事做尽',en: '', jp: 'ある人は多くの悪いことをした。'},
         voice:[
             {
                 path: 'xr-266hszj.mp3',
                 desc: {
                     zh: '有人坏事做尽',
                     en: '',
-                    jp: ''
+                    jp: '悪いことをたくさんした人がいる'
                 }
             }
         ]

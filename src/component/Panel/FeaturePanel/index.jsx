@@ -44,7 +44,7 @@ function FeaturePanel(props) {
             <div className="panel-btn-container">
                 <div className="btn-wrapper btn-permutation" onClick={isPermutation}>
                     <div className="btn-name">
-                        <IntlProvider locale={props.lang} messages={{zh:"排列组合功能", en: '', jp: ''}}>
+                        <IntlProvider locale={props.lang} messages={{zh:"排列组合功能", en: '', jp: 'カスタムコンビネーション機能'}}>
                             <FormattedMessage id={props.lang}></FormattedMessage>
                         </IntlProvider>
                     </div>

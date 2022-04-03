@@ -94,7 +94,7 @@ const findVup = (arr, hit) => {
     }
     var findone;
     for(var i=0;;++i){
-        if(arr[i].name === hit){
+        if(arr[i].name.zh === hit){
             findone = arr[i];
             break;
         }
