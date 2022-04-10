@@ -22,7 +22,8 @@ class Permutation extends Component {
             pendingList: [],
             nextTime: 0,
             isPlay: false,
-            current: 0
+            current: 0,
+            isGetVoiceFromXHR: false
         };
     }
 
@@ -44,6 +45,11 @@ class Permutation extends Component {
         if(this.state.isPlay){
             // pending list item decode
             this.play(this.state.current);
+            return;
+        }
+        // 获取排列组合音声
+        if(this.state.isGetVoiceFromXHR){
+            this.playPermutationListVoice()
         }
     }
 
@@ -59,7 +65,8 @@ class Permutation extends Component {
             isPlay: false,
             current: 0,
             nextTime: 0,
-            pendingList: []
+            pendingList: [],
+            isGetVoiceFromXHR: false
         })
         // dispatch清空action
         store.dispatch(createSetPermutationStateAction());
@@ -74,10 +81,12 @@ class Permutation extends Component {
         }
         // 循环xhr获取的arraybuffer list
         if(this.state.permutationList.length !== 0){
-            this.state.permutationList.map((v,k) => {
-                let path = pathComplete(v.data);
-                return this.getVoiceFromPerlist2pending(path);
-            })
+            if(this.state.permutationList.length === this.state.pendingList.length){
+                return;
+            }
+            let voiceData = this.state.permutationList[this.state.current]
+            let path = pathComplete(voiceData.data)
+            this.getVoiceFromPerlist2pending(path)
         }else{
             message.error("添加几个音频后再试");
             return;
@@ -114,6 +123,7 @@ class Permutation extends Component {
             }
         }, () => {
             message.error("当前音频"+index+"播放错误");
+            return;
         });
     }
 
@@ -127,16 +137,21 @@ class Permutation extends Component {
             if(xhr.readyState === 4){
                 if(xhr.status === 200){
                     this.setState({
-                        pendingList: [...this.state.pendingList, xhr.response]
+                        pendingList: [...this.state.pendingList, xhr.response],
+                        current: this.state.current + 1,
+                        isGetVoiceFromXHR: true
                     })
                     if(this.state.pendingList.length === this.state.permutationList.length){
                         store.dispatch(createChangePlayerState());
                         this.setState({
-                            isPlay: true
+                            isPlay: true,
+                            current: 0,
+                            isGetVoiceFromXHR: false
                         })
                     }
                 }else{
                     message.error("获取音频失败,reason:"+xhr.responseText);
+                    return;
                 }
             }
         }
@@ -180,5 +195,5 @@ class Permutation extends Component {
         }
     }
 }
- 
+
 export default Permutation;
