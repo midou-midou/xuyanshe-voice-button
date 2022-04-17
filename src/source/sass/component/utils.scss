@@ -105,6 +105,20 @@
     
 }
 
+// site inform
+.siteInform-container{
+    background-color: #F9A602;
+    padding: 1rem .5rem;
+
+    .siteInform-inner{
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--inform-font-color);
+        text-align: center;
+    }
+    
+}
+
 // animation
 @keyframes slideInFromBottom {
     0%{

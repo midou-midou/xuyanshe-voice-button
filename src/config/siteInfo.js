@@ -2,6 +2,7 @@
 // github: github url
 // bili: bilibili url
 // cloud: cos或oos
+// inform: 网站醒目位置通知
 // beian: ICP备案号和网安备案
 // friends: 友链
 // support: 音声支援榜 
@@ -9,12 +10,16 @@
 // sitetheme: 站点主题色（xiaoxi、xiaotao、xiaorou、reine、ailurus）
 const site = {
     title: {zh: '', en: '', jp: ''},
-    anno: {zh: '', en: '', jp: ''},
     authoruid: '9964933',
     author: '_米豆',
     github: '',
     bili: 'https://space.bilibili.com/9964933',
     cloud: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com',
+    inform: { 
+        zh: '注意！！！本网站网址将要变为voice.xuyanshe.club，老网址将会重定向到新网址',
+        en: '', 
+        jp: '注意!voice.xuyanshe.club最新のアドレス'
+    },
     beian: {
         wangan: '',
         icp: '渝ICP备19003460号'
