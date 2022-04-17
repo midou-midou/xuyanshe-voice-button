@@ -18,7 +18,7 @@ const site = {
     inform: { 
         zh: '注意！！！本网站网址将要变为voice.xuyanshe.club，老网址将会重定向到新网址',
         en: '', 
-        jp: ''
+        jp: '注意!voice.xuyanshe.club最新のアドレス'
     },
     beian: {
         wangan: '',
