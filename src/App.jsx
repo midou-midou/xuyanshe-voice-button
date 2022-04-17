@@ -4,6 +4,7 @@ import Nav from './component/Navs/Nav';
 import XiaoXi from './component/Vup/XiaoXi';
 import XiaoTao from './component/Vup/XiaoTao';
 import XiaoRou from './component/Vup/XiaoRou';
+import SiteInform from './component/utills/SiteInform';
 import SiteInfo from './component/Panel/SiteInfo';
 import Footer from './component/Footer';
 import Reine from './component/Vup/Reine';
@@ -22,6 +23,7 @@ function App() {
 	return (
 		<Fragment>
 			<Nav />
+			<SiteInform />
 			<SiteInfo />
 			<SupportBtn />
 			<NavPanel vups={vups}/>
