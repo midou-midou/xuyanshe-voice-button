@@ -16,7 +16,7 @@ function Footer() {
                 <span id="c-flag">Copyright © </span>
                 <span id="c-year">{y}</span>
                 <a target="_blank" rel="noopener noreferrer" href={siteInfo.bili}>
-                    <div className="footer-profile" style={{backgroundImage: `url(${linkbase}${siteInfo.authoruid}.jpg)`}}></div>
+                    <div className="footer-profile" style={{backgroundImage: `url(${linkbase}${siteInfo.authoruid}.webp)`}}></div>
                 </a>
                 <span id="footer-au-name">
                     <a target="_blank" rel="noopener noreferrer" href={siteInfo.bili}> {siteInfo.author}</a>

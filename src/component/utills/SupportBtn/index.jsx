@@ -5,7 +5,6 @@ import { useState } from "react";
 
 function SupportBtn() {
     const supportInfo = useSelector(state => state.getSiteInfo.supports);
-    const tsupportInfo = useSelector(state => state.getSiteInfo.translateSupport);
     const vup = useSelector(state => state.getVupData);
     const lang = useSelector((state) => state.getLang);
     const [linkBase] = useState('//space.bilibili.com/');
@@ -22,7 +21,7 @@ function SupportBtn() {
                 {
                     supportInfo.map((item, key) => {
                         let color = findVup(vup, item.tag).color;
-                        let profile = ProfileLink + item.uid + '.jpg'; 
+                        let profile = ProfileLink + item.uid + '.webp'; 
                         return (
                             <div className="btn-wrapper btn-support" style={{backgroundColor: `${color}`,'--support-color':`${color}`}} key={key}>
                                 <div className="support-profile" style={{
