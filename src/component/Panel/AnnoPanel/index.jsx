@@ -68,7 +68,7 @@ function AnnoPanel(props) {
             <div className="panel-container annoPanel-container drawPanelZoomIn">
                 <div className="danmaku-container-panel"><DanmuPanel vupInfo={vup}/></div>
                 <div className="profile-container">
-                    <div className="profile" style={{backgroundImage: `url(${linkbase}${vup.uid}.jpg)`}}></div>
+                    <div className="profile" style={{backgroundImage: `url(${linkbase}${vup.uid}.webp)`}}></div>
                     <div className="profile-border" ref={profileBorderRef}></div>
                     <div className="profile-info" ref={liveInfoRef}><a target="_blank" rel="noopener noreferrer" href={`https://live.bilibili.com/${vup.liveroom}`}>Live</a></div>
                 </div>
