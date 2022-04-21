@@ -25,7 +25,7 @@ function Reine(){
                 <Suspense fallback={<Loading />} >
                     <AnnoPanel up="兰音"/>
                 </Suspense>
-                <Dynamic uid="698029620" />
+                {/* <Dynamic uid="698029620" /> */}
                 <Suspense fallback={<Loading />} >
                     <VoicePanel voice={voice} theme="reine"/>
                 </Suspense>

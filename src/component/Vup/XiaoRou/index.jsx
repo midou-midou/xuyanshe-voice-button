@@ -25,7 +25,7 @@ function XiaoRou(){
                 <Suspense fallback={<Loading />} >
                     <AnnoPanel up="小柔"/>
                 </Suspense>
-                <Dynamic uid="1734978373" />
+                {/* <Dynamic uid="1734978373" /> */}
                 <Suspense fallback={<Loading />} >
                     <VoicePanel voice={voice} theme="xiaorou"/>
                 </Suspense>

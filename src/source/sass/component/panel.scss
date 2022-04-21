@@ -304,30 +304,6 @@
         
     }
 
-    .site-inner-leftimg{
-        width: var(--head-img-wh);
-        height: var(--head-img-wh);
-        position: absolute;
-        left: var(--head-img-padding);
-        bottom: 0;
-        background-image: url(https://static.xiaoblogs.cn/img/headleft.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .site-inner-rightimg{
-        width: var(--head-img-wh);
-        height: var(--head-img-wh);
-        position: absolute;
-        bottom: 0;
-        right: var(--head-img-padding);
-        background-image: url(https://static.xiaoblogs.cn/img/headright.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
     // mobile适配
     @media screen and (max-width: 680px){
         --head-img-padding: 1.5rem;
