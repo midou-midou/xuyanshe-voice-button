@@ -25,7 +25,7 @@ function XiaoTao(){
                 <Suspense fallback={<Loading />}>
                     <AnnoPanel up="小桃"/>
                 </Suspense>
-                <Dynamic uid="5563350"/>
+                {/* <Dynamic uid="5563350"/> */}
                 <Suspense fallback={<Loading />}>
                     <VoicePanel voice={voice} theme="xiaotao"/>
                 </Suspense>

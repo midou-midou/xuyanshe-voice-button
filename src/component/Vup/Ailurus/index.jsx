@@ -25,7 +25,7 @@ function Ailurus(){
                 <Suspense fallback={<Loading />} >
                     <AnnoPanel up="艾露露"/>
                 </Suspense>
-                <Dynamic uid="1501380958" />
+                {/* <Dynamic uid="1501380958" /> */}
                 <Suspense fallback={<Loading />} >
                     <VoicePanel voice={voice} theme="ailurus"/>
                 </Suspense>

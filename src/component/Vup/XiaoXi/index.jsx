@@ -28,7 +28,7 @@ function XiaoXi(){
                 <Suspense fallback={<Loading />}>
                     <AnnoPanel up="小希"/>
                 </Suspense>
-                <Dynamic uid="5563350" />
+                {/* <Dynamic uid="5563350" /> */}
                 <Suspense fallback={<Loading />}>
                     <VoicePanel voice={voice} theme="xiaoxi"/>
                 </Suspense>
