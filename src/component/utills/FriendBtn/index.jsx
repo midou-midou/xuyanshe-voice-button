@@ -17,11 +17,10 @@ function FriendBtn() {
                     friendsInfo.map((item, key) => 
                         <div className="btn-wrapper btn-friend" style={{
                             backgroundColor: `${item.color}`,
-                            '--friend-color':`${item.color}`,
-                            '--friendImg-url':`${item.link}`+'/favicon.ico'}} key={key}>
+                            '--friend-color':`${item.color}`}} key={key}>
                             <div className="friend-profile" style={{
                                 backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0), var(--friend-color)),'+
-                                            'url('+`${item.link}`+'/favicon.ico'+')'
+                                            `url(${item.link}/favicon.ico)`
                             }}></div>
                             <a className="btn-name friend-name" target="_blank" rel="noopener noreferrer" href={item.link}>{item.name}</a>
                         </div>

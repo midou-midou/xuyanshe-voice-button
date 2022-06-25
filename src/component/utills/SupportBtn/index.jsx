@@ -26,7 +26,7 @@ function SupportBtn() {
                             <div className="btn-wrapper btn-support" style={{backgroundColor: `${color}`,'--support-color':`${color}`}} key={key}>
                                 <div className="support-profile" style={{
                                     backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0), var(--support-color)),'+
-                                                    'url('+`${profile}`+')'
+                                                    `url(${profile})`
                                 }}></div>
                                 <a className="btn-name support-name" target="_blank" rel="noopener noreferrer" href={`${linkBase}${item.uid}`}>{item.name}</a>
                             </div>

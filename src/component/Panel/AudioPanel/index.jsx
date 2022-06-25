@@ -39,10 +39,10 @@ class AudioPanel extends Component {
         let _playlist = new Map();
         let _playlistIndex = [];
         this.props.voice.map((tags, clifkey) => 
-            tags.voice.map((oneSound, voiceKey) => (
-                _playlist.set(clifkey*100+voiceKey, oneSound),
-                _playlistIndex.push(clifkey*100+voiceKey)
-            ))
+            tags.voice.map((oneSound, voiceKey) =>  {
+                _playlist.set(clifkey*100+voiceKey, oneSound)
+                return _playlistIndex.push(clifkey*100+voiceKey)
+            })
         )
         this.setState(()=>({
             playList: _playlist,

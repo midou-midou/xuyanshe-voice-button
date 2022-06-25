@@ -41,7 +41,7 @@ class Permutation extends Component {
         })
     }
 
-    componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(){
         if(this.state.isPlay){
             // pending list item decode
             this.play(this.state.current);

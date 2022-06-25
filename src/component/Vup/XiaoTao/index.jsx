@@ -3,7 +3,7 @@ import { Fragment, Suspense, lazy, useEffect } from "react";
 import AudioPanel from '../../Panel/AudioPanel'
 import FriendBtn from "../../utills/FriendBtn";
 import Loading from "../../utills/Loading";
-import Dynamic from "../../utills/Dynamic";
+// import Dynamic from "../../utills/Dynamic";
 import {
     createSetSiteThemeAction
 } from '../../../store/actions/site'
@@ -17,7 +17,7 @@ function XiaoTao(){
 
     useEffect(() => {
         dispatch(createSetSiteThemeAction("xiaotao"));
-    }, [])
+    })
     
     return (
         <Fragment>

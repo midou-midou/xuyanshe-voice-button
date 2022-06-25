@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 function SiteInfo() {
     const lang = useSelector((state) => state.getLang)
-    const [siteinfo, _] = useState(
+    const [siteinfo] = useState(
         [
             {zh: '欢迎来到虚研社按钮', en: '', jp: '虚研社ボタンへようこそ'},
             {zh: '收录一些奇怪的，严🈲外传的，可以在公众场合大声播放的，无限循环的可爱的声音', en: '', jp: '変な音、外伝厳禁、公共の場で大声で再生できる、無限ループの可愛い音が収録されています'},
@@ -40,10 +40,6 @@ function SiteInfo() {
                 <p className="site-inner site-important">
                     <IntlProvider locale={lang} messages={siteinfo[8]}><FormattedMessage id={lang}></FormattedMessage></IntlProvider>
                 ：<a target="_blank" rel="noopener noreferrer" href="https://space.bilibili.com/9964933">_米豆</a></p>
-                <div className="shields-container">
-                    <img alt="GitHub issues" src="https://img.shields.io/github/issues/MIMONATCH/xuyanshe-voice-button" />
-                    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/MIMONATCH/xuyanshe-voice-button" />
-                </div>
             </div>
         </div>
     );

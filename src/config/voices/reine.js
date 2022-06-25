@@ -358,12 +358,12 @@ exports.reine = [
     },
     {
         clfy: {zh: '录播组', en: '', jp: '録画グループ'},
-        alias: {zh: '\耶/',en: '', jp: 'えっ!'},
+        alias: {zh: '耶',en: '', jp: 'えっ!'},
         voice:[
             {
                 path: 'ly-ljyy.mp3',
                 desc: {
-                    zh: '\兰家影耶/',
+                    zh: '兰家影耶',
                     en: '',
                     jp: '録画グループの呼び方'
                 }

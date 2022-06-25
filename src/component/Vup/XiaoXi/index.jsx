@@ -4,7 +4,7 @@ import { Fragment, lazy, Suspense, useEffect } from "react";
 import AudioPanel from '../../Panel/AudioPanel'
 // import AnnoPanel from '../../Panel/AnnoPanel'
 import FriendBtn from "../../utills/FriendBtn";
-import Dynamic from "../../utills/Dynamic";
+// import Dynamic from "../../utills/Dynamic";
 import Loading from "../../utills/Loading";
 import { useDispatch } from "react-redux";
 import {
@@ -20,7 +20,7 @@ function XiaoXi(){
 
     useEffect(() => {
         dispatch(createSetSiteThemeAction("xiaoxi"));
-    }, [])
+    })
     
     return (
         <Fragment>

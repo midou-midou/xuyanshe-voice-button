@@ -412,7 +412,6 @@ exports.ailurus = [
                     jp: '艾研社'
                 }
             },
-            ,
             {
                 path: 'all-xxn.mp3',
                 desc: {
