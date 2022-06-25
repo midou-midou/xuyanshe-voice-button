@@ -550,7 +550,7 @@ exports.xiaoxi = [
     },
     {
         clfy: {zh: '小希叫你起床', en: '', jp: 'Xiaoxiはあなたを起こします'},
-        alias: {zh: '\"叫床\"(bushi', en: '', jp: '起こしてくれ'},
+        alias: {zh: '叫床(bushi', en: '', jp: '起こしてくれ'},
         voice:[
             {
                 path: 'jiaoqichuang-xx.mp3',

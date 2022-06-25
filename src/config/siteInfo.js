@@ -42,7 +42,7 @@ const site = {
         },
         {
             name: '老余的甜蜜小家',
-            link: 'http://yuyy.info',
+            link: 'https://yuyy.info',
             color: '#7fdcac'
         },
         {

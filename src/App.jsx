@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import Nav from './component/Navs/Nav';
+import { BrowserRouter } from 'react-router-dom';
 import XiaoXi from './component/Vup/XiaoXi';
 import XiaoTao from './component/Vup/XiaoTao';
 import XiaoRou from './component/Vup/XiaoRou';
@@ -22,20 +23,22 @@ function App() {
 
 	return (
 		<Fragment>
-			<Nav />
-			<SiteInform />
-			<SiteInfo />
-			<SupportBtn />
-			<NavPanel vups={vups}/>
-			<FeaturePanel />
-			<Switch>
-				<Route exact path="/xx" component={XiaoXi}></Route>
-				<Route exact path="/xt" component={XiaoTao}></Route>
-				<Route exact path="/xr" component={XiaoRou}></Route>
-				<Route exact path="/reine" component={Reine}></Route>
-				<Route exact path="/ailurus" component={Ailurus}></Route>
-				<Redirect to="/xx"/>
-			</Switch>
+			<BrowserRouter>
+				<Nav />
+				<SiteInform />
+				<SiteInfo />
+				<SupportBtn />
+				<NavPanel vups={vups}/>
+				<FeaturePanel />
+				<Switch>
+					<Route exact path="/xx" component={XiaoXi}></Route>
+					<Route exact path="/xt" component={XiaoTao}></Route>
+					<Route exact path="/xr" component={XiaoRou}></Route>
+					<Route exact path="/reine" component={Reine}></Route>
+					<Route exact path="/ailurus" component={Ailurus}></Route>
+					<Redirect to="/xx"/>
+				</Switch>
+			</BrowserRouter>
 			<Footer />
 			<Console />
 		</Fragment>

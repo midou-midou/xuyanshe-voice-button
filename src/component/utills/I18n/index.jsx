@@ -6,7 +6,7 @@ import {
 
 function I18n() {
     const lang = useSelector((state) => state.getLang);
-    const [locale, setLocale] = useState({zh: '中文', en: 'English', jp: '日本'});
+    const [locale] = useState({zh: '中文', en: 'English', jp: '日本'});
     const droplist = useRef(null);
     const dispatch = useDispatch();
     

@@ -20,7 +20,7 @@ function AnnoPanel(props) {
 
     useEffect(() => {
         getUpState();
-    },[])
+    })
     
     useEffect(() => {
         switch(state.isLive){
