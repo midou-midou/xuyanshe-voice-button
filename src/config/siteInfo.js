@@ -58,11 +58,6 @@ const site = {
             tag: '艾露露'
         },
         {
-            uid: '313536584',
-            name: '嘉然今天吃碎片手雷',
-            tag: '艾露露'
-        },
-        {
             uid: '668764',
             name: 'MonsterArcher',
             tag: '小希'
