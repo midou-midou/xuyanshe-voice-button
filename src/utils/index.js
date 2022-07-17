@@ -92,14 +92,11 @@ const findVup = (arr, hit) => {
     if(arr.length === 0 || !hit){
         return;
     }
-    var findone;
     for(var i=0;;++i){
-        if(arr[i].name.zh === hit){
-            findone = arr[i];
-            break;
+        if(arr[i].alias === hit){
+            return arr[i]
         }
     }
-    return findone;
 }
 
 export {

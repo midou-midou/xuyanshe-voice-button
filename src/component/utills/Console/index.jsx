@@ -12,10 +12,6 @@ function Console() {
            'color: #fdc888;padding:0 1rem 0 0'
         );
         console.log(
-            `%c  `,
-            'background: url(https://static.xiaoblogs.cn/img/ai.png) no-repeat; font-size:162px;line-height:162px'
-        )
-        console.log(
             `%cGitHub: %chttps://github.com/MIMONATCH/xuyanshe-voice-button`,
             'color: #259dd4;padding:0 0 0 1rem',
             'color: #259dd4'

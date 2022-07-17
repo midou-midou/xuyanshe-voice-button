@@ -1,6 +1,7 @@
 const vupData = [
     {
         uid: '5563350',
+        alias: 'xiaoxi',
         name: {zh: '小希', en: '', jp: 'Xiaoxi'},
         abbr: 'xx',
         color: '#CD3951',
@@ -9,6 +10,7 @@ const vupData = [
     },
     {
         uid: '5563350',
+        alias: 'xiaotao',
         name: {zh: '小桃', en: '', jp: 'Xiaotao'},
         abbr: 'xt',
         color: '#DCCAE8',
@@ -17,6 +19,7 @@ const vupData = [
     },
     {
         uid: '1734978373',
+        alias: 'xiaorou',
         name: {zh: '小柔', en: '', jp: 'Xiaorou'},
         abbr: 'xr',
         color: '#89dedb',
@@ -25,6 +28,7 @@ const vupData = [
     },
     {
         uid: '698029620',
+        alias: 'reine',
         name: {zh: '兰音', en: '', jp: 'Reine'},
         abbr: 'reine',
         color: '#a272f4',
@@ -33,6 +37,7 @@ const vupData = [
     },
     {
         uid: '1501380958',
+        alias: 'ailurus',
         name: {zh: '艾露露', en: '', jp: 'Ailurus'},
         abbr: 'ailurus',
         color: '#fdc888',

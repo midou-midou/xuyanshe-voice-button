@@ -2,14 +2,10 @@ import { Fragment } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import Nav from './component/Navs/Nav';
 import { BrowserRouter } from 'react-router-dom';
-import XiaoXi from './component/Vup/XiaoXi';
-import XiaoTao from './component/Vup/XiaoTao';
-import XiaoRou from './component/Vup/XiaoRou';
 import SiteInform from './component/utills/SiteInform';
 import SiteInfo from './component/Panel/SiteInfo';
 import Footer from './component/Footer';
-import Reine from './component/Vup/Reine';
-import Ailurus from './component/Vup/Ailurus';
+import Vup from './component/Vup'
 import Console from './component/utills/Console';
 import SupportBtn from './component/utills/SupportBtn';
 import NavPanel from './component/Panel/NavPanel';
@@ -31,12 +27,12 @@ function App() {
 				<NavPanel vups={vups}/>
 				<FeaturePanel />
 				<Switch>
-					<Route exact path="/xx" component={XiaoXi}></Route>
-					<Route exact path="/xt" component={XiaoTao}></Route>
-					<Route exact path="/xr" component={XiaoRou}></Route>
-					<Route exact path="/reine" component={Reine}></Route>
-					<Route exact path="/ailurus" component={Ailurus}></Route>
-					<Redirect to="/xx"/>
+					{
+						vups.map((v, k) => {
+							return <Route exact path={`/:name`} key={k} component={Vup}></Route>
+						})
+					}
+					<Redirect to="/xiaoxi"/>
 				</Switch>
 			</BrowserRouter>
 			<Footer />
