@@ -55,52 +55,52 @@ const site = {
         {
             uid: '209730937',
             name: '艾露露干脆面厂',
-            tag: '艾露露'
+            tag: 'ailurus'
         },
         {
             uid: '668764',
             name: 'MonsterArcher',
-            tag: '小希'
+            tag: 'xiaoxi'
         },
         {
             uid: '889272',
             name: 'SSBSBB',
-            tag: '艾露露'
+            tag: 'ailurus'
         },
         {
             uid: '1370282565',
             name: '兰音家的录播组',
-            tag: '兰音'
+            tag: 'reine'
         },
         {
             uid: '82658096',
             name: '我的青春恋爱勿语',
-            tag: '艾露露'
+            tag: 'ailurus'
         },
         {
             uid: '38145917',
             name: '王者之位i',
-            tag: '小希'
+            tag: 'xiaoxi'
         },
         {
             uid: '670852382',
             name: '小希小桃录播组',
-            tag: '小希'
+            tag: 'xiaoxi'
         },
         {
             uid: '524880733',
             name: 'c--b--b',
-            tag: '兰音'
+            tag: 'reine'
         },
         {
             uid: '31278580',
             name: 'Popura-',
-            tag: '小柔'
+            tag: 'xiaorou'
         },
         {
             uid: '404477750',
             name: '阻油Ts喧嚣',
-            tag: '小希'
+            tag: 'xiaoxi'
         }
     ],
     sitetheme: "xiaoxi"

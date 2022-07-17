@@ -14,7 +14,7 @@ function Nav(){
             {
                 vup.map((v,k) => {
                     return (
-                        <NavLink activeClassName="top-nav-active" className="nav-item" key={k} to={"/"+v.abbr}>
+                        <NavLink activeClassName="top-nav-active" className="nav-item" key={k} to={`/${v.alias}`}>
                             <div className={`nav-small-item ${v.abbr}`}>
                                 <IntlProvider locale={lang} messages={v.name}>
                                     <FormattedMessage id={lang}></FormattedMessage>
