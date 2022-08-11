@@ -1,7 +1,5 @@
 import site from '../config/siteInfo'
-import voiceData from '../config/voice'
 import { NO_LIVE } from '../config/enmu';
-// import http from 'http'
 
 // 组合Voice路径
 const pathComplete = (voice) => {
@@ -13,21 +11,7 @@ const pathComplete = (voice) => {
         return null;
     }
     base_url = base_url.concat(voice.path);
-    return base_url;    
-}
-
-// desc: 从Voice中获取对应up的声音
-// arg: sour up主名字
-const getTargArr = (sour) => {
-    if(!voiceData[sour]){
-        console.error(`${sour}不存在`);
-        return;
-    }
-    var targetArr = [];
-    voiceData[sour].map((clfyVoice, k) => 
-        targetArr = [...targetArr, ...clfyVoice.voice]
-    )
-    return targetArr;
+    return base_url;
 }
 
 // 格式化音频时间
@@ -101,7 +85,6 @@ const findVup = (arr, hit) => {
 
 export {
     pathComplete,
-    getTargArr,
     getAudioSecond,
     getBiliProfileUrl,
     drawDanmu,
