@@ -19,3 +19,5 @@ export const ADDPERMUTATIONLISTITEM = 'add_permutation_listitem';
 // 站点相关
 export const GETSITETHEME = 'get_site_theme';
 export const SETSITETHEME = 'set_site_theme';
+// 音声相关
+export const GETVOICEDATA = 'get_voice_data';

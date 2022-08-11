@@ -17,11 +17,10 @@ import 'antd/dist/antd.css'
 import { message } from 'antd';
 
 class VoiceBtn extends Component {
-    
     constructor(props) {
         super(props);
         const storeState = store.getState();
-        this.state = { 
+        this.state = {
             animaList: [],
             isPlay: false,
             isPlayerPlaying: storeState.playingVoice.isPlay,
@@ -37,15 +36,15 @@ class VoiceBtn extends Component {
 
     // 挂载
     componentDidMount(){
-        store.subscribe(() => {
-            const storeState = store.getState();
+        this.unsubscribe = store.subscribe(() => {
+            const storeState = store.getState().playingVoice;
             this.setState(() => ({
-                isAllStop: storeState.playingVoice.isAllStop,
-                isLoop: storeState.playingVoice.isLoop,
-                playingIndex: storeState.playingVoice.playingIndex,
-                hitIndex: storeState.playingVoice.hitIndex,
-                permunationState: storeState.playingVoice.isPermutation,
-                isPlayerPlaying: storeState.playingVoice.isPlay
+                isAllStop: storeState.isAllStop,
+                isLoop: storeState.isLoop,
+                playingIndex: storeState.playingIndex,
+                hitIndex: storeState.hitIndex,
+                permunationState: storeState.isPermutation,
+                isPlayerPlaying: storeState.isPlay
             }));
         });
     }
@@ -56,7 +55,7 @@ class VoiceBtn extends Component {
         if(this.props.lang !== prevProps.lang){
             return null;
         }
-        // stop当前音声  
+        // stop当前音声
         if(this.state.isAllStop && prevState.isAllStop !== this.state.isAllStop){
             this.stopVoice();
             return;
@@ -70,8 +69,12 @@ class VoiceBtn extends Component {
 
     // 卸载
     componentWillUnmount(){
+        this.unsubscribe()
         if(this.props.currentIndex === this.state.playingIndex){
-            this.stopVoice();
+            if(this.state.playerList.length !== 0){
+                this.state.playerList.map((item, key) => item.pause());
+            }
+            store.dispatch(createChangePlayingIndex(-1));
         }
     }
 
@@ -104,7 +107,7 @@ class VoiceBtn extends Component {
                     return;
             }
         }
-        
+
     }
 
     // 停止按钮音声
@@ -136,7 +139,7 @@ class VoiceBtn extends Component {
             store.dispatch(createSetPermutationListItemAction({theme: this.props.theme, data: this.props.onevoice}));
             return;
         }
-        this._playerPlay(this.props.onevoice, 
+        this._playerPlay(this.props.onevoice,
             () => {this.clearAnimation()},
             () => {
                 store.dispatch(createPlayingAction({onevoice: this.props.onevoice, currentIndex: this.props.currentIndex}));
@@ -206,11 +209,13 @@ class VoiceBtn extends Component {
 
     // clear animation
     clearAnimation = () => {
-        this.voiceButton.current.classList.remove('wrapper-click');
+        if(this.voiceButton.current !== null){
+            this.voiceButton.current.classList.remove('wrapper-click');
+        }
     }
 
-    render() { 
-        return ( 
+    render() {
+        return (
             <div className="btn-wrapper" ref={this.voiceButton} onClick={this.playVoice}>
                 <div className="left-mask mask">
                     <div className="left-top-mask" style={{'--piece': this.state.piece+'s'}}></div>
@@ -230,5 +235,5 @@ class VoiceBtn extends Component {
         );
     }
 }
- 
+
 export default VoiceBtn;

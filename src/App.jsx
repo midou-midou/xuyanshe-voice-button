@@ -10,10 +10,10 @@ import Console from './component/utills/Console';
 import SupportBtn from './component/utills/SupportBtn';
 import NavPanel from './component/Panel/NavPanel';
 import FeaturePanel from './component/Panel/FeaturePanel';
+import FriendBtn from './component/utills/FriendBtn';
 import { useSelector } from 'react-redux';
 
 import './source/sass/index.scss';
-
 function App() {
 	const vups = useSelector((state) => state.getVupData);
 
@@ -24,6 +24,7 @@ function App() {
 				<SiteInform />
 				<SiteInfo />
 				<SupportBtn />
+				<FriendBtn />
 				<NavPanel vups={vups}/>
 				<FeaturePanel />
 				<Switch>

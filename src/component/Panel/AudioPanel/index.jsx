@@ -38,7 +38,7 @@ class AudioPanel extends Component {
     initPlayList = () => {
         let _playlist = new Map();
         let _playlistIndex = [];
-        this.props.voice.map((tags, clifkey) => 
+        this.props.voice.map((tags, clifkey) =>
             tags.voice.map((oneSound, voiceKey) =>  {
                 _playlist.set(clifkey*100+voiceKey, oneSound)
                 return _playlistIndex.push(clifkey*100+voiceKey)
@@ -52,7 +52,7 @@ class AudioPanel extends Component {
 
     // 监听store & 设置所有播放列表 & 订阅AllLoop next voice
     componentDidMount(){
-        store.subscribe(() => {
+        this.unsubscribe = store.subscribe(() => {
             const storeState = store.getState();
             this.setState({
                 playingList: [...storeState.playingVoice.playingList]
@@ -92,11 +92,12 @@ class AudioPanel extends Component {
         store.dispatch(createClearPlayerInfo());
         PubSub.unsubscribe('nextVoice');
         this.props.loop(NO_LOOP);
+        this.unsubscribe()
         clearTimeout(this.timer);
     }
 
     // audioPanel 相关操作
-    // 停止音频播放 
+    // 停止音频播放
     stopAllVoice = () => {
         if(this.props.isPermutation){
             message.error("请点击功能面版下的垃圾桶标致来停止当前列表");
@@ -117,7 +118,7 @@ class AudioPanel extends Component {
             this.props.loop(NO_LOOP);
         }
     }
-    
+
     // 随机播放
     random = () => {
         if(this.props.isPermutation){
@@ -164,14 +165,14 @@ class AudioPanel extends Component {
             myref.current.firstChild.classList.remove('control-btn-click');
         }, 1000)
     }
-    
-    render() { 
-        return ( 
+
+    render() {
+        return (
             <div className="audioPanel-container">
                 <IntlProvider locale={this.props.lang} messages={this.props.playingVoiceData.desc}>
-                    <div 
+                    <div
                         className="audioinfo audio-info-show"
-                        ref={this.audioInfo} 
+                        ref={this.audioInfo}
                         onAnimationEnd={() => {this.audioInfo.current.classList.remove('audio-info-show');}}>
                         <FormattedMessage id={this.props.lang}></FormattedMessage>
                     </div>

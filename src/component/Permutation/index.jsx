@@ -12,13 +12,13 @@ class Permutation extends Component {
     constructor(props) {
         super(props);
         const storeState = store.getState();
-        this.state = { 
+        this.state = {
             lang: storeState.getLang,
             isPlayerPlaying: storeState.playingVoice.isPlay,
             isPermanution: storeState.playingVoice.isPermutation,
             permutationList: storeState.playingVoice.permutationList,
             sitetheme: storeState.getSiteInfo.sitetheme,
-            audioCtx: new (window.AudioContext),
+            audioCtx: new (window.AudioContext)(),
             pendingList: [],
             nextTime: 0,
             isPlay: false,
@@ -37,7 +37,7 @@ class Permutation extends Component {
                 permutationList: storeState.playingVoice.permutationList,
                 sitetheme: storeState.getSiteInfo.sitetheme,
                 isPlayerPlaying: storeState.playingVoice.isPlay
-            })  
+            })
         })
     }
 
@@ -61,7 +61,7 @@ class Permutation extends Component {
         }
         // 当前播放音频暂停
         this.setState({
-            audioCtx: new (window.AudioContext),
+            audioCtx: new (window.AudioContext)(),
             isPlay: false,
             current: 0,
             nextTime: 0,
@@ -101,7 +101,7 @@ class Permutation extends Component {
                 pendingList: [],
                 nextTime: 0
             })
-            store.dispatch(createChangePlayerState());       
+            store.dispatch(createChangePlayerState());
             return;
         }
         let buf = this.state.pendingList[index];
@@ -157,10 +157,10 @@ class Permutation extends Component {
         }
         xhr.send();
     }
-    
-    render() { 
+
+    render() {
         if(this.state.permutationList.length !== 0){
-            return ( 
+            return (
                 <div className="per-panel-container">
                     <div className={`per-btnlist-container ${this.state.sitetheme}`}>
                         <div className="per-btnlist">
@@ -186,7 +186,7 @@ class Permutation extends Component {
                 </div>
             );
         }else{
-            return ( 
+            return (
                 <div className="per-panel-container">
                     <div className="per-btnlist-container"></div>
                     <div className="per-control"></div>

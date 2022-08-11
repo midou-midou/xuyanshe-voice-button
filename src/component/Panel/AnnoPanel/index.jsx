@@ -8,7 +8,6 @@ import 'antd/dist/antd.css'
 function AnnoPanel(props) {
     const { up } = props;
     const vups = useSelector(state => state.getVupData);
-    console.log(vups);
     const vup = findVup(vups, up);
     let [linkbase] = useState('https://xysbtn.xiaoblogs.cn/profile/');
    
