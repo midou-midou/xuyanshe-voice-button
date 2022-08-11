@@ -24,7 +24,7 @@
             font-size: 1.5rem;
             color: var(--link-blue);
         }
-        
+
     }
 
     .i18n-droplist{
@@ -46,9 +46,9 @@
                 background-color: rgba(37,157,212,0.2);
                 transition: background-color .13s linear;
             }
-            
+
         }
-        
+
     }
 
     .active{
@@ -102,7 +102,7 @@
     .right{
         right: .19rem;
     }
-    
+
 }
 
 // site inform
@@ -116,7 +116,24 @@
         color: var(--inform-font-color);
         text-align: center;
     }
-    
+}
+
+.screenloading-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+
+    .screenloading-logo{
+        animation: screenLoadingAnimation 5s linear infinite;
+    }
+
+    .screenloading-info{
+        margin-top: 1rem;
+        color: var(--info-font-color);
+        font-weight: 500;
+    }
 }
 
 // animation
@@ -132,5 +149,14 @@
     100%{
         transform: translate3d(0, 0, 0);
         opacity: 1;
+    }
+}
+
+@keyframes screenLoadingAnimation {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
     }
 }

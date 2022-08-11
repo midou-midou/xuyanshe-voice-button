@@ -68,7 +68,7 @@
             border-bottom: .2rem;
             border-left: .2rem;
             border-bottom-left-radius: var(--btn-radius);
-            transform-origin: 100% 0%; 
+            transform-origin: 100% 0%;
             transform: rotate(-90deg);
         }
     }
@@ -76,7 +76,7 @@
     .middle-mask-container{
         width: calc(100% - 2rem);
         height: var(--btn-height);
-        
+
         div{
             width: 100%;
             height: 50%;
@@ -123,10 +123,10 @@
             border-bottom: .2rem;
             border-right: .2rem;
             border-bottom-right-radius: var(--btn-radius);
-            transform-origin: 0% 0%; 
+            transform-origin: 0% 0%;
             transform: rotate(-90deg);
         }
-        
+
     }
 
     // mobile适配
@@ -192,7 +192,6 @@
 
 .btn-permutation{
     background: linear-gradient(120deg, var(--xiaoxi-color), var(--ailurus-color));
-    animation: feature-btn 2s linear infinite;
 }
 
 .panel-pin-btn{
@@ -220,18 +219,18 @@
     .left-bottom-mask{
         animation: left-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }
-    
+
     .middle-top-mask{
         animation: middle-top-line var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }
-    
+
     .middle-bottom-mask{
         animation: middle-bottom-line var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }
-    
+
     .right-bottom-mask{
         animation: right-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
-    } 
+    }
 
     .right-top-mask{
         animation: right-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
@@ -281,18 +280,6 @@
     }
 }
 
-@keyframes feature-btn {
-    0%{
-        box-shadow: 0 0 10px var(--xiaorou-color);
-    }
-    100%{
-        box-shadow: 0 0 5px var(--xiaotao-color),
-        0 0 10px var(--xiaotao-color),
-        0 0 15px var(--xiaotao-color),
-        0 0 30px var(--xiaotao-color);
-    }
-}
-
 // 每一个人的主题色
 .xiaoxi{
     .btn-wrapper{
@@ -306,7 +293,7 @@
 }
 
 .xiaotao{
-    .btn-wrapper{ 
+    .btn-wrapper{
         div.mask-gray{
             background-color: var(--xiaotao-color);
         }

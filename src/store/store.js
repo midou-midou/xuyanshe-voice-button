@@ -1,9 +1,11 @@
-import {createStore, combineReducers} from 'redux'
+import {createStore, combineReducers, applyMiddleware} from 'redux'
 import vupDataReducer from './reducers/vupdata'
 import voiceReducer from './reducers/voice'
 import siteReducer from './reducers/site'
 import langReducer from './reducers/locale'
 import playerReducer from './reducers/audio'
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 const allReducer = combineReducers({
 	getVupData: vupDataReducer,
@@ -13,4 +15,4 @@ const allReducer = combineReducers({
 	playingVoice: playerReducer
 })
 
-export default createStore(allReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export default createStore(allReducer, composeWithDevTools(applyMiddleware(thunk)));
