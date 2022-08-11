@@ -182,8 +182,7 @@
         left: -.2rem;
         width: 3.2rem;
         height: 2.7rem;
-        background-position: center;
-        background-size: cover;
+        background-size: contain;
     }
     @media screen and (min-width: 680px){
         --btn-height: 2.2rem;
