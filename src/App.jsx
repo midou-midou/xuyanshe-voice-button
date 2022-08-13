@@ -1,7 +1,9 @@
 import { Fragment } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
-import Nav from './component/Navs/Nav';
+import { useSelector } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+
+import Nav from './component/Navs/Nav';
 import SiteInform from './component/utills/SiteInform';
 import SiteInfo from './component/Panel/SiteInfo';
 import Footer from './component/Footer';
@@ -11,7 +13,6 @@ import SupportBtn from './component/utills/SupportBtn';
 import NavPanel from './component/Panel/NavPanel';
 import FeaturePanel from './component/Panel/FeaturePanel';
 import FriendBtn from './component/utills/FriendBtn';
-import { useSelector } from 'react-redux';
 
 import './source/sass/index.scss';
 function App() {
