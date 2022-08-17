@@ -8,7 +8,7 @@
 
     &::-webkit-scrollbar-thumb{
         border-radius: .1rem;
-        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);   
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     }
 
     &::-webkit-scrollbar-track{
@@ -44,16 +44,16 @@
     box-shadow: 0 .1rem .2rem var(--shadow-color);
     background-color: var(--panel-bg-color);
     position: relative;
-    
+
     .panel-info-container{
         display: flex;
         align-items: center;
         position: relative;
-        
+
         div{
             display: inline-block;
         }
-        
+
         .panel-tags{
             font-weight: 600;
             margin: 1rem 1rem 0 1rem;
@@ -62,23 +62,23 @@
 
         .panel-alias{
             margin: 1rem 0 0 0;
-            font-weight: 500; 
+            font-weight: 500;
             color: var(--global-font-color);
         }
 
     }
-    
+
     .panel-btn-container{
         padding: .5rem 0;
         display: flex;
         flex-wrap: wrap
     }
 
-    .heimu{ 
+    .heimu{
         width: auto;
-        background-color: #252525; 
-        color: #252525; 
-        text-shadow: none; 
+        background-color: #252525;
+        color: #252525;
+        text-shadow: none;
 
         &:hover{ transition: color .13s linear; color: whitesmoke;}
     }
@@ -93,7 +93,7 @@
             color: #d81e06;
             font-size: 4rem;
         }
-        
+
     }
 
     .isNew{
@@ -118,7 +118,7 @@
             font-size: 1.4rem;
         }
     }
-    
+
 }
 // 音声控制卡片默认样式
 .audioPanel-container{
@@ -138,7 +138,7 @@
     .audio-info-show{
         animation: zoomIn 1s;
     }
-    
+
     .audioControl-container{
         display: flex;
         flex-direction: row;
@@ -178,7 +178,7 @@
             display: block;
         }
     }
-    
+
 }
 // 网站公告默认样式 & danmaku组件默认样式
 .annoPanel-container{
@@ -192,7 +192,7 @@
     .profile-container{
         position: relative;
         margin: 0 1rem;
-        
+
         .profile{
             width: 6rem;
             height: 6rem;
@@ -226,18 +226,9 @@
             }
         }
 
-        .live{
-            border: 1.7px solid red;
-            animation: liveOn 2s infinite linear;
-        }
-
-        .liveInfo{
-            display: block;
-        }
-        
     }
-    
-    
+
+
 
     #danmu-collect{
         width: 20%;
@@ -281,7 +272,7 @@
                 color: red;
                 animation: oneBeat .6s linear infinite;
             }
-            
+
         }
 
         .shields-container{
@@ -293,15 +284,15 @@
             }
         }
 
-        .heimu{ 
+        .heimu{
             width: auto;
-            background-color: #252525; 
-            color: #252525; 
-            text-shadow: none; 
+            background-color: #252525;
+            color: #252525;
+            text-shadow: none;
 
             &:hover{ transition: color .13s linear ; color: #d0e6ff; }
         }
-        
+
     }
 
     // mobile适配
@@ -313,9 +304,9 @@
     @media screen and (min-width: 680px){
         --head-img-padding: 5rem;
         --head-img-wh: 10rem;
-        
+
     }
-    
+
 }
 // 弹幕组件默认样式
 .danmaku-container-panel{
@@ -332,7 +323,7 @@
             width: auto !important;
         }
     }
-    
+
 }
 // 网站Footer组件默认样式
 .footer-container-panel{
@@ -370,7 +361,7 @@
         }
     }
 
-    
+
 
     .shield-footer-container{
         margin: .5rem 0;
@@ -383,7 +374,7 @@
             }
         }
 
-        
+
     }
 
     #footer-powerby{
@@ -415,7 +406,7 @@
             transform: rotate(360deg);
         }
     }
-    
+
 }
 
 // 动态卡片样式
@@ -450,7 +441,7 @@
         letter-spacing: .5px;
     }
 
-    
+
 
     // mobile适配
     @media screen and (max-width: 680px){
@@ -470,7 +461,7 @@
             font-size: .9rem;
         }
     }
-    
+
 }
 
 // index mobile 导航
@@ -526,7 +517,7 @@
         font-size: 1.7rem;
         color: var(--audio-font-color);
     }
-    
+
     .per-btnlist-container{
         overflow-x: auto;
         overflow-y: hidden;
@@ -542,19 +533,19 @@
                 .xiaoxi{
                     background-color: var(--xiaoxi-color);
                 }
-    
+
                 .xiaotao{
                     background-color: var(--xiaotao-color);
                 }
-    
+
                 .xiaorou{
                     background-color: var(--xiaorou-color);
                 }
-    
+
                 .reine{
                     background-color: var(--reine-color);
                 }
-    
+
                 .ailurus{
                     background-color: var(--ailurus-color);
                 }
@@ -568,7 +559,7 @@
 
         &::-webkit-scrollbar-thumb{
             border-radius: .25rem;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);   
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
         }
 
         &::-webkit-scrollbar-track{
@@ -615,7 +606,7 @@
             background-color: var(--audio-hover-color);
         }
     }
-    
+
 }
 
 // 面版pin到页面上
@@ -637,7 +628,7 @@
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-    
+
     50% {
         -webkit-transform: scale(0.85);
         transform: scale(0.85);
@@ -677,7 +668,7 @@
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-    
+
     50% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
