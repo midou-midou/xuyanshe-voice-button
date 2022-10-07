@@ -9,7 +9,7 @@ const vupData = [
         desc: ['希酱','χ型AI','土妹子','豪宅毁灭者','王二狗','希某人','沙雕希']
     },
     {
-        uid: '5563350',
+        uid: '1084222017',
         alias: 'xiaotao',
         name: {zh: '小桃', en: '', jp: 'Xiaotao'},
         abbr: 'xt',
