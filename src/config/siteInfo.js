@@ -49,6 +49,11 @@ const site = {
             name: '彼岸霜滢Eliro按钮',
             link: 'https://eliro.top/',
             color: '#9af0ff'
+        },
+        {
+            name: '希亚娜按钮',
+            link: 'https://ciyana.moe/',
+            color: '#1F38EE'
         }
     ],
     supports: [
