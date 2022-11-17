@@ -8,7 +8,8 @@ import {
     SETPERMUTATIONSTATE,
     SETPERMUTATIONLIST,
     ADDPERMUTATIONLISTITEM,
-    CHANGEPLAYINGSTATE
+    CHANGEPLAYINGSTATE,
+    CHANGEPLAYERINFO
 } from '../constant'
 import { NO_LOOP } from '../../config/enmu'
 
@@ -67,6 +68,9 @@ export default function playerReducer(preState = playingVoice, action){
     }
     if(type === CHANGEPLAYINGSTATE){
         preState.isPlay = !preState.isPlay;
+    }
+    if (type === CHANGEPLAYERINFO){
+        preState.voice.desc = Object.assign(preState.voice.desc, data);
     }
     // 排列组合相关
     if(type === SETPERMUTATIONSTATE){

@@ -1,6 +1,5 @@
 import { Component, createRef } from "react";
 import { connect } from "react-redux";
-import { message } from "antd";
 import PubSub from 'pubsub-js';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import store from '../../../store/store';
@@ -10,7 +9,8 @@ import {
     createPlayerStateAction,
     createRandomAction,
     createPlayingAction,
-    createClearPlayerInfo
+    createClearPlayerInfo,
+    createChangePlayerInfo
 } from '../../../store/actions/audio'
 
 class AudioPanel extends Component {
@@ -100,7 +100,7 @@ class AudioPanel extends Component {
     // 停止音频播放
     stopAllVoice = () => {
         if(this.props.isPermutation){
-            message.error("请点击功能面版下的垃圾桶标致来停止当前列表");
+            store.dispatch(createChangePlayerInfo({zh: "请点击功能面版下的垃圾桶标致来停止当前列表", en: '', jp: ''}));
             return;
         }
         this.playAnima(this.playstopbtn);
@@ -122,7 +122,7 @@ class AudioPanel extends Component {
     // 随机播放
     random = () => {
         if(this.props.isPermutation){
-            message.error("随机播放功能仅在音声模式下可用");
+            store.dispatch(createChangePlayerInfo({zh: "随机播放功能仅在音声模式下可用", en: '', jp: ''}));
             return;
         }
         this.playAnima(this.randombtn);
@@ -138,7 +138,7 @@ class AudioPanel extends Component {
     // 单曲、全部循环
     changeLoopState = () => {
         if(this.props.isPermutation){
-            message.error("全部循环功能仅在音声模式下可用");
+            store.dispatch(createChangePlayerInfo({zh: "全部循环功能仅在音声模式下可用", en: '', jp: ''}));
             return;
         }
         this.playAnima(this.loopbtn);

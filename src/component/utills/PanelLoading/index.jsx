@@ -1,11 +1,9 @@
-import { Skeleton } from "antd";
-
-import 'antd/dist/antd.css';
+import ScreenLoading from "../ScreenLoading";
 
 function PanelLoading() {
     return ( 
         <div className="panel-container dynamic-card">
-            <Skeleton active />
+            <ScreenLoading />
         </div>
     );
 }

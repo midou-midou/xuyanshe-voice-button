@@ -1,12 +1,13 @@
 import { IntlProvider, FormattedMessage } from "react-intl";
 import { useRef } from "react";
 import { useState } from "react";
-import { message } from "antd";
 import Permutation from "../../Permutation";
 import { connect } from "react-redux";
 import {
-    createSetPermutationStateAction
+    createSetPermutationStateAction,
+    createChangePlayerInfo
 } from '../../../store/actions/audio'
+import store from "../../../store/store";
 
 function FeaturePanel(props) {
     const icon = useRef(null);
@@ -26,7 +27,7 @@ function FeaturePanel(props) {
 
     const isPermutation = () => {
         if(props.isPlayerPlaying){
-            message.warning("请等待当前音声播放完成后重试");
+            store.dispatch(createChangePlayerInfo({zh: "请等待当前音声播放完成后重试", en: '', jp: ''}));
             return;
         }else{
             props.createSetPermutationStateAction();
