@@ -3,8 +3,6 @@ import { findVup } from '../../../utils/index';
 import { useSelector } from 'react-redux'
 import DanmuPanel from "../DanmuPanel";
 
-import 'antd/dist/antd.css'
-
 function AnnoPanel(props) {
     const { up } = props;
     const vups = useSelector(state => state.getVupData);

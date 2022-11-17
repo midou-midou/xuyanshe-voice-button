@@ -8,6 +8,7 @@ export const PLAYINGVOICE = 'playingvoice';
 export const LOOPONEVOICE = 'loop_voice';
 export const CLEARVOICEINFO = 'clear_voice_info';
 export const CHANGEPLAYINGSTATE = 'change_playing_state';
+export const CHANGEPLAYERINFO = 'change_player_info';
 // export const LOOPPLAYLISTVOICE = 'loop_playlist_voice';
 export const STOPVOICE = 'stopvoice';
 export const RANDOMVOICE = 'random_voice';

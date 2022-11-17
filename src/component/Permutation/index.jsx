@@ -1,11 +1,11 @@
 import { Component } from 'react';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import store from '../../store/store';
-import { message } from "antd";
 import { pathComplete } from '../../utils/index';
 import {
     createSetPermutationStateAction,
-    createChangePlayerState
+    createChangePlayerState,
+    createChangePlayerInfo
 } from '../../store/actions/audio'
 
 class Permutation extends Component {
@@ -56,7 +56,7 @@ class Permutation extends Component {
     // 全删除
     clearAllVoice = () => {
         if(this.isPlay){
-            message.warning("请等待当前列表播放完成后重试");
+            store.dispatch(createChangePlayerInfo({zh: "请等待当前列表播放完成后重试", en: '', jp: ''}));
             return;
         }
         // 当前播放音频暂停
@@ -76,7 +76,7 @@ class Permutation extends Component {
     // 播放相关
     playPermutationListVoice = () => {
         if(this.state.isPlay){
-            message.warning("请等待当前音声播放完成后重试");
+            store.dispatch(createChangePlayerInfo({zh: "请等待当前音声播放完成后重试", en: '', jp: ''}));
             return;
         }
         // 循环xhr获取的arraybuffer list
@@ -88,7 +88,7 @@ class Permutation extends Component {
             let path = pathComplete(voiceData.data)
             this.getVoiceFromPerlist2pending(path)
         }else{
-            message.error("添加几个音频后再试");
+            store.dispatch(createChangePlayerInfo({zh: "添加几个音频后再试", en: '', jp: ''}));
             return;
         }
     }
@@ -122,7 +122,7 @@ class Permutation extends Component {
                 }
             }
         }, () => {
-            message.error("当前音频"+index+"播放错误");
+            store.dispatch(createChangePlayerInfo({zh: "当前音频"+index+"播放错误", en: '', jp: ''}));
             return;
         });
     }
@@ -150,7 +150,7 @@ class Permutation extends Component {
                         })
                     }
                 }else{
-                    message.error("获取音频失败,reason:"+xhr.responseText);
+                    store.dispatch(createChangePlayerInfo({zh: "获取音频失败", en: '', jp: ''}));
                     return;
                 }
             }

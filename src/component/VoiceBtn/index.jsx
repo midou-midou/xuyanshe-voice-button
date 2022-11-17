@@ -9,12 +9,11 @@ import {
     createChangePlayingIndex,
     createRandomAction,
     createClearPlayerInfo,
-    createSetPermutationListItemAction
+    createSetPermutationListItemAction,
+    createChangePlayerInfo
 } from '../../store/actions/audio'
 
 import 'animate.css';
-import 'antd/dist/antd.css'
-import { message } from 'antd';
 
 class VoiceBtn extends Component {
     constructor(props) {
@@ -133,7 +132,7 @@ class VoiceBtn extends Component {
         // 排列组合模式开启
         if(this.state.permunationState){
             if(this.state.isPlayerPlaying){
-                message.error("请等待当前列表播放完毕后在添加");
+                store.dispatch(createChangePlayerInfo({zh: "请等待当前列表播放完毕后在添加", en: '', jp: ''}));
                 return;
             }
             store.dispatch(createSetPermutationListItemAction({theme: this.props.theme, data: this.props.onevoice}));
@@ -198,7 +197,7 @@ class VoiceBtn extends Component {
             })
         }
         audio.onerror = () => {
-            message.error("音频播放失败");
+            store.dispatch(createChangePlayerInfo({zh: "音频播放失败", en: '', jp: ''}));
         }
     }
 
