@@ -20,11 +20,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Install node js version
       - name: use Node.js 18
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
               node-version: '18'
 
