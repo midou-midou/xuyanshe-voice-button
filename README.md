@@ -6,7 +6,8 @@
 
 指路：
 
-- [小希小桃Channel](https://space.bilibili.com/5563350)
+- [小希Channel](https://space.bilibili.com/5563350)
+- [小桃Channel](https://space.bilibili.com/1084222017)
 - [小柔Channel](https://space.bilibili.com/1734978373)
 - [兰音Renie](https://space.bilibili.com/698029620)
 - [艾露露Ailurus](https://space.bilibili.com/1501380958)
