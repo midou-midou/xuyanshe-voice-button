@@ -1,22 +1,17 @@
 {
-  "name": "xxxtvb",
+  "name": "xuyanshe-voice-button",
   "version": "1.13.0",
   "private": true,
   "dependencies": {
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
-    "conventional-changelog": "^3.1.24",
     "danmaku": "^2.0.2",
     "http-proxy-middleware": "^2.0.1",
     "pubsub-js": "^1.9.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-intl": "^5.21.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
@@ -24,8 +19,7 @@
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "reselect": "^4.1.2",
-    "sass": "^1.49.9",
-    "web-vitals": "^1.0.1"
+    "sass": "^1.49.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -52,8 +46,12 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "conventional-changelog": "^3.1.25",
     "husky": "^7.0.4",
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+    "semantic-release": "^20.0.2"
   },
   "release": {
     "branches": "dev",

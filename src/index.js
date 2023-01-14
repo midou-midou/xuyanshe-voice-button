@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
 import App from './App.jsx';
 import FloatNavLink from './component/Navs/FloatNavLink';
 import {Provider} from 'react-redux'
 import store from './store/store'
 
-ReactDOM.render(
-    <React.StrictMode>
+const container = document.getElementById('app-root');
+const root = createRoot(container);
+root.render(
+    <StrictMode>
         <Provider store={store}>
             <App />
             <FloatNavLink />
         </Provider>
-    </React.StrictMode>,
-    document.getElementById('app-root')
-);
+    </StrictMode>
+)
