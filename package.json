@@ -19,7 +19,7 @@
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "reselect": "^4.1.2",
-    "sass": "^1.49.9"
+    "sass": "^1.60.0"
   },
   "scripts": {
     "start": "react-scripts start",
