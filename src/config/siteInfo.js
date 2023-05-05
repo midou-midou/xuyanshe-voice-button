@@ -16,13 +16,13 @@ const site = {
     bili: 'https://space.bilibili.com/9964933',
     cloud: 'https://xysbtn-1257227807.cos.ap-chengdu.myqcloud.com',
     inform: { 
-        zh: '注意！！！本网站网址将要变为voice.xuyanshe.club，老网址将会重定向到新网址',
+        zh: '',
         en: '', 
-        jp: '注意!voice.xuyanshe.club最新のアドレス'
+        jp: ''
     },
     beian: {
         wangan: '',
-        icp: '渝ICP备19003460号'
+        icp: '青ICP备2023000252号-1'
     },
     friends:[
         {

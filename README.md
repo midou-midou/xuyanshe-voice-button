@@ -36,6 +36,12 @@ Demo [点这里](https://xysbtn.xiaoblogs.cn)
 - [x] 音声排列组合
 - [ ] ……
 
+## 环境
+
+```
+node v14-v16
+```
+
 ## 安装
 
 #### npm

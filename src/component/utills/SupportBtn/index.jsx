@@ -8,7 +8,7 @@ function SupportBtn() {
     const vup = useSelector(state => state.getVupData);
     const lang = useSelector((state) => state.getLang);
     const [linkBase] = useState('//space.bilibili.com/');
-    const [ProfileLink] = useState('https://xysbtn.xiaoblogs.cn/profile/');
+    const [ProfileLink] = useState(`${window.location.origin}/profile`);
 
     return (  
         <div className="panel-container siteinfoZoomIn">
