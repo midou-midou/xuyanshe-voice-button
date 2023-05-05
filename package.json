@@ -1,6 +1,6 @@
 {
   "name": "xuyanshe-voice-button",
-  "version": "1.15.1",
+  "version": "1.15.2",
   "private": true,
   "dependencies": {
     "animate.css": "^4.1.1",
