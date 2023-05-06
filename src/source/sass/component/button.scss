@@ -212,11 +212,11 @@
 .wrapper-click{
     animation: oneBeat 0.45s ease-out;
     .left-top-mask{
-        animation: left-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+        animation: left-top-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }
 
     .left-bottom-mask{
-        animation: left-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+        animation: left-bottom-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }
 
     .middle-top-mask{
@@ -228,22 +228,37 @@
     }
 
     .right-bottom-mask{
-        animation: right-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+        animation: right-bottom-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }
 
     .right-top-mask{
-        animation: right-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
+        animation: right-top-route var(--piece) linear forwards calc(var(--piece) * var(--delay));
     }
 }
 
 
-@keyframes left-route {
+@keyframes left-top-route {
     0% {
         transform: rotate(-90deg);
+        transform-origin: right bottom;
         visibility: visible;
     }
     100% {
         visibility: visible;
+        transform: rotate(0deg);
+        transform-origin: right bottom;
+    }
+}
+
+@keyframes left-bottom-route {
+    0% {
+        transform: rotate(-90deg);
+        transform-origin: right top;
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+        transform-origin: right top;
         transform: rotate(0deg);
     }
 }
@@ -269,12 +284,26 @@
     }
 }
 
-@keyframes right-route {
+@keyframes right-top-route {
     0% {
+        transform-origin: left bottom;
         transform: rotate(-90deg);
     }
     100% {
         visibility: visible;
+        transform-origin: left bottom;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes right-bottom-route {
+    0% {
+        transform-origin: left top;
+        transform: rotate(-90deg);
+    }
+    100% {
+        visibility: visible;
+        transform-origin: left top;
         transform: rotate(0deg);
     }
 }

@@ -13,6 +13,7 @@ function ScreenLoading() {
                     height="50px"
                     className="screenloading-logo"
                     src={loading}
+                    alt=""
                 />
                 <div className="screenloading-info">
                     <IntlProvider locale={lang} messages={{zh: '音声正在由桃桃装填...', en: '', jp: ''}}>

@@ -34,7 +34,7 @@ function App() {
 							return <Route exact path={`/:name`} key={k} component={Vup}></Route>
 						})
 					}
-					<Redirect to="/xiaoxi"/>
+					<Redirect to={`/${vups[0].alias}`}/>
 				</Switch>
 			</BrowserRouter>
 			<Footer />
