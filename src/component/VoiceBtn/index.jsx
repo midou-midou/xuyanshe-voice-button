@@ -111,20 +111,18 @@ class VoiceBtn extends Component {
 
     // 停止按钮音声
     stopVoice = () => {
-        if(this.state.isPlay){
-            this.clearAnimation()
-            if(this.state.playerList.length !== 0){
-                this.state.playerList.map((item, key) => item.pause());
-            }
-            store.dispatch(createChangePlayingIndex(-1));
-            this.setState({
-                isPlay: false,
-                playerList: JSON.parse(JSON.stringify([]))
-            })
-            return;
-        }else{
+        if(!this.state.isPlay){
             return;
         }
+        this.clearAnimation()
+        if(this.state.playerList.length !== 0){
+            this.state.playerList.map((item, key) => item.pause());
+        }
+        store.dispatch(createChangePlayingIndex(-1));
+        this.setState({
+            isPlay: false,
+            playerList: JSON.parse(JSON.stringify([]))
+        })
     }
 
     // 点击播放音声
@@ -138,8 +136,16 @@ class VoiceBtn extends Component {
             store.dispatch(createSetPermutationListItemAction({theme: this.props.theme, data: this.props.onevoice}));
             return;
         }
+        if(this.state.playerList.length !== 0) {
+            // 后面点击的动画覆盖前面的
+            this.voiceButton.current.classList.remove('wrapper-click');
+        }
         this._playerPlay(this.props.onevoice,
-            () => {this.clearAnimation()},
+            () => {
+                if (this.state.playerList.length === 0) {
+                    this.clearAnimation()
+                }
+            },
             () => {
                 store.dispatch(createPlayingAction({onevoice: this.props.onevoice, currentIndex: this.props.currentIndex}));
                 this.emitDanmu();
@@ -151,7 +157,11 @@ class VoiceBtn extends Component {
     randomVoice = () => {
         this._playerPlay(
             this.props.onevoice,
-            () => {this.clearAnimation()},
+            () => {
+                if (this.state.playerList.length === 0) {
+                    this.clearAnimation()
+                }
+            },
             () => {store.dispatch(createRandomAction({onevoice: this.props.onevoice, hitIndex: -1}))}
         );
     }
@@ -165,7 +175,7 @@ class VoiceBtn extends Component {
     _playerPlay = (voice, stopcb, playcb) => {
         const audio = new Audio();
         audio.src = pathComplete(voice);
-        // audio.preload = 'metadata';
+        audio.preload = 'metadata';
         audio.load();
         let _playerList = this.state.playerList;
         _playerList.push(audio);
@@ -191,10 +201,16 @@ class VoiceBtn extends Component {
             if(stopcb){
                 stopcb();
             }
-            this.setState({
+            if (_playerList.length !== 0) {
+                this.setState({
+                    playerList: [..._playerList]
+                })
+                return
+            }
+            this.setState(() => ({
                 playerList: [..._playerList],
                 isPlay: false
-            })
+            }))
         }
         audio.onerror = () => {
             store.dispatch(createChangePlayerInfo({zh: "音频播放失败", en: '', jp: ''}));
@@ -208,9 +224,7 @@ class VoiceBtn extends Component {
 
     // clear animation
     clearAnimation = () => {
-        if(this.voiceButton.current !== null){
-            this.voiceButton.current.classList.remove('wrapper-click');
-        }
+        this.voiceButton.current.classList.remove('wrapper-click');
     }
 
     render() {

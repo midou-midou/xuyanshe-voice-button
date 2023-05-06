@@ -6,7 +6,7 @@ import { IntlProvider, FormattedMessage} from 'react-intl'
 function Footer() {
     const y = new Date().getFullYear()
     const siteInfo = useSelector(state => state.getSiteInfo)
-    let [linkbase] = useState('https://xysbtn.xiaoblogs.cn/profile/')
+    let [linkbase] = useState(`${window.location.origin}/profile/`)
     const [footInfo] = useState({zh: '本网站为粉丝行为，与虚研社官方无任何关联', en: '', jp: '当サイトはファンの行為で、虚研社の公式とは何の関係もありません'})
     const lang = useSelector((state) => state.getLang)
 
@@ -21,13 +21,6 @@ function Footer() {
                 <span id="footer-au-name">
                     <a target="_blank" rel="noopener noreferrer" href={siteInfo.bili}> {siteInfo.author}</a>
                 </span>
-            </div>
-            <div className="shield-footer-container">
-                <div className="shield-github-star">
-                    <img alt="github" src="https://img.shields.io/github/package-json/v/MIMONATCH/xuyanshe-voice-button" />
-                    <img alt="fork" src="https://img.shields.io/github/forks/MIMONATCH/xuyanshe-voice-button" />
-                    <img alt="star" src="https://img.shields.io/github/stars/MIMONATCH/xuyanshe-voice-button" />
-                </div>
             </div>
             <div id="footer-powerby">
                 <span id="footer-info"><IntlProvider locale={lang} messages={footInfo}><FormattedMessage id={lang}></FormattedMessage></IntlProvider></span>

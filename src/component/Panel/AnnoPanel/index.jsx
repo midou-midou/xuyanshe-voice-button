@@ -7,7 +7,7 @@ function AnnoPanel(props) {
     const { up } = props;
     const vups = useSelector(state => state.getVupData);
     const vup = findVup(vups, up);
-    let [linkbase] = useState('https://xysbtn.xiaoblogs.cn/profile/');
+    let [linkbase] = useState(`${window.location.origin}/profile/`);
    
     return (
         <div className="panel-container annoPanel-container drawPanelZoomIn">
