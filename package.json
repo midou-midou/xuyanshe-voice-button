@@ -12,17 +12,18 @@
     "react-intl": "^5.21.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.0",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "reselect": "^4.1.2",
-    "sass": "^1.49.9"
+    "sass": "^1.62.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": [
@@ -49,8 +50,10 @@
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog": "^3.1.25",
     "husky": "^7.0.4",
+    "postcss-normalize": "^10.0.1",
     "redux-devtools-extension": "^2.13.9",
-    "semantic-release": "^20.0.2"
+    "semantic-release": "^20.0.2",
+    "source-map-explorer": "^2.5.3"
   },
   "release": {
     "branches": "dev",
@@ -79,6 +82,6 @@
     ]
   },
   "volta": {
-    "node": "16.20.0"
+    "node": "18.16.0"
   }
 }

@@ -18,37 +18,25 @@
 
 ## 在线演示 Demo
 
-Demo [点这里](https://xysbtn.xiaoblogs.cn)
+Demo [点这里](https://voice.xuyanshe.club)
 
 ## 附属项目
 
 - [MIMONATCH/xysbtnRss: 虚研社按钮RSS代理Bot🤖 (github.com)](https://github.com/MIMONATCH/xysbtnRss)
 - [MIMONATCH/xysbtnProfileGetter: 虚研社按钮头像Getter (github.com)](https://github.com/MIMONATCH/xysbtnProfileGetter)
 
-## TODO
+## 新功能 · 音声排列组合
 
-- [x] i18n 国际化
-- [x] Dark mode 夜间模式
-- [x] 更多音声资源
-- [x] 粉丝音声组件
-- [x] 友链
-- [x] 动态
-- [x] 音声排列组合
-- [ ] ……
+`在功能面板开启排列组合后，可以将多个音声串起来播放哦`
+
 
 ## 环境
 
 ```
-node v14-v16
+node ^16
 ```
 
 ## 安装
-
-#### npm
-
-```sh
-npm install
-```
 
 #### yarn
 
@@ -58,19 +46,11 @@ yarn install
 
 ## 开发
 
-#### npm
-
-```sh
-npm run start
-```
-
 #### yarn
 
 ```
 yarn start
 ```
-
-如需要配置则要运行eject命令
 
 ## 配置
 

@@ -393,61 +393,6 @@
 
 }
 
-// 动态卡片样式
-.dynamic-card{
-    padding: 1rem;
-
-    .dynamic-card-title{
-        font-weight: 600;
-        color: var(--info-font-color);
-    }
-
-    .dynamic-info{
-        margin: .7rem 0;
-        line-height: 1rem;
-
-        .dynamic-title{
-            display: block;
-            color: var(--link-blue);
-            text-decoration: underline;
-            margin: 0 0 .5rem 0;
-        }
-
-        .dynamic-time{
-            font-size: .5rem;
-            color: var(--audio-font-color);
-        }
-    }
-
-    .dynamic-content{
-        color: var(--global-font-color);
-        line-height: 1.5rem;
-        letter-spacing: .5px;
-    }
-
-
-
-    // mobile适配
-    @media screen and (max-width: 680px){
-        .dynamic-card-title{
-            font-size: 1.1rem;
-        }
-        .dynamic-content{
-            font-size: .8rem;
-        }
-    }
-
-    @media screen and (min-width: 680px){
-        .dynamic-card-title{
-            font-size: 1.3rem;
-        }
-        .dynamic-content{
-            font-size: .9rem;
-        }
-    }
-
-}
-
 // index mobile 导航
 .indexNavPanel{
     .indexNav-Container{
@@ -644,23 +589,4 @@
     --zoomInDelay: 0;
     animation: zoomIn 1s;
     animation-delay: calc(1s * var(--zoomInDelay));
-}
-
-// live on 动画
-@keyframes liveOn {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-
-    100% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-        opacity: 0%;
-    }
 }
