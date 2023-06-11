@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { FormattedMessage, IntlProvider } from 'react-intl';
 import { findVup } from '../../../utils/index'
 import { useState } from "react";
+import CoolGirl from "../CoolGirl";
 
 function SupportBtn() {
     const supportInfo = useSelector(state => state.getSiteInfo.supports);
@@ -33,6 +34,7 @@ function SupportBtn() {
                         )
                     })
                 }
+                <CoolGirl />
             </div>
         </div>
     );
