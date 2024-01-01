@@ -52,7 +52,7 @@
     "husky": "^7.0.4",
     "postcss-normalize": "^10.0.1",
     "redux-devtools-extension": "^2.13.9",
-    "semantic-release": "^20.0.2",
+    "semantic-release": "^22.0.12",
     "source-map-explorer": "^2.5.3"
   },
   "release": {
