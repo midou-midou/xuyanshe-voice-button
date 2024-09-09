@@ -44,4 +44,4 @@ jobs:
           key: ${{ secrets.xysbtndeploy }}
           port: 22
           script: |
-            scp build/* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{secrets.REMOTE_TARGET}}
+            scp dist/* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{secrets.REMOTE_TARGET}}
