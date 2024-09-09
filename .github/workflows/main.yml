@@ -37,12 +37,11 @@ jobs:
           CI: false
       #Deploy
       - name: SSH Deploy
-        uses: easingthemes/ssh-deploy@v3
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.xysbtndeploy }}
-          ARGS: "-rltgoDzvO"
-          SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/dist/, /node_modules/"
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.xysbtndeploy }}
+          port: 22
+          script: |
+            scp build/* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{secrets.REMOTE_TARGET}}
