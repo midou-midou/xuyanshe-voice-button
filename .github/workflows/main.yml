@@ -23,10 +23,10 @@ jobs:
         uses: actions/checkout@v3
 
       # Install node js version
-      - name: use Node.js 16
+      - name: use Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
 
       # node install & build
       - name: install and build
@@ -37,12 +37,11 @@ jobs:
           CI: false
       #Deploy
       - name: SSH Deploy
-        uses: appleboy/ssh-action@v1.0.3
+        uses: kostya-ten/ssh-server-deploy@v4
         with:
           host: ${{ secrets.REMOTE_HOST }}
+          port: ${{ secrets.REMOTE_PORT }}
           username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.xysbtndeploy }}
-          port: 22
-          script: |
-            ls
-            scp dist/* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{secrets.REMOTE_TARGET}}
+          private_key: ${{ secrets.xysbtndeploy }}
+          scp_source: build/*
+          scp_target: ${{secrets.REMOTE_TARGET}}
