@@ -18,18 +18,15 @@ function VoicePanel(props){
                                 <i className="iconfont icon-New-Tga i-new"></i>
                             </div>
                             <div className="panel-info-container">
-                                <IntlProvider locale={lang} messages={tags.clfy}>
+                                <IntlProvider locale={lang} messages={JSON.parse(tags.clfy.desc)}>
                                     <div className="panel-tags"><FormattedMessage id={lang}></FormattedMessage></div>
-                                </IntlProvider>
-                                <IntlProvider locale={lang} messages={tags.alias}>
-                                    <div className="panel-alias">(<FormattedMessage id={lang}></FormattedMessage>)</div>
                                 </IntlProvider>
                             </div>
                             <div className="panel-btn-container">
                             {
                                 tags.voice.map((oneSound, voiceKey) => {
                                     return (
-                                        <IntlProvider locale={lang} messages={oneSound.desc} key={voiceKey}>
+                                        <IntlProvider locale={lang} messages={JSON.parse(oneSound.desc)} key={voiceKey}>
                                             <VoiceBtn onevoice={oneSound} currentIndex={clifkey*100+voiceKey} lang={lang} theme={theme}/>
                                         </IntlProvider>
                                     );

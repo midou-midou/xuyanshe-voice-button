@@ -3,7 +3,7 @@ import { NO_LIVE } from '../config/enmu';
 
 // 组合Voice路径
 const pathComplete = (voice) => {
-    var base_url = site.cloud || "%PUBLIC_URL%/voice/";
+    var base_url = `${site.cloud}/api/voice` || "%PUBLIC_URL%/voice/";
     if(site.cloud){
         base_url = site.cloud.slice(-1) === '/' ? base_url : base_url.concat('/');
     }

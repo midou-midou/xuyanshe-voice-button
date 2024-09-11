@@ -20,6 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "ssl": "cross-env HTTPS=true SSL_CRT_FILE=cert.pem SSL_KEY_FILE=cert.key PORT=443 yarn start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -49,6 +50,7 @@
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog": "^3.1.25",
+    "cross-env": "^7.0.3",
     "husky": "^7.0.4",
     "postcss-normalize": "^10.0.1",
     "redux-devtools-extension": "^2.13.9",
@@ -82,6 +84,6 @@
     ]
   },
   "volta": {
-    "node": "18.16.0"
+    "node": "20.11.0"
   }
 }

@@ -169,7 +169,7 @@ class AudioPanel extends Component {
     render() {
         return (
             <div className="audioPanel-container">
-                <IntlProvider locale={this.props.lang} messages={this.props.playingVoiceData.desc}>
+                <IntlProvider locale={this.props.lang} messages={typeof this.props.playingVoiceData.desc === 'string' ? JSON.parse(this.props.playingVoiceData.desc) : this.props.playingVoiceData.desc}>
                     <div
                         className="audioinfo audio-info-show"
                         ref={this.audioInfo}
