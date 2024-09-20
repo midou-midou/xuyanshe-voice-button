@@ -33,7 +33,7 @@ Demo [点这里](https://voice.xuyanshe.club)
 ## 环境
 
 ```
-node ^18
+node >=18
 ```
 
 ## 安装
