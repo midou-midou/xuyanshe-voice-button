@@ -169,7 +169,7 @@ class Permutation extends Component {
                                     <div className="btn-per-mask" key={k}>
                                         <div className={`btn-wrapper btn-per ${v.theme}`}>
                                             <div className="btn-name">
-                                                <IntlProvider locale={this.state.lang} messages={v.data.desc}>
+                                                <IntlProvider locale={this.state.lang} messages={JSON.parse(v.data.desc)}>
                                                     <FormattedMessage id={this.state.lang}></FormattedMessage>
                                                 </IntlProvider>
                                             </div>
