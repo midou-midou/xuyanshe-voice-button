@@ -136,11 +136,11 @@ class Permutation extends Component {
             // XHR完成响应
             if(xhr.readyState === 4){
                 if(xhr.status === 200){
-                    this.setState({
+                    this.setState(() => ({
                         pendingList: [...this.state.pendingList, xhr.response],
                         current: this.state.current + 1,
                         isGetVoiceFromXHR: true
-                    })
+                    }))
                     if(this.state.pendingList.length === this.state.permutationList.length){
                         store.dispatch(createChangePlayerState());
                         this.setState({

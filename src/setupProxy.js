@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 module.exports = function(app) {
     app.use(
         createProxyMiddleware('/api', {
-            target: 'https://xysbtn.xiaoblogs.cn/json',
+            target: 'https://upload.xuyanshe.club/api',
             changeOrigin: true,
             pathRewrite: {'^/api': ''}
         })
