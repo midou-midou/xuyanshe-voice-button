@@ -2,6 +2,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import { useRef } from "react";
 import { useState } from "react";
 import Permutation from "../../Permutation";
+import UploadLink from "../../utills/UploadLink";
 import { connect } from "react-redux";
 import {
     createSetPermutationStateAction,
@@ -50,6 +51,7 @@ function FeaturePanel(props) {
                         </IntlProvider>
                     </div>
                 </div>
+                <UploadLink />
             </div>
             <Permutation />
         </div>

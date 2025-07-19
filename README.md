@@ -29,6 +29,12 @@ Demo [点这里](https://voice.xuyanshe.club)
 
 `在功能面板开启排列组合后，可以将多个音声串起来播放哦`
 
+## 新音声文件上传!
+
+**[上传站来啦!点我跳转](https://upload.xuyanshe.club)**
+
+| PS. 音频的格式仅支持 **mp3**
+
 
 ## 环境
 
@@ -56,17 +62,6 @@ yarn start
 
 所有的配置都在`src/config`目录下
 
-### 新音声配置添加
-#### 目前正在开发上传站，以前的新增方式已经不可用
-
-<br />
-
-### 新音声文件上传
-
-暂时不支持网站直接上传到腾讯COS，请各位朋友发送到我的邮箱 midoude163@163.com
-
-音频的格式仅支持 **mp3**
-
 ## 提交
 
 - **PR请提交到dev分支，main分支不支持PR**
@@ -77,5 +72,5 @@ yarn start
 
 MIT
 
-Copyright © 2021 [midou](https://github.com/MIMONATCH)
+Copyright © 2021-2025 [midou](https://github.com/MIMONATCH)
 

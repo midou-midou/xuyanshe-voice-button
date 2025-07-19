@@ -17,6 +17,9 @@ function SiteInform() {
                     <IntlProvider locale={lang} messages={siteInfo}>
                         <FormattedMessage id={lang}></FormattedMessage>
                     </IntlProvider>
+                    <a href="https://upload.xuyanshe.club" target="_blank" style={{
+                        textDecoration: 'none'
+                    }} rel="noreferrer">点我跳转上传站</a>
                 </div>
             </div>
         );

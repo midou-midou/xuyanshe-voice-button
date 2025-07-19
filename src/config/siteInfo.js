@@ -16,7 +16,7 @@ const site = {
     bili: 'https://space.bilibili.com/9964933',
     cloud: 'https://upload.xuyanshe.club',
     inform: { 
-        zh: '终于可以上传音声啦！音声上传站即将上线，敬请期待',
+        zh: '终于可以上传音声啦！',
         en: '', 
         jp: ''
     },
