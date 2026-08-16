@@ -18,7 +18,7 @@
 
 ## 在线演示 Demo
 
-Demo [点这里](https://voice.xuyanshe.club)
+Demo [点这里](http://60.205.14.12/xiaoxi)
 
 ## 附属项目
 
@@ -31,7 +31,7 @@ Demo [点这里](https://voice.xuyanshe.club)
 
 ## 新音声文件上传!
 
-**[上传站来啦!点我跳转](https://upload.xuyanshe.club)**
+**[上传站来啦!点我跳转](http://60.205.14.12/upload/xiaoxi)**
 
 | PS. 音频的格式仅支持 **mp3**
 
