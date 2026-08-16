@@ -14,7 +14,7 @@ const site = {
     author: '_米豆',
     github: '',
     bili: 'https://space.bilibili.com/9964933',
-    cloud: 'https://upload.xuyanshe.club',
+    cloud: location.origin,
     inform: { 
         zh: '终于可以上传音声啦！',
         en: '', 
